@@ -1,0 +1,13 @@
+D:\ProJectWindow\MyProJect\MyProJect\bin\Debug\MyProJect.exe.config
+D:\ProJectWindow\MyProJect\MyProJect\bin\Debug\MyProJect.exe
+D:\ProJectWindow\MyProJect\MyProJect\bin\Debug\MyProJect.pdb
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.csprojAssemblyReference.cache
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormLogin.resources
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormMain.resources
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.Properties.Resources.resources
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.csproj.GenerateResource.cache
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.csproj.CoreCompileInputs.cache
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.exe
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.pdb
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormSignUp.resources
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormManage.resources
