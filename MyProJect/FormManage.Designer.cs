@@ -45,7 +45,7 @@
             this.gbProductList = new System.Windows.Forms.GroupBox();
             this.btnSearchProduct = new System.Windows.Forms.Button();
             this.txtProductSearch = new System.Windows.Forms.TextBox();
-            this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.dgvProductList = new System.Windows.Forms.DataGridView();
             this.btnUpdateProduct = new System.Windows.Forms.Button();
             this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
@@ -67,34 +67,32 @@
             this.btnAddProducer = new System.Windows.Forms.Button();
             this.gbProducerList = new System.Windows.Forms.GroupBox();
             this.btnSearchProducer = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtSearchProducer = new System.Windows.Forms.TextBox();
             this.dgvProducerList = new System.Windows.Forms.DataGridView();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtProducerPhone = new System.Windows.Forms.TextBox();
             this.lblPhoneProducer = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtProducerAddress = new System.Windows.Forms.TextBox();
             this.lblProducerAddress = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtProducerName = new System.Windows.Forms.TextBox();
             this.lblProducerName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtProducerID = new System.Windows.Forms.TextBox();
             this.lblProducerID = new System.Windows.Forms.Label();
             this.tabStaffmanage = new System.Windows.Forms.TabPage();
             this.gbStaffList = new System.Windows.Forms.GroupBox();
             this.btnSearchStaff = new System.Windows.Forms.Button();
             this.txtSearchStaff = new System.Windows.Forms.TextBox();
-            this.dgvStaff = new System.Windows.Forms.DataGridView();
+            this.dgvStaffList = new System.Windows.Forms.DataGridView();
             this.btnUpdateStaff = new System.Windows.Forms.Button();
             this.btnDeleteStaff = new System.Windows.Forms.Button();
             this.btnAddStaff = new System.Windows.Forms.Button();
-            this.cmbCity = new System.Windows.Forms.ComboBox();
-            this.lblCity = new System.Windows.Forms.Label();
             this.cmbGender = new System.Windows.Forms.ComboBox();
-            this.DOC_Picker = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.lblDOB = new System.Windows.Forms.Label();
-            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtStaffAddress = new System.Windows.Forms.TextBox();
             this.lblAddresss = new System.Windows.Forms.Label();
-            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtStaffPhone = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtStaffEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.txtStaffName = new System.Windows.Forms.TextBox();
@@ -105,38 +103,39 @@
             this.gbAccount = new System.Windows.Forms.GroupBox();
             this.btnSearchAccount = new System.Windows.Forms.Button();
             this.txtSearchAccount = new System.Windows.Forms.TextBox();
-            this.dgvAccount = new System.Windows.Forms.DataGridView();
+            this.dgvAccountList = new System.Windows.Forms.DataGridView();
             this.btnUpdateAccount = new System.Windows.Forms.Button();
             this.btnDeleteAccount = new System.Windows.Forms.Button();
             this.btnAddAccount = new System.Windows.Forms.Button();
             this.lblAcccountName = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtAccountName = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblAccountPassword = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtAccountID = new System.Windows.Forms.TextBox();
             this.lblAccountID = new System.Windows.Forms.Label();
             this.tabBillmanage = new System.Windows.Forms.TabPage();
             this.gb_Bill = new System.Windows.Forms.GroupBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnFilter = new System.Windows.Forms.Button();
             this.btnSearchBill = new System.Windows.Forms.Button();
-            this.txt_SearchBill = new System.Windows.Forms.TextBox();
+            this.txtSearchBill = new System.Windows.Forms.TextBox();
             this.dgvBill = new System.Windows.Forms.DataGridView();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvSaleBill = new System.Windows.Forms.DataGridView();
             this.btnUdateBill = new System.Windows.Forms.Button();
             this.BtnDeleteBill = new System.Windows.Forms.Button();
             this.btnAddBill = new System.Windows.Forms.Button();
-            this.DaySellPicker = new System.Windows.Forms.DateTimePicker();
-            this.cmb_Product = new System.Windows.Forms.ComboBox();
-            this.cmbTypeProductOnBill = new System.Windows.Forms.ComboBox();
-            this.lblProduct = new System.Windows.Forms.Label();
-            this.lblTypeOnBill = new System.Windows.Forms.Label();
-            this.cmb_Price = new System.Windows.Forms.TextBox();
-            this.lblPriceProduct = new System.Windows.Forms.Label();
-            this.txtAmount = new System.Windows.Forms.TextBox();
-            this.lblAmount = new System.Windows.Forms.Label();
-            this.lblDaySell = new System.Windows.Forms.Label();
-            this.txtBill_ID = new System.Windows.Forms.TextBox();
-            this.lblBill_ID = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.GBType = new System.Windows.Forms.GroupBox();
             this.lblTieuDe = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
@@ -145,19 +144,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTypeList)).BeginInit();
             this.tabProductmanagement.SuspendLayout();
             this.gbProductList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).BeginInit();
             this.tabPoducer.SuspendLayout();
             this.gbProducerList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducerList)).BeginInit();
             this.tabStaffmanage.SuspendLayout();
             this.gbStaffList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaffList)).BeginInit();
             this.tabAccount.SuspendLayout();
             this.gbAccount.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccountList)).BeginInit();
             this.tabBillmanage.SuspendLayout();
             this.gb_Bill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSaleBill)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.GBType.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -172,10 +175,11 @@
             this.tabControl1.Controls.Add(this.tabStaffmanage);
             this.tabControl1.Controls.Add(this.tabAccount);
             this.tabControl1.Controls.Add(this.tabBillmanage);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(6, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1027, 631);
+            this.tabControl1.Size = new System.Drawing.Size(1027, 614);
             this.tabControl1.TabIndex = 0;
             // 
             // tabTypeProduct
@@ -191,7 +195,7 @@
             this.tabTypeProduct.Location = new System.Drawing.Point(4, 32);
             this.tabTypeProduct.Name = "tabTypeProduct";
             this.tabTypeProduct.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTypeProduct.Size = new System.Drawing.Size(1019, 595);
+            this.tabTypeProduct.Size = new System.Drawing.Size(1019, 578);
             this.tabTypeProduct.TabIndex = 0;
             this.tabTypeProduct.Text = "Type of product manage";
             this.tabTypeProduct.UseVisualStyleBackColor = true;
@@ -204,7 +208,7 @@
             this.gbTypelist.Controls.Add(this.txtSearch);
             this.gbTypelist.Controls.Add(this.dgvTypeList);
             this.gbTypelist.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTypelist.Location = new System.Drawing.Point(10, 170);
+            this.gbTypelist.Location = new System.Drawing.Point(10, 153);
             this.gbTypelist.Name = "gbTypelist";
             this.gbTypelist.Size = new System.Drawing.Size(1003, 419);
             this.gbTypelist.TabIndex = 7;
@@ -339,7 +343,7 @@
             this.tabProductmanagement.Location = new System.Drawing.Point(4, 32);
             this.tabProductmanagement.Name = "tabProductmanagement";
             this.tabProductmanagement.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProductmanagement.Size = new System.Drawing.Size(1019, 595);
+            this.tabProductmanagement.Size = new System.Drawing.Size(1019, 578);
             this.tabProductmanagement.TabIndex = 1;
             this.tabProductmanagement.Text = "Product management";
             this.tabProductmanagement.UseVisualStyleBackColor = true;
@@ -351,10 +355,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbProductList.Controls.Add(this.btnSearchProduct);
             this.gbProductList.Controls.Add(this.txtProductSearch);
-            this.gbProductList.Controls.Add(this.dgvProduct);
+            this.gbProductList.Controls.Add(this.dgvProductList);
             this.gbProductList.Location = new System.Drawing.Point(11, 252);
             this.gbProductList.Name = "gbProductList";
-            this.gbProductList.Size = new System.Drawing.Size(1002, 337);
+            this.gbProductList.Size = new System.Drawing.Size(1002, 320);
             this.gbProductList.TabIndex = 16;
             this.gbProductList.TabStop = false;
             this.gbProductList.Text = "Product list";
@@ -379,17 +383,17 @@
             this.txtProductSearch.Size = new System.Drawing.Size(255, 29);
             this.txtProductSearch.TabIndex = 17;
             // 
-            // dgvProduct
+            // dgvProductList
             // 
-            this.dgvProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvProductList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvProduct.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduct.Location = new System.Drawing.Point(6, 87);
-            this.dgvProduct.Name = "dgvProduct";
-            this.dgvProduct.Size = new System.Drawing.Size(990, 244);
-            this.dgvProduct.TabIndex = 0;
+            this.dgvProductList.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductList.Location = new System.Drawing.Point(6, 87);
+            this.dgvProductList.Name = "dgvProductList";
+            this.dgvProductList.Size = new System.Drawing.Size(990, 227);
+            this.dgvProductList.TabIndex = 0;
             // 
             // btnUpdateProduct
             // 
@@ -541,17 +545,17 @@
             this.tabPoducer.Controls.Add(this.btnDeleteProducer);
             this.tabPoducer.Controls.Add(this.btnAddProducer);
             this.tabPoducer.Controls.Add(this.gbProducerList);
-            this.tabPoducer.Controls.Add(this.textBox4);
+            this.tabPoducer.Controls.Add(this.txtProducerPhone);
             this.tabPoducer.Controls.Add(this.lblPhoneProducer);
-            this.tabPoducer.Controls.Add(this.textBox3);
+            this.tabPoducer.Controls.Add(this.txtProducerAddress);
             this.tabPoducer.Controls.Add(this.lblProducerAddress);
-            this.tabPoducer.Controls.Add(this.textBox2);
+            this.tabPoducer.Controls.Add(this.txtProducerName);
             this.tabPoducer.Controls.Add(this.lblProducerName);
-            this.tabPoducer.Controls.Add(this.textBox1);
+            this.tabPoducer.Controls.Add(this.txtProducerID);
             this.tabPoducer.Controls.Add(this.lblProducerID);
             this.tabPoducer.Location = new System.Drawing.Point(4, 32);
             this.tabPoducer.Name = "tabPoducer";
-            this.tabPoducer.Size = new System.Drawing.Size(1019, 595);
+            this.tabPoducer.Size = new System.Drawing.Size(1019, 578);
             this.tabPoducer.TabIndex = 3;
             this.tabPoducer.Text = "Producer management";
             this.tabPoducer.UseVisualStyleBackColor = true;
@@ -595,11 +599,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbProducerList.Controls.Add(this.btnSearchProducer);
-            this.gbProducerList.Controls.Add(this.textBox5);
+            this.gbProducerList.Controls.Add(this.txtSearchProducer);
             this.gbProducerList.Controls.Add(this.dgvProducerList);
             this.gbProducerList.Location = new System.Drawing.Point(3, 209);
             this.gbProducerList.Name = "gbProducerList";
-            this.gbProducerList.Size = new System.Drawing.Size(1013, 383);
+            this.gbProducerList.Size = new System.Drawing.Size(1013, 366);
             this.gbProducerList.TabIndex = 14;
             this.gbProducerList.TabStop = false;
             this.gbProducerList.Text = "Producer list";
@@ -614,14 +618,14 @@
             this.btnSearchProducer.Text = "Search";
             this.btnSearchProducer.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // txtSearchProducer
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtSearchProducer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(558, 38);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(260, 29);
-            this.textBox5.TabIndex = 15;
+            this.txtSearchProducer.Location = new System.Drawing.Point(558, 38);
+            this.txtSearchProducer.Name = "txtSearchProducer";
+            this.txtSearchProducer.Size = new System.Drawing.Size(260, 29);
+            this.txtSearchProducer.TabIndex = 15;
             // 
             // dgvProducerList
             // 
@@ -631,16 +635,16 @@
             this.dgvProducerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProducerList.Location = new System.Drawing.Point(6, 93);
             this.dgvProducerList.Name = "dgvProducerList";
-            this.dgvProducerList.Size = new System.Drawing.Size(1001, 284);
+            this.dgvProducerList.Size = new System.Drawing.Size(1001, 267);
             this.dgvProducerList.TabIndex = 0;
             // 
-            // textBox4
+            // txtProducerPhone
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(698, 85);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(260, 29);
-            this.textBox4.TabIndex = 13;
+            this.txtProducerPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtProducerPhone.Location = new System.Drawing.Point(698, 85);
+            this.txtProducerPhone.Name = "txtProducerPhone";
+            this.txtProducerPhone.Size = new System.Drawing.Size(260, 29);
+            this.txtProducerPhone.TabIndex = 13;
             // 
             // lblPhoneProducer
             // 
@@ -652,13 +656,13 @@
             this.lblPhoneProducer.TabIndex = 12;
             this.lblPhoneProducer.Text = "Phone";
             // 
-            // textBox3
+            // txtProducerAddress
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(698, 21);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(260, 29);
-            this.textBox3.TabIndex = 11;
+            this.txtProducerAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtProducerAddress.Location = new System.Drawing.Point(698, 21);
+            this.txtProducerAddress.Name = "txtProducerAddress";
+            this.txtProducerAddress.Size = new System.Drawing.Size(260, 29);
+            this.txtProducerAddress.TabIndex = 11;
             // 
             // lblProducerAddress
             // 
@@ -670,12 +674,12 @@
             this.lblProducerAddress.TabIndex = 10;
             this.lblProducerAddress.Text = "Address";
             // 
-            // textBox2
+            // txtProducerName
             // 
-            this.textBox2.Location = new System.Drawing.Point(208, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(260, 29);
-            this.textBox2.TabIndex = 3;
+            this.txtProducerName.Location = new System.Drawing.Point(208, 85);
+            this.txtProducerName.Name = "txtProducerName";
+            this.txtProducerName.Size = new System.Drawing.Size(260, 29);
+            this.txtProducerName.TabIndex = 3;
             // 
             // lblProducerName
             // 
@@ -686,12 +690,12 @@
             this.lblProducerName.TabIndex = 2;
             this.lblProducerName.Text = "Producer\'s name";
             // 
-            // textBox1
+            // txtProducerID
             // 
-            this.textBox1.Location = new System.Drawing.Point(208, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 29);
-            this.textBox1.TabIndex = 1;
+            this.txtProducerID.Location = new System.Drawing.Point(208, 21);
+            this.txtProducerID.Name = "txtProducerID";
+            this.txtProducerID.Size = new System.Drawing.Size(260, 29);
+            this.txtProducerID.TabIndex = 1;
             // 
             // lblProducerID
             // 
@@ -708,16 +712,14 @@
             this.tabStaffmanage.Controls.Add(this.btnUpdateStaff);
             this.tabStaffmanage.Controls.Add(this.btnDeleteStaff);
             this.tabStaffmanage.Controls.Add(this.btnAddStaff);
-            this.tabStaffmanage.Controls.Add(this.cmbCity);
-            this.tabStaffmanage.Controls.Add(this.lblCity);
             this.tabStaffmanage.Controls.Add(this.cmbGender);
-            this.tabStaffmanage.Controls.Add(this.DOC_Picker);
+            this.tabStaffmanage.Controls.Add(this.dtpDateOfBirth);
             this.tabStaffmanage.Controls.Add(this.lblDOB);
-            this.tabStaffmanage.Controls.Add(this.txtAddress);
+            this.tabStaffmanage.Controls.Add(this.txtStaffAddress);
             this.tabStaffmanage.Controls.Add(this.lblAddresss);
-            this.tabStaffmanage.Controls.Add(this.txtPhone);
+            this.tabStaffmanage.Controls.Add(this.txtStaffPhone);
             this.tabStaffmanage.Controls.Add(this.lblPhone);
-            this.tabStaffmanage.Controls.Add(this.txtEmail);
+            this.tabStaffmanage.Controls.Add(this.txtStaffEmail);
             this.tabStaffmanage.Controls.Add(this.lblEmail);
             this.tabStaffmanage.Controls.Add(this.lblGender);
             this.tabStaffmanage.Controls.Add(this.txtStaffName);
@@ -726,7 +728,7 @@
             this.tabStaffmanage.Controls.Add(this.lblStaffID);
             this.tabStaffmanage.Location = new System.Drawing.Point(4, 32);
             this.tabStaffmanage.Name = "tabStaffmanage";
-            this.tabStaffmanage.Size = new System.Drawing.Size(1019, 595);
+            this.tabStaffmanage.Size = new System.Drawing.Size(1019, 578);
             this.tabStaffmanage.TabIndex = 2;
             this.tabStaffmanage.Text = "Staff management";
             this.tabStaffmanage.UseVisualStyleBackColor = true;
@@ -738,10 +740,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbStaffList.Controls.Add(this.btnSearchStaff);
             this.gbStaffList.Controls.Add(this.txtSearchStaff);
-            this.gbStaffList.Controls.Add(this.dgvStaff);
+            this.gbStaffList.Controls.Add(this.dgvStaffList);
             this.gbStaffList.Location = new System.Drawing.Point(3, 289);
             this.gbStaffList.Name = "gbStaffList";
-            this.gbStaffList.Size = new System.Drawing.Size(1002, 303);
+            this.gbStaffList.Size = new System.Drawing.Size(1002, 286);
             this.gbStaffList.TabIndex = 20;
             this.gbStaffList.TabStop = false;
             this.gbStaffList.Text = "Staff list";
@@ -765,16 +767,16 @@
             this.txtSearchStaff.Size = new System.Drawing.Size(230, 29);
             this.txtSearchStaff.TabIndex = 21;
             // 
-            // dgvStaff
+            // dgvStaffList
             // 
-            this.dgvStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvStaffList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStaff.Location = new System.Drawing.Point(6, 72);
-            this.dgvStaff.Name = "dgvStaff";
-            this.dgvStaff.Size = new System.Drawing.Size(990, 225);
-            this.dgvStaff.TabIndex = 0;
+            this.dgvStaffList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStaffList.Location = new System.Drawing.Point(6, 72);
+            this.dgvStaffList.Name = "dgvStaffList";
+            this.dgvStaffList.Size = new System.Drawing.Size(990, 208);
+            this.dgvStaffList.TabIndex = 0;
             // 
             // btnUpdateStaff
             // 
@@ -809,25 +811,6 @@
             this.btnAddStaff.Text = "Add";
             this.btnAddStaff.UseVisualStyleBackColor = true;
             // 
-            // cmbCity
-            // 
-            this.cmbCity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbCity.FormattingEnabled = true;
-            this.cmbCity.Location = new System.Drawing.Point(746, 13);
-            this.cmbCity.Name = "cmbCity";
-            this.cmbCity.Size = new System.Drawing.Size(230, 31);
-            this.cmbCity.TabIndex = 16;
-            // 
-            // lblCity
-            // 
-            this.lblCity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(616, 16);
-            this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(39, 23);
-            this.lblCity.TabIndex = 15;
-            this.lblCity.Text = "City";
-            // 
             // cmbGender
             // 
             this.cmbGender.FormattingEnabled = true;
@@ -836,15 +819,15 @@
             this.cmbGender.Size = new System.Drawing.Size(230, 31);
             this.cmbGender.TabIndex = 14;
             // 
-            // DOC_Picker
+            // dtpDateOfBirth
             // 
-            this.DOC_Picker.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
-            this.DOC_Picker.CustomFormat = "dd/MM/yyyy";
-            this.DOC_Picker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DOC_Picker.Location = new System.Drawing.Point(178, 124);
-            this.DOC_Picker.Name = "DOC_Picker";
-            this.DOC_Picker.Size = new System.Drawing.Size(230, 29);
-            this.DOC_Picker.TabIndex = 13;
+            this.dtpDateOfBirth.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
+            this.dtpDateOfBirth.CustomFormat = "dd/MM/yyyy";
+            this.dtpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(178, 124);
+            this.dtpDateOfBirth.Name = "dtpDateOfBirth";
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(230, 29);
+            this.dtpDateOfBirth.TabIndex = 13;
             // 
             // lblDOB
             // 
@@ -855,55 +838,55 @@
             this.lblDOB.TabIndex = 12;
             this.lblDOB.Text = "Date of birth";
             // 
-            // txtAddress
+            // txtStaffAddress
             // 
-            this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAddress.Location = new System.Drawing.Point(746, 181);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(230, 29);
-            this.txtAddress.TabIndex = 11;
+            this.txtStaffAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtStaffAddress.Location = new System.Drawing.Point(748, 129);
+            this.txtStaffAddress.Name = "txtStaffAddress";
+            this.txtStaffAddress.Size = new System.Drawing.Size(230, 29);
+            this.txtStaffAddress.TabIndex = 11;
             // 
             // lblAddresss
             // 
             this.lblAddresss.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAddresss.AutoSize = true;
-            this.lblAddresss.Location = new System.Drawing.Point(616, 184);
+            this.lblAddresss.Location = new System.Drawing.Point(618, 132);
             this.lblAddresss.Name = "lblAddresss";
             this.lblAddresss.Size = new System.Drawing.Size(74, 23);
             this.lblAddresss.TabIndex = 10;
             this.lblAddresss.Text = "Address";
             // 
-            // txtPhone
+            // txtStaffPhone
             // 
-            this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPhone.Location = new System.Drawing.Point(746, 126);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(230, 29);
-            this.txtPhone.TabIndex = 9;
+            this.txtStaffPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtStaffPhone.Location = new System.Drawing.Point(748, 74);
+            this.txtStaffPhone.Name = "txtStaffPhone";
+            this.txtStaffPhone.Size = new System.Drawing.Size(230, 29);
+            this.txtStaffPhone.TabIndex = 9;
             // 
             // lblPhone
             // 
             this.lblPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(616, 129);
+            this.lblPhone.Location = new System.Drawing.Point(618, 77);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(59, 23);
             this.lblPhone.TabIndex = 8;
             this.lblPhone.Text = "Phone";
             // 
-            // txtEmail
+            // txtStaffEmail
             // 
-            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Location = new System.Drawing.Point(746, 68);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(230, 29);
-            this.txtEmail.TabIndex = 7;
+            this.txtStaffEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtStaffEmail.Location = new System.Drawing.Point(748, 16);
+            this.txtStaffEmail.Name = "txtStaffEmail";
+            this.txtStaffEmail.Size = new System.Drawing.Size(230, 29);
+            this.txtStaffEmail.TabIndex = 7;
             // 
             // lblEmail
             // 
             this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(616, 71);
+            this.lblEmail.Location = new System.Drawing.Point(618, 19);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(51, 23);
             this.lblEmail.TabIndex = 6;
@@ -957,14 +940,14 @@
             this.tabAccount.Controls.Add(this.btnDeleteAccount);
             this.tabAccount.Controls.Add(this.btnAddAccount);
             this.tabAccount.Controls.Add(this.lblAcccountName);
-            this.tabAccount.Controls.Add(this.textBox9);
-            this.tabAccount.Controls.Add(this.textBox8);
+            this.tabAccount.Controls.Add(this.txtAccountName);
+            this.tabAccount.Controls.Add(this.txtPassword);
             this.tabAccount.Controls.Add(this.lblAccountPassword);
-            this.tabAccount.Controls.Add(this.textBox6);
+            this.tabAccount.Controls.Add(this.txtAccountID);
             this.tabAccount.Controls.Add(this.lblAccountID);
             this.tabAccount.Location = new System.Drawing.Point(4, 32);
             this.tabAccount.Name = "tabAccount";
-            this.tabAccount.Size = new System.Drawing.Size(1019, 595);
+            this.tabAccount.Size = new System.Drawing.Size(1019, 578);
             this.tabAccount.TabIndex = 4;
             this.tabAccount.Text = "Account management";
             this.tabAccount.UseVisualStyleBackColor = true;
@@ -976,10 +959,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbAccount.Controls.Add(this.btnSearchAccount);
             this.gbAccount.Controls.Add(this.txtSearchAccount);
-            this.gbAccount.Controls.Add(this.dgvAccount);
+            this.gbAccount.Controls.Add(this.dgvAccountList);
             this.gbAccount.Location = new System.Drawing.Point(3, 213);
             this.gbAccount.Name = "gbAccount";
-            this.gbAccount.Size = new System.Drawing.Size(1013, 368);
+            this.gbAccount.Size = new System.Drawing.Size(1013, 351);
             this.gbAccount.TabIndex = 12;
             this.gbAccount.TabStop = false;
             this.gbAccount.Text = "Account list";
@@ -1004,16 +987,16 @@
             this.txtSearchAccount.Size = new System.Drawing.Size(300, 29);
             this.txtSearchAccount.TabIndex = 13;
             // 
-            // dgvAccount
+            // dgvAccountList
             // 
-            this.dgvAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvAccountList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAccount.Location = new System.Drawing.Point(6, 96);
-            this.dgvAccount.Name = "dgvAccount";
-            this.dgvAccount.Size = new System.Drawing.Size(1001, 266);
-            this.dgvAccount.TabIndex = 0;
+            this.dgvAccountList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccountList.Location = new System.Drawing.Point(6, 96);
+            this.dgvAccountList.Name = "dgvAccountList";
+            this.dgvAccountList.Size = new System.Drawing.Size(1001, 249);
+            this.dgvAccountList.TabIndex = 0;
             // 
             // btnUpdateAccount
             // 
@@ -1057,19 +1040,19 @@
             this.lblAcccountName.TabIndex = 8;
             this.lblAcccountName.Text = "Account name";
             // 
-            // textBox9
+            // txtAccountName
             // 
-            this.textBox9.Location = new System.Drawing.Point(233, 84);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(300, 29);
-            this.textBox9.TabIndex = 7;
+            this.txtAccountName.Location = new System.Drawing.Point(233, 84);
+            this.txtAccountName.Name = "txtAccountName";
+            this.txtAccountName.Size = new System.Drawing.Size(300, 29);
+            this.txtAccountName.TabIndex = 7;
             // 
-            // textBox8
+            // txtPassword
             // 
-            this.textBox8.Location = new System.Drawing.Point(233, 146);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(300, 29);
-            this.textBox8.TabIndex = 5;
+            this.txtPassword.Location = new System.Drawing.Point(233, 146);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(300, 29);
+            this.txtPassword.TabIndex = 5;
             // 
             // lblAccountPassword
             // 
@@ -1080,12 +1063,12 @@
             this.lblAccountPassword.TabIndex = 4;
             this.lblAccountPassword.Text = "Password";
             // 
-            // textBox6
+            // txtAccountID
             // 
-            this.textBox6.Location = new System.Drawing.Point(233, 28);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(300, 29);
-            this.textBox6.TabIndex = 1;
+            this.txtAccountID.Location = new System.Drawing.Point(233, 28);
+            this.txtAccountID.Name = "txtAccountID";
+            this.txtAccountID.Size = new System.Drawing.Size(300, 29);
+            this.txtAccountID.TabIndex = 1;
             // 
             // lblAccountID
             // 
@@ -1099,26 +1082,11 @@
             // tabBillmanage
             // 
             this.tabBillmanage.Controls.Add(this.gb_Bill);
-            this.tabBillmanage.Controls.Add(this.btnUdateBill);
-            this.tabBillmanage.Controls.Add(this.BtnDeleteBill);
-            this.tabBillmanage.Controls.Add(this.btnAddBill);
-            this.tabBillmanage.Controls.Add(this.DaySellPicker);
-            this.tabBillmanage.Controls.Add(this.cmb_Product);
-            this.tabBillmanage.Controls.Add(this.cmbTypeProductOnBill);
-            this.tabBillmanage.Controls.Add(this.lblProduct);
-            this.tabBillmanage.Controls.Add(this.lblTypeOnBill);
-            this.tabBillmanage.Controls.Add(this.cmb_Price);
-            this.tabBillmanage.Controls.Add(this.lblPriceProduct);
-            this.tabBillmanage.Controls.Add(this.txtAmount);
-            this.tabBillmanage.Controls.Add(this.lblAmount);
-            this.tabBillmanage.Controls.Add(this.lblDaySell);
-            this.tabBillmanage.Controls.Add(this.txtBill_ID);
-            this.tabBillmanage.Controls.Add(this.lblBill_ID);
             this.tabBillmanage.Location = new System.Drawing.Point(4, 32);
             this.tabBillmanage.Name = "tabBillmanage";
-            this.tabBillmanage.Size = new System.Drawing.Size(1019, 595);
+            this.tabBillmanage.Size = new System.Drawing.Size(1019, 578);
             this.tabBillmanage.TabIndex = 5;
-            this.tabBillmanage.Text = "Bill management";
+            this.tabBillmanage.Text = "Bill statistics";
             this.tabBillmanage.UseVisualStyleBackColor = true;
             // 
             // gb_Bill
@@ -1129,14 +1097,14 @@
             this.gb_Bill.Controls.Add(this.btnRefresh);
             this.gb_Bill.Controls.Add(this.btnFilter);
             this.gb_Bill.Controls.Add(this.btnSearchBill);
-            this.gb_Bill.Controls.Add(this.txt_SearchBill);
+            this.gb_Bill.Controls.Add(this.txtSearchBill);
             this.gb_Bill.Controls.Add(this.dgvBill);
-            this.gb_Bill.Location = new System.Drawing.Point(3, 228);
+            this.gb_Bill.Location = new System.Drawing.Point(3, 29);
             this.gb_Bill.Name = "gb_Bill";
-            this.gb_Bill.Size = new System.Drawing.Size(1013, 364);
+            this.gb_Bill.Size = new System.Drawing.Size(1013, 546);
             this.gb_Bill.TabIndex = 16;
             this.gb_Bill.TabStop = false;
-            this.gb_Bill.Text = "List item";
+            this.gb_Bill.Text = "Bill satistics List";
             // 
             // btnRefresh
             // 
@@ -1169,14 +1137,14 @@
             this.btnSearchBill.Text = "Search";
             this.btnSearchBill.UseVisualStyleBackColor = true;
             // 
-            // txt_SearchBill
+            // txtSearchBill
             // 
-            this.txt_SearchBill.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtSearchBill.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_SearchBill.Location = new System.Drawing.Point(590, 42);
-            this.txt_SearchBill.Name = "txt_SearchBill";
-            this.txt_SearchBill.Size = new System.Drawing.Size(251, 29);
-            this.txt_SearchBill.TabIndex = 17;
+            this.txtSearchBill.Location = new System.Drawing.Point(590, 42);
+            this.txtSearchBill.Name = "txtSearchBill";
+            this.txtSearchBill.Size = new System.Drawing.Size(251, 29);
+            this.txtSearchBill.TabIndex = 17;
             // 
             // dgvBill
             // 
@@ -1186,142 +1154,163 @@
             this.dgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBill.Location = new System.Drawing.Point(6, 97);
             this.dgvBill.Name = "dgvBill";
-            this.dgvBill.Size = new System.Drawing.Size(1001, 261);
+            this.dgvBill.Size = new System.Drawing.Size(1001, 443);
             this.dgvBill.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.btnUdateBill);
+            this.tabPage1.Controls.Add(this.BtnDeleteBill);
+            this.tabPage1.Controls.Add(this.btnAddBill);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.numericUpDown1);
+            this.tabPage1.Controls.Add(this.dateTimePicker1);
+            this.tabPage1.Controls.Add(this.comboBox2);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1019, 578);
+            this.tabPage1.TabIndex = 6;
+            this.tabPage1.Text = "Sell";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvSaleBill);
+            this.groupBox1.Location = new System.Drawing.Point(6, 300);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1007, 272);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Sale Bill";
+            // 
+            // dgvSaleBill
+            // 
+            this.dgvSaleBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSaleBill.Location = new System.Drawing.Point(6, 28);
+            this.dgvSaleBill.Name = "dgvSaleBill";
+            this.dgvSaleBill.Size = new System.Drawing.Size(995, 244);
+            this.dgvSaleBill.TabIndex = 0;
             // 
             // btnUdateBill
             // 
             this.btnUdateBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUdateBill.Location = new System.Drawing.Point(870, 117);
+            this.btnUdateBill.Location = new System.Drawing.Point(703, 226);
             this.btnUdateBill.Name = "btnUdateBill";
-            this.btnUdateBill.Size = new System.Drawing.Size(102, 81);
-            this.btnUdateBill.TabIndex = 15;
+            this.btnUdateBill.Size = new System.Drawing.Size(135, 38);
+            this.btnUdateBill.TabIndex = 18;
             this.btnUdateBill.Text = "Update";
             this.btnUdateBill.UseVisualStyleBackColor = true;
             // 
             // BtnDeleteBill
             // 
             this.BtnDeleteBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnDeleteBill.Location = new System.Drawing.Point(709, 117);
+            this.BtnDeleteBill.Location = new System.Drawing.Point(703, 169);
             this.BtnDeleteBill.Name = "BtnDeleteBill";
-            this.BtnDeleteBill.Size = new System.Drawing.Size(102, 81);
-            this.BtnDeleteBill.TabIndex = 14;
+            this.BtnDeleteBill.Size = new System.Drawing.Size(135, 38);
+            this.BtnDeleteBill.TabIndex = 17;
             this.BtnDeleteBill.Text = "Delete";
             this.BtnDeleteBill.UseVisualStyleBackColor = true;
             // 
             // btnAddBill
             // 
             this.btnAddBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddBill.Location = new System.Drawing.Point(555, 117);
+            this.btnAddBill.Location = new System.Drawing.Point(703, 116);
             this.btnAddBill.Name = "btnAddBill";
-            this.btnAddBill.Size = new System.Drawing.Size(102, 81);
-            this.btnAddBill.TabIndex = 13;
+            this.btnAddBill.Size = new System.Drawing.Size(135, 38);
+            this.btnAddBill.TabIndex = 16;
             this.btnAddBill.Text = "Add";
             this.btnAddBill.UseVisualStyleBackColor = true;
             // 
-            // DaySellPicker
+            // label6
             // 
-            this.DaySellPicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DaySellPicker.CustomFormat = "dd/MM/yyyy";
-            this.DaySellPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DaySellPicker.Location = new System.Drawing.Point(697, 13);
-            this.DaySellPicker.Name = "DaySellPicker";
-            this.DaySellPicker.Size = new System.Drawing.Size(275, 29);
-            this.DaySellPicker.TabIndex = 12;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(915, 78);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(24, 23);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "%";
             // 
-            // cmb_Product
+            // label5
             // 
-            this.cmb_Product.FormattingEnabled = true;
-            this.cmb_Product.Location = new System.Drawing.Point(138, 114);
-            this.cmb_Product.Name = "cmb_Product";
-            this.cmb_Product.Size = new System.Drawing.Size(243, 31);
-            this.cmb_Product.TabIndex = 11;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(699, 78);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 23);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Discount";
             // 
-            // cmbTypeProductOnBill
+            // numericUpDown1
             // 
-            this.cmbTypeProductOnBill.FormattingEnabled = true;
-            this.cmbTypeProductOnBill.Location = new System.Drawing.Point(138, 61);
-            this.cmbTypeProductOnBill.Name = "cmbTypeProductOnBill";
-            this.cmbTypeProductOnBill.Size = new System.Drawing.Size(243, 31);
-            this.cmbTypeProductOnBill.TabIndex = 10;
+            this.numericUpDown1.Location = new System.Drawing.Point(834, 72);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(75, 29);
+            this.numericUpDown1.TabIndex = 8;
             // 
-            // lblProduct
+            // dateTimePicker1
             // 
-            this.lblProduct.AutoSize = true;
-            this.lblProduct.Location = new System.Drawing.Point(31, 117);
-            this.lblProduct.Name = "lblProduct";
-            this.lblProduct.Size = new System.Drawing.Size(70, 23);
-            this.lblProduct.TabIndex = 9;
-            this.lblProduct.Text = "Product";
+            this.dateTimePicker1.Location = new System.Drawing.Point(209, 235);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(181, 29);
+            this.dateTimePicker1.TabIndex = 7;
             // 
-            // lblTypeOnBill
+            // comboBox2
             // 
-            this.lblTypeOnBill.AutoSize = true;
-            this.lblTypeOnBill.Location = new System.Drawing.Point(31, 64);
-            this.lblTypeOnBill.Name = "lblTypeOnBill";
-            this.lblTypeOnBill.Size = new System.Drawing.Size(48, 23);
-            this.lblTypeOnBill.TabIndex = 8;
-            this.lblTypeOnBill.Text = "Type";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(209, 155);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(181, 31);
+            this.comboBox2.TabIndex = 6;
             // 
-            // cmb_Price
+            // label4
             // 
-            this.cmb_Price.Location = new System.Drawing.Point(138, 169);
-            this.cmb_Price.Name = "cmb_Price";
-            this.cmb_Price.Size = new System.Drawing.Size(243, 29);
-            this.cmb_Price.TabIndex = 7;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(55, 241);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 23);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Date of sale";
             // 
-            // lblPriceProduct
+            // label3
             // 
-            this.lblPriceProduct.AutoSize = true;
-            this.lblPriceProduct.Location = new System.Drawing.Point(31, 169);
-            this.lblPriceProduct.Name = "lblPriceProduct";
-            this.lblPriceProduct.Size = new System.Drawing.Size(48, 23);
-            this.lblPriceProduct.TabIndex = 6;
-            this.lblPriceProduct.Text = "Price";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(55, 241);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 23);
+            this.label3.TabIndex = 4;
             // 
-            // txtAmount
+            // label2
             // 
-            this.txtAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAmount.Location = new System.Drawing.Point(697, 63);
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(275, 29);
-            this.txtAmount.TabIndex = 5;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(55, 163);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 23);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Product";
             // 
-            // lblAmount
+            // comboBox1
             // 
-            this.lblAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblAmount.AutoSize = true;
-            this.lblAmount.Location = new System.Drawing.Point(551, 66);
-            this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(70, 23);
-            this.lblAmount.TabIndex = 4;
-            this.lblAmount.Text = "Amount";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(209, 70);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(181, 31);
+            this.comboBox1.TabIndex = 2;
             // 
-            // lblDaySell
+            // label1
             // 
-            this.lblDaySell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDaySell.AutoSize = true;
-            this.lblDaySell.Location = new System.Drawing.Point(552, 15);
-            this.lblDaySell.Name = "lblDaySell";
-            this.lblDaySell.Size = new System.Drawing.Size(69, 23);
-            this.lblDaySell.TabIndex = 2;
-            this.lblDaySell.Text = "Day sell";
-            // 
-            // txtBill_ID
-            // 
-            this.txtBill_ID.Location = new System.Drawing.Point(138, 15);
-            this.txtBill_ID.Name = "txtBill_ID";
-            this.txtBill_ID.Size = new System.Drawing.Size(243, 29);
-            this.txtBill_ID.TabIndex = 1;
-            // 
-            // lblBill_ID
-            // 
-            this.lblBill_ID.AutoSize = true;
-            this.lblBill_ID.Location = new System.Drawing.Point(31, 15);
-            this.lblBill_ID.Name = "lblBill_ID";
-            this.lblBill_ID.Size = new System.Drawing.Size(25, 23);
-            this.lblBill_ID.TabIndex = 0;
-            this.lblBill_ID.Text = "ID";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(55, 78);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Type";
             // 
             // GBType
             // 
@@ -1332,7 +1321,7 @@
             this.GBType.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBType.Location = new System.Drawing.Point(12, 93);
             this.GBType.Name = "GBType";
-            this.GBType.Size = new System.Drawing.Size(1037, 665);
+            this.GBType.Size = new System.Drawing.Size(1037, 648);
             this.GBType.TabIndex = 1;
             this.GBType.TabStop = false;
             this.GBType.Text = "Shop manage tab";
@@ -1351,7 +1340,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1059, 766);
+            this.ClientSize = new System.Drawing.Size(1059, 749);
             this.Controls.Add(this.lblTieuDe);
             this.Controls.Add(this.GBType);
             this.Name = "FormManage";
@@ -1369,7 +1358,7 @@
             this.tabProductmanagement.PerformLayout();
             this.gbProductList.ResumeLayout(false);
             this.gbProductList.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
             this.tabPoducer.ResumeLayout(false);
             this.tabPoducer.PerformLayout();
             this.gbProducerList.ResumeLayout(false);
@@ -1379,17 +1368,21 @@
             this.tabStaffmanage.PerformLayout();
             this.gbStaffList.ResumeLayout(false);
             this.gbStaffList.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaffList)).EndInit();
             this.tabAccount.ResumeLayout(false);
             this.tabAccount.PerformLayout();
             this.gbAccount.ResumeLayout(false);
             this.gbAccount.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccountList)).EndInit();
             this.tabBillmanage.ResumeLayout(false);
-            this.tabBillmanage.PerformLayout();
             this.gb_Bill.ResumeLayout(false);
             this.gb_Bill.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSaleBill)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.GBType.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1433,81 +1426,80 @@
         private System.Windows.Forms.Button btnDeleteProduct;
         private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.GroupBox gbProductList;
-        private System.Windows.Forms.DataGridView dgvProduct;
+        private System.Windows.Forms.DataGridView dgvProductList;
         private System.Windows.Forms.Button btnSearchProduct;
         private System.Windows.Forms.TextBox txtProductSearch;
         private System.Windows.Forms.TextBox txtStaffName;
         private System.Windows.Forms.Label lblStaffName;
         private System.Windows.Forms.TextBox txtStaffID;
         private System.Windows.Forms.Label lblStaffID;
-        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtStaffAddress;
         private System.Windows.Forms.Label lblAddresss;
-        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtStaffPhone;
         private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtStaffEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblGender;
-        private System.Windows.Forms.DateTimePicker DOC_Picker;
+        private System.Windows.Forms.DateTimePicker dtpDateOfBirth;
         private System.Windows.Forms.Label lblDOB;
         private System.Windows.Forms.ComboBox cmbGender;
-        private System.Windows.Forms.ComboBox cmbCity;
-        private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.Button btnUpdateStaff;
         private System.Windows.Forms.Button btnDeleteStaff;
         private System.Windows.Forms.Button btnAddStaff;
         private System.Windows.Forms.GroupBox gbStaffList;
-        private System.Windows.Forms.DataGridView dgvStaff;
+        private System.Windows.Forms.DataGridView dgvStaffList;
         private System.Windows.Forms.TextBox txtSearchStaff;
         private System.Windows.Forms.Button btnSearchStaff;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProducerID;
         private System.Windows.Forms.Label lblProducerID;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtProducerName;
         private System.Windows.Forms.Label lblProducerName;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtProducerPhone;
         private System.Windows.Forms.Label lblPhoneProducer;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtProducerAddress;
         private System.Windows.Forms.Label lblProducerAddress;
         private System.Windows.Forms.GroupBox gbProducerList;
         private System.Windows.Forms.DataGridView dgvProducerList;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtSearchProducer;
         private System.Windows.Forms.Button btnSearchProducer;
         private System.Windows.Forms.Button btnUpdateProducer;
         private System.Windows.Forms.Button btnDeleteProducer;
         private System.Windows.Forms.Button btnAddProducer;
         private System.Windows.Forms.Label lblAcccountName;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtAccountName;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblAccountPassword;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtAccountID;
         private System.Windows.Forms.Label lblAccountID;
         private System.Windows.Forms.Button btnDeleteAccount;
         private System.Windows.Forms.Button btnAddAccount;
         private System.Windows.Forms.Button btnUpdateAccount;
         private System.Windows.Forms.GroupBox gbAccount;
-        private System.Windows.Forms.DataGridView dgvAccount;
+        private System.Windows.Forms.DataGridView dgvAccountList;
         private System.Windows.Forms.TextBox txtSearchAccount;
         private System.Windows.Forms.Button btnSearchAccount;
-        private System.Windows.Forms.TextBox txtBill_ID;
-        private System.Windows.Forms.Label lblBill_ID;
-        private System.Windows.Forms.Label lblProduct;
-        private System.Windows.Forms.Label lblTypeOnBill;
-        private System.Windows.Forms.TextBox cmb_Price;
-        private System.Windows.Forms.Label lblPriceProduct;
-        private System.Windows.Forms.TextBox txtAmount;
-        private System.Windows.Forms.Label lblAmount;
-        private System.Windows.Forms.Label lblDaySell;
-        private System.Windows.Forms.ComboBox cmb_Product;
-        private System.Windows.Forms.ComboBox cmbTypeProductOnBill;
-        private System.Windows.Forms.DateTimePicker DaySellPicker;
-        private System.Windows.Forms.Button btnUdateBill;
-        private System.Windows.Forms.Button BtnDeleteBill;
-        private System.Windows.Forms.Button btnAddBill;
         private System.Windows.Forms.GroupBox gb_Bill;
         private System.Windows.Forms.DataGridView dgvBill;
         private System.Windows.Forms.Button btnSearchBill;
-        private System.Windows.Forms.TextBox txt_SearchBill;
+        private System.Windows.Forms.TextBox txtSearchBill;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnFilter;
         public System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnUdateBill;
+        private System.Windows.Forms.Button BtnDeleteBill;
+        private System.Windows.Forms.Button btnAddBill;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dgvSaleBill;
     }
 }
