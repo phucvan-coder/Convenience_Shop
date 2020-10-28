@@ -115,7 +115,7 @@
             this.lblAccountID = new System.Windows.Forms.Label();
             this.tabBillmanage = new System.Windows.Forms.TabPage();
             this.gb_Bill = new System.Windows.Forms.GroupBox();
-            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnRefreshBill = new System.Windows.Forms.Button();
             this.btnFilter = new System.Windows.Forms.Button();
             this.btnSearchBill = new System.Windows.Forms.Button();
             this.txtSearchBill = new System.Windows.Forms.TextBox();
@@ -1094,7 +1094,7 @@
             this.gb_Bill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gb_Bill.Controls.Add(this.btnRefresh);
+            this.gb_Bill.Controls.Add(this.btnRefreshBill);
             this.gb_Bill.Controls.Add(this.btnFilter);
             this.gb_Bill.Controls.Add(this.btnSearchBill);
             this.gb_Bill.Controls.Add(this.txtSearchBill);
@@ -1106,15 +1106,15 @@
             this.gb_Bill.TabStop = false;
             this.gb_Bill.Text = "Bill satistics List";
             // 
-            // btnRefresh
+            // btnRefreshBill
             // 
-            this.btnRefresh.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(155, 32);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(90, 39);
-            this.btnRefresh.TabIndex = 20;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefreshBill.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshBill.Location = new System.Drawing.Point(155, 32);
+            this.btnRefreshBill.Name = "btnRefreshBill";
+            this.btnRefreshBill.Size = new System.Drawing.Size(90, 39);
+            this.btnRefreshBill.TabIndex = 20;
+            this.btnRefreshBill.Text = "Refresh";
+            this.btnRefreshBill.UseVisualStyleBackColor = true;
             // 
             // btnFilter
             // 
@@ -1482,7 +1482,7 @@
         private System.Windows.Forms.DataGridView dgvBill;
         private System.Windows.Forms.Button btnSearchBill;
         private System.Windows.Forms.TextBox txtSearchBill;
-        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnRefreshBill;
         private System.Windows.Forms.Button btnFilter;
         public System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TabPage tabPage1;
