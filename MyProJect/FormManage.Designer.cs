@@ -34,12 +34,12 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvTypeList = new System.Windows.Forms.DataGridView();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDeleteType = new System.Windows.Forms.Button();
+            this.btnUpdateType = new System.Windows.Forms.Button();
+            this.btnAddType = new System.Windows.Forms.Button();
             this.txtTypeName = new System.Windows.Forms.TextBox();
             this.lblNameoftype = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtTypeID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.tabProductmanagement = new System.Windows.Forms.TabPage();
             this.gbProductList = new System.Windows.Forms.GroupBox();
@@ -185,19 +185,19 @@
             // tabTypeProduct
             // 
             this.tabTypeProduct.Controls.Add(this.gbTypelist);
-            this.tabTypeProduct.Controls.Add(this.btnDelete);
-            this.tabTypeProduct.Controls.Add(this.btnUpdate);
-            this.tabTypeProduct.Controls.Add(this.btnAdd);
+            this.tabTypeProduct.Controls.Add(this.btnDeleteType);
+            this.tabTypeProduct.Controls.Add(this.btnUpdateType);
+            this.tabTypeProduct.Controls.Add(this.btnAddType);
             this.tabTypeProduct.Controls.Add(this.txtTypeName);
             this.tabTypeProduct.Controls.Add(this.lblNameoftype);
-            this.tabTypeProduct.Controls.Add(this.txtID);
+            this.tabTypeProduct.Controls.Add(this.txtTypeID);
             this.tabTypeProduct.Controls.Add(this.lblID);
             this.tabTypeProduct.Location = new System.Drawing.Point(4, 32);
             this.tabTypeProduct.Name = "tabTypeProduct";
             this.tabTypeProduct.Padding = new System.Windows.Forms.Padding(3);
             this.tabTypeProduct.Size = new System.Drawing.Size(1019, 578);
             this.tabTypeProduct.TabIndex = 0;
-            this.tabTypeProduct.Text = "Type of product manage";
+            this.tabTypeProduct.Text = "Type of product management";
             this.tabTypeProduct.UseVisualStyleBackColor = true;
             // 
             // gbTypelist
@@ -246,38 +246,40 @@
             this.dgvTypeList.Size = new System.Drawing.Size(991, 328);
             this.dgvTypeList.TabIndex = 0;
             // 
-            // btnDelete
+            // btnDeleteType
             // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(745, 30);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(102, 81);
-            this.btnDelete.TabIndex = 6;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDeleteType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteType.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteType.Location = new System.Drawing.Point(745, 30);
+            this.btnDeleteType.Name = "btnDeleteType";
+            this.btnDeleteType.Size = new System.Drawing.Size(102, 81);
+            this.btnDeleteType.TabIndex = 6;
+            this.btnDeleteType.Text = "Delete";
+            this.btnDeleteType.UseVisualStyleBackColor = true;
+            this.btnDeleteType.Click += new System.EventHandler(this.btnDeleteType_Click);
             // 
-            // btnUpdate
+            // btnUpdateType
             // 
-            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(911, 30);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(102, 81);
-            this.btnUpdate.TabIndex = 5;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdateType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdateType.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateType.Location = new System.Drawing.Point(911, 30);
+            this.btnUpdateType.Name = "btnUpdateType";
+            this.btnUpdateType.Size = new System.Drawing.Size(102, 81);
+            this.btnUpdateType.TabIndex = 5;
+            this.btnUpdateType.Text = "Update";
+            this.btnUpdateType.UseVisualStyleBackColor = true;
             // 
-            // btnAdd
+            // btnAddType
             // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(569, 30);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(102, 81);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAddType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddType.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddType.Location = new System.Drawing.Point(569, 30);
+            this.btnAddType.Name = "btnAddType";
+            this.btnAddType.Size = new System.Drawing.Size(102, 81);
+            this.btnAddType.TabIndex = 4;
+            this.btnAddType.Text = "Add";
+            this.btnAddType.UseVisualStyleBackColor = true;
+            this.btnAddType.Click += new System.EventHandler(this.btnAddType_Click);
             // 
             // txtTypeName
             // 
@@ -300,14 +302,14 @@
             this.lblNameoftype.TabIndex = 2;
             this.lblNameoftype.Text = "Name of type";
             // 
-            // txtID
+            // txtTypeID
             // 
-            this.txtID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtTypeID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtID.Location = new System.Drawing.Point(150, 30);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(251, 29);
-            this.txtID.TabIndex = 1;
+            this.txtTypeID.Location = new System.Drawing.Point(150, 30);
+            this.txtTypeID.Name = "txtTypeID";
+            this.txtTypeID.Size = new System.Drawing.Size(251, 29);
+            this.txtTypeID.TabIndex = 1;
             // 
             // lblID
             // 
@@ -581,6 +583,7 @@
             this.btnDeleteProducer.TabIndex = 16;
             this.btnDeleteProducer.Text = "Delete";
             this.btnDeleteProducer.UseVisualStyleBackColor = true;
+            this.btnDeleteProducer.Click += new System.EventHandler(this.btnDeleteProducer_Click);
             // 
             // btnAddProducer
             // 
@@ -592,6 +595,7 @@
             this.btnAddProducer.TabIndex = 15;
             this.btnAddProducer.Text = "Add";
             this.btnAddProducer.UseVisualStyleBackColor = true;
+            this.btnAddProducer.Click += new System.EventHandler(this.btnAddProducer_Click);
             // 
             // gbProducerList
             // 
@@ -1348,6 +1352,7 @@
             this.Text = "FormManage";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormManage_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormManage_FormClosed);
+            this.Load += new System.EventHandler(this.FormManage_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabTypeProduct.ResumeLayout(false);
             this.tabTypeProduct.PerformLayout();
@@ -1398,13 +1403,13 @@
         private System.Windows.Forms.TabPage tabPoducer;
         private System.Windows.Forms.TabPage tabAccount;
         private System.Windows.Forms.TabPage tabBillmanage;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtTypeID;
         private System.Windows.Forms.GroupBox GBType;
         private System.Windows.Forms.TextBox txtTypeName;
         private System.Windows.Forms.Label lblNameoftype;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDeleteType;
+        private System.Windows.Forms.Button btnUpdateType;
+        private System.Windows.Forms.Button btnAddType;
         private System.Windows.Forms.Label lblTieuDe;
         private System.Windows.Forms.GroupBox gbTypelist;
         private System.Windows.Forms.DataGridView dgvTypeList;

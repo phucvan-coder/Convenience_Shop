@@ -11,3 +11,22 @@ D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.exe
 D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.pdb
 D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormSignUp.resources
 D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormManage.resources
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\bin\Debug\MyProJect.exe.config
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\bin\Debug\MyProJect.exe
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\bin\Debug\MyProJect.pdb
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\bin\Debug\EntityFramework.dll
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\bin\Debug\EntityFramework.SqlServer.dll
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\bin\Debug\EntityFramework.xml
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\bin\Debug\EntityFramework.SqlServer.xml
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csprojAssemblyReference.cache
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormBillFilter.resources
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormLogin.resources
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormMain.resources
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormManage.resources
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormSignUp.resources
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.Properties.Resources.resources
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csproj.GenerateResource.cache
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csproj.CoreCompileInputs.cache
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csproj.CopyComplete
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.exe
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.pdb

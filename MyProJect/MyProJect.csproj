@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,11 +55,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs">
+      <DependentUpon>ConvenienceShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Bill.cs">
+      <DependentUpon>ConvenienceShop.tt</DependentUpon>
+    </Compile>
     <Compile Include="BillFilter.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BillFilter.Designer.cs">
       <DependentUpon>BillFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillInfo.cs">
+      <DependentUpon>ConvenienceShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConvenienceShop.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConvenienceShop.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConvenienceShop.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConvenienceShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConvenienceShop.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConvenienceShop.edmx</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -76,8 +109,23 @@
     <Compile Include="FormSignUp.Designer.cs">
       <DependentUpon>FormSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Object\ProducerInfo.cs" />
+    <Compile Include="Object\ProductInfo.cs" />
+    <Compile Include="Object\TypeInfo.cs" />
+    <Compile Include="Producer.cs">
+      <DependentUpon>ConvenienceShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>ConvenienceShop.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Staff.cs">
+      <DependentUpon>ConvenienceShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypeOfProduct.cs">
+      <DependentUpon>ConvenienceShop.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BillFilter.resx">
       <DependentUpon>BillFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +151,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="ConvenienceShop.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ConvenienceShop.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ConvenienceShop.edmx.diagram">
+      <DependentUpon>ConvenienceShop.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -124,6 +180,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\unlock-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConvenienceShop.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ConvenienceShop.edmx</DependentUpon>
+      <LastGenOutput>ConvenienceShop.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ConvenienceShop.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ConvenienceShop.edmx</DependentUpon>
+      <LastGenOutput>ConvenienceShop.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
