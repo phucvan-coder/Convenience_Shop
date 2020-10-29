@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Objects.DataClasses;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,9 @@ namespace MyProJect
     {
         public FormManage()
         {
+            
             InitializeComponent();
+            ComboboxStatus();
         }
         // form closing
         private void FormManage_FormClosing(object sender, FormClosingEventArgs e)
@@ -45,6 +48,16 @@ namespace MyProJect
             DisplayType();
             DisplayProducer();
             DisplayProduct();
+            ComboboxType();
+            ComboboxProducer();
+
+            //Product Manage
+            txtPrice.Text = "";
+            txtProductName.Text = "";
+            cmbStatus.SelectedIndex = -1;
+            cmbProducer.SelectedIndex = -1;
+            cmbType.SelectedIndex = -1;
+
         }
         //Type of product management
         #region Type of product management
@@ -53,7 +66,7 @@ namespace MyProJect
         //Function display information of product type from database to datagridview
         public void DisplayType()
         {
-            using(ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
                 List<TypeInfo> typeList = new List<TypeInfo>();
                 typeList = entity.TypeOfProducts.Select(x => new TypeInfo
@@ -139,15 +152,15 @@ namespace MyProJect
         //Function display information of producer onto datagridview
         public void DisplayProducer()
         {
-            using(ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
                 List<ProducerInfo> producerList = new List<ProducerInfo>();
                 producerList = entity.Producers.Select(x => new ProducerInfo
                 {
                     Id = x.Id,
-                    ProducerName=x.ProducerName,
-                    Address=x.Address,
-                    Phone=x.Phone
+                    ProducerName = x.ProducerName,
+                    Address = x.Address,
+                    Phone = x.Phone
                 }).ToList();
                 dgvProducerList.DataSource = producerList;
             }
@@ -230,7 +243,7 @@ namespace MyProJect
         {
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
-                List<Product> productList = new List<Product>();
+                List<ProductInfo> productList = new List<ProductInfo>();
                 productList = entity.Products.Select(x => new ProductInfo
                 {
                     Id = x.Id,
@@ -239,15 +252,159 @@ namespace MyProJect
                     Price = x.Price,
                     ProducerName = x.Producer.ProducerName,
                     Status = x.Status
-                });
+                }).ToList();
                 dgvProductList.DataSource = productList;
             }
         }
+
+        public void ComboboxType()
+        {
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            {
+                List<TypeOfProduct> type = new List<TypeOfProduct>();
+                type = entity.TypeOfProducts.ToList();
+                cmbType.DataSource = type;
+                cmbType.DisplayMember = "TypeName";
+                cmbType.ValueMember = "Id";
+            }
+        }
+
+        public void ComboboxProducer()
+        {
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            {
+                List<Producer> producer = new List<Producer>();
+                producer = entity.Producers.ToList();
+                cmbProducer.DataSource = producer;
+                cmbProducer.DisplayMember = "ProducerName";
+                cmbProducer.ValueMember = "Id";
+            }
+        }
+
+        public void ComboboxStatus()
+        {
+            cmbStatus.Items.Add("Status1");
+            cmbStatus.Items.Add("Status2");
+        }
+
+        //Function add product onto database
+        public bool AddProduct(Product product)
+        {
+            bool result = false;
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            {
+                entity.Products.Add(product);
+                entity.SaveChanges();
+                result = true;
+            }
+            return result;
+        }
+        #endregion
+
+        #region Event
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            Product pro = new Product();
+            pro.Price = Convert.ToInt32(txtPrice.Text);
+            pro.ProductName = txtProductName.Text;
+            pro.TypeID = Convert.ToInt32(cmbType.SelectedValue);
+            pro.ProducerID = Convert.ToInt32(cmbProducer.SelectedValue);
+            pro.Status = cmbStatus.GetItemText(cmbStatus.SelectedItem);
+
+            bool res = AddProduct(pro);
+            if (res)
+            {
+                MessageBox.Show("Success!");
+                FormManage_Load(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Fail!");
+            }
+
+        }
+        //Event Delete product
+        private void btnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            using (ConvenienceShopEntities en = new ConvenienceShopEntities())
+            {
+                en.Database.ExecuteSqlCommand("DELETE FROM Product Where Id=" + dgvProductList.SelectedRows[0].Cells[0].Value.ToString());
+                en.SaveChanges();
+                MessageBox.Show("Deleted!");
+                FormManage_Load(sender, e);
+            }
+        }
+
+        //Event Update Product
+
+        private void dgvProductList_SelectionChanged(object sender, EventArgs e)
+        {
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            {
+                Product pro = new Product();
+                if (dgvProductList.SelectedRows.Count > 0)
+                {
+                    pro = entity.Products.SqlQuery("Select * from Product where id=" + dgvProductList.SelectedRows[0].Cells[0].Value.ToString()).FirstOrDefault();
+                    if (pro.Id != -1)
+                    {
+                        txtProductID.Text = pro.Id.ToString();
+                        txtPrice.Text = pro.Price.ToString();
+                        txtProductName.Text = pro.ProductName.ToString();
+                        cmbStatus.SelectedIndex = cmbStatus.Items.IndexOf(pro.Status);
+                        cmbProducer.SelectedIndex = cmbProducer.FindStringExact(pro.Producer.ProducerName);
+                        cmbType.SelectedIndex = cmbType.FindStringExact(pro.TypeOfProduct.TypeName);
+                    }
+                }
+                
+            }
+        }
+
+        private void btnUpdateProduct_Click(object sender, EventArgs e)
+        {
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            {
+                entity.Database.ExecuteSqlCommand("update Product set " +
+                    
+                    "ProductName='" + txtProductName.Text + "', " +
+                    "TypeID=" + cmbType.ValueMember + ", " +
+                    "ProducerID=" + cmbProducer.ValueMember + ", " +
+                    "Price=" + txtPrice.Text + ", " +
+                    "Status='" + cmbStatus.GetItemText(cmbStatus.SelectedItem) + "'" + 
+                    " where Id=" + txtProductID.Text
+                    );
+                entity.SaveChanges();
+                MessageBox.Show("Success!");
+                FormManage_Load(sender, e);
+            }
+        }
+
+
+        #endregion
+
+        #endregion
+
+        //Staff management
+        #region Staff management
+
+        #region Method
         #endregion
 
         #region Event
         #endregion
 
         #endregion
+
+        //Account management
+        #region Account management
+
+        #region Method
+        #endregion
+
+        #region Event
+        #endregion
+
+        #endregion
+
+
     }
 }

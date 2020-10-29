@@ -30,3 +30,22 @@ F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJ
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csproj.CopyComplete
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.exe
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.pdb
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\bin\Debug\MyProJect.exe.config
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\bin\Debug\MyProJect.exe
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\bin\Debug\MyProJect.pdb
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\bin\Debug\EntityFramework.dll
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\bin\Debug\EntityFramework.xml
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csprojAssemblyReference.cache
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormBillFilter.resources
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormLogin.resources
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormMain.resources
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormManage.resources
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormSignUp.resources
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.Properties.Resources.resources
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csproj.GenerateResource.cache
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csproj.CoreCompileInputs.cache
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csproj.CopyComplete
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.exe
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.pdb

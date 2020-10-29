@@ -6,6 +6,13 @@ CREATE TABLE TypeOfProduct(
 	Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	TypeName NVARCHAR(50) NULL
 )
+
+--Insert
+go
+insert into TypeOfProduct values('A1'),('A2'), ('A3')
+go
+--end
+
 GO
 CREATE TABLE Producer(
 	Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,

@@ -192,10 +192,10 @@
             this.tabTypeProduct.Controls.Add(this.lblNameoftype);
             this.tabTypeProduct.Controls.Add(this.txtTypeID);
             this.tabTypeProduct.Controls.Add(this.lblID);
-            this.tabTypeProduct.Location = new System.Drawing.Point(4, 32);
+            this.tabTypeProduct.Location = new System.Drawing.Point(4, 33);
             this.tabTypeProduct.Name = "tabTypeProduct";
             this.tabTypeProduct.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTypeProduct.Size = new System.Drawing.Size(1019, 578);
+            this.tabTypeProduct.Size = new System.Drawing.Size(1019, 577);
             this.tabTypeProduct.TabIndex = 0;
             this.tabTypeProduct.Text = "Type of product management";
             this.tabTypeProduct.UseVisualStyleBackColor = true;
@@ -207,7 +207,7 @@
             this.gbTypelist.Controls.Add(this.btnSearch);
             this.gbTypelist.Controls.Add(this.txtSearch);
             this.gbTypelist.Controls.Add(this.dgvTypeList);
-            this.gbTypelist.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbTypelist.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTypelist.Location = new System.Drawing.Point(10, 153);
             this.gbTypelist.Name = "gbTypelist";
             this.gbTypelist.Size = new System.Drawing.Size(1003, 419);
@@ -218,7 +218,7 @@
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(880, 28);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(102, 29);
@@ -232,7 +232,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch.Location = new System.Drawing.Point(586, 28);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(251, 32);
+            this.txtSearch.Size = new System.Drawing.Size(251, 31);
             this.txtSearch.TabIndex = 9;
             // 
             // dgvTypeList
@@ -249,7 +249,7 @@
             // btnDeleteType
             // 
             this.btnDeleteType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteType.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteType.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteType.Location = new System.Drawing.Point(745, 30);
             this.btnDeleteType.Name = "btnDeleteType";
             this.btnDeleteType.Size = new System.Drawing.Size(102, 81);
@@ -261,7 +261,7 @@
             // btnUpdateType
             // 
             this.btnUpdateType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdateType.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateType.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateType.Location = new System.Drawing.Point(911, 30);
             this.btnUpdateType.Name = "btnUpdateType";
             this.btnUpdateType.Size = new System.Drawing.Size(102, 81);
@@ -272,7 +272,7 @@
             // btnAddType
             // 
             this.btnAddType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddType.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddType.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddType.Location = new System.Drawing.Point(569, 30);
             this.btnAddType.Name = "btnAddType";
             this.btnAddType.Size = new System.Drawing.Size(102, 81);
@@ -295,10 +295,10 @@
             this.lblNameoftype.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNameoftype.AutoSize = true;
-            this.lblNameoftype.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameoftype.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameoftype.Location = new System.Drawing.Point(6, 82);
             this.lblNameoftype.Name = "lblNameoftype";
-            this.lblNameoftype.Size = new System.Drawing.Size(109, 23);
+            this.lblNameoftype.Size = new System.Drawing.Size(133, 24);
             this.lblNameoftype.TabIndex = 2;
             this.lblNameoftype.Text = "Name of type";
             // 
@@ -316,10 +316,10 @@
             this.lblID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.Location = new System.Drawing.Point(6, 33);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(25, 23);
+            this.lblID.Size = new System.Drawing.Size(29, 24);
             this.lblID.TabIndex = 0;
             this.lblID.Text = "ID";
             // 
@@ -341,11 +341,11 @@
             this.tabProductmanagement.Controls.Add(this.lblType);
             this.tabProductmanagement.Controls.Add(this.txtProductID);
             this.tabProductmanagement.Controls.Add(this.lblProDuctID);
-            this.tabProductmanagement.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabProductmanagement.Location = new System.Drawing.Point(4, 32);
+            this.tabProductmanagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabProductmanagement.Location = new System.Drawing.Point(4, 33);
             this.tabProductmanagement.Name = "tabProductmanagement";
             this.tabProductmanagement.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProductmanagement.Size = new System.Drawing.Size(1019, 578);
+            this.tabProductmanagement.Size = new System.Drawing.Size(1019, 577);
             this.tabProductmanagement.TabIndex = 1;
             this.tabProductmanagement.Text = "Product management";
             this.tabProductmanagement.UseVisualStyleBackColor = true;
@@ -394,41 +394,46 @@
             this.dgvProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductList.Location = new System.Drawing.Point(6, 87);
             this.dgvProductList.Name = "dgvProductList";
+            this.dgvProductList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductList.Size = new System.Drawing.Size(990, 227);
             this.dgvProductList.TabIndex = 0;
+            this.dgvProductList.SelectionChanged += new System.EventHandler(this.dgvProductList_SelectionChanged);
             // 
             // btnUpdateProduct
             // 
             this.btnUpdateProduct.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnUpdateProduct.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateProduct.Location = new System.Drawing.Point(617, 196);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
             this.btnUpdateProduct.Size = new System.Drawing.Size(92, 50);
             this.btnUpdateProduct.TabIndex = 15;
             this.btnUpdateProduct.Text = "Update";
             this.btnUpdateProduct.UseVisualStyleBackColor = true;
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
             // 
             // btnDeleteProduct
             // 
             this.btnDeleteProduct.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnDeleteProduct.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteProduct.Location = new System.Drawing.Point(471, 196);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
             this.btnDeleteProduct.Size = new System.Drawing.Size(92, 50);
             this.btnDeleteProduct.TabIndex = 14;
             this.btnDeleteProduct.Text = "Delete";
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
+            this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
             // 
             // btnAddProduct
             // 
             this.btnAddProduct.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAddProduct.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProduct.Location = new System.Drawing.Point(323, 196);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(92, 50);
             this.btnAddProduct.TabIndex = 13;
             this.btnAddProduct.Text = "Add";
             this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // cmbProducer
             // 
@@ -436,17 +441,17 @@
             this.cmbProducer.FormattingEnabled = true;
             this.cmbProducer.Location = new System.Drawing.Point(724, 81);
             this.cmbProducer.Name = "cmbProducer";
-            this.cmbProducer.Size = new System.Drawing.Size(255, 31);
+            this.cmbProducer.Size = new System.Drawing.Size(255, 32);
             this.cmbProducer.TabIndex = 12;
             // 
             // lblProDucer
             // 
             this.lblProDucer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblProDucer.AutoSize = true;
-            this.lblProDucer.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProDucer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProDucer.Location = new System.Drawing.Point(590, 84);
             this.lblProDucer.Name = "lblProDucer";
-            this.lblProDucer.Size = new System.Drawing.Size(80, 23);
+            this.lblProDucer.Size = new System.Drawing.Size(96, 24);
             this.lblProDucer.TabIndex = 11;
             this.lblProDucer.Text = "Producer";
             // 
@@ -456,17 +461,17 @@
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(724, 137);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(255, 31);
+            this.cmbStatus.Size = new System.Drawing.Size(255, 32);
             this.cmbStatus.TabIndex = 10;
             // 
             // lblStatus
             // 
             this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.Location = new System.Drawing.Point(590, 140);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(58, 23);
+            this.lblStatus.Size = new System.Drawing.Size(66, 24);
             this.lblStatus.TabIndex = 9;
             this.lblStatus.Text = "Status";
             // 
@@ -482,10 +487,10 @@
             // 
             this.lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.Location = new System.Drawing.Point(590, 29);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(48, 23);
+            this.lblPrice.Size = new System.Drawing.Size(58, 24);
             this.lblPrice.TabIndex = 7;
             this.lblPrice.Text = "Price";
             // 
@@ -499,10 +504,10 @@
             // lblProductName
             // 
             this.lblProductName.AutoSize = true;
-            this.lblProductName.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductName.Location = new System.Drawing.Point(6, 140);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(129, 23);
+            this.lblProductName.Size = new System.Drawing.Size(155, 24);
             this.lblProductName.TabIndex = 5;
             this.lblProductName.Text = "Product\'s name";
             // 
@@ -511,16 +516,16 @@
             this.cmbType.FormattingEnabled = true;
             this.cmbType.Location = new System.Drawing.Point(171, 81);
             this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(255, 31);
+            this.cmbType.Size = new System.Drawing.Size(255, 32);
             this.cmbType.TabIndex = 4;
             // 
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblType.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblType.Location = new System.Drawing.Point(6, 81);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(48, 23);
+            this.lblType.Size = new System.Drawing.Size(57, 24);
             this.lblType.TabIndex = 3;
             this.lblType.Text = "Type";
             // 
@@ -534,10 +539,10 @@
             // lblProDuctID
             // 
             this.lblProDuctID.AutoSize = true;
-            this.lblProDuctID.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProDuctID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProDuctID.Location = new System.Drawing.Point(6, 29);
             this.lblProDuctID.Name = "lblProDuctID";
-            this.lblProDuctID.Size = new System.Drawing.Size(25, 23);
+            this.lblProDuctID.Size = new System.Drawing.Size(29, 24);
             this.lblProDuctID.TabIndex = 1;
             this.lblProDuctID.Text = "ID";
             // 
@@ -555,9 +560,9 @@
             this.tabPoducer.Controls.Add(this.lblProducerName);
             this.tabPoducer.Controls.Add(this.txtProducerID);
             this.tabPoducer.Controls.Add(this.lblProducerID);
-            this.tabPoducer.Location = new System.Drawing.Point(4, 32);
+            this.tabPoducer.Location = new System.Drawing.Point(4, 33);
             this.tabPoducer.Name = "tabPoducer";
-            this.tabPoducer.Size = new System.Drawing.Size(1019, 578);
+            this.tabPoducer.Size = new System.Drawing.Size(1019, 577);
             this.tabPoducer.TabIndex = 3;
             this.tabPoducer.Text = "Producer management";
             this.tabPoducer.UseVisualStyleBackColor = true;
@@ -565,7 +570,7 @@
             // btnUpdateProducer
             // 
             this.btnUpdateProducer.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnUpdateProducer.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateProducer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateProducer.Location = new System.Drawing.Point(617, 153);
             this.btnUpdateProducer.Name = "btnUpdateProducer";
             this.btnUpdateProducer.Size = new System.Drawing.Size(92, 50);
@@ -576,7 +581,7 @@
             // btnDeleteProducer
             // 
             this.btnDeleteProducer.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnDeleteProducer.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteProducer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteProducer.Location = new System.Drawing.Point(471, 153);
             this.btnDeleteProducer.Name = "btnDeleteProducer";
             this.btnDeleteProducer.Size = new System.Drawing.Size(92, 50);
@@ -588,7 +593,7 @@
             // btnAddProducer
             // 
             this.btnAddProducer.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAddProducer.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProducer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProducer.Location = new System.Drawing.Point(313, 153);
             this.btnAddProducer.Name = "btnAddProducer";
             this.btnAddProducer.Size = new System.Drawing.Size(92, 50);
@@ -656,7 +661,7 @@
             this.lblPhoneProducer.AutoSize = true;
             this.lblPhoneProducer.Location = new System.Drawing.Point(585, 88);
             this.lblPhoneProducer.Name = "lblPhoneProducer";
-            this.lblPhoneProducer.Size = new System.Drawing.Size(59, 23);
+            this.lblPhoneProducer.Size = new System.Drawing.Size(71, 24);
             this.lblPhoneProducer.TabIndex = 12;
             this.lblPhoneProducer.Text = "Phone";
             // 
@@ -674,7 +679,7 @@
             this.lblProducerAddress.AutoSize = true;
             this.lblProducerAddress.Location = new System.Drawing.Point(585, 24);
             this.lblProducerAddress.Name = "lblProducerAddress";
-            this.lblProducerAddress.Size = new System.Drawing.Size(74, 23);
+            this.lblProducerAddress.Size = new System.Drawing.Size(87, 24);
             this.lblProducerAddress.TabIndex = 10;
             this.lblProducerAddress.Text = "Address";
             // 
@@ -690,7 +695,7 @@
             this.lblProducerName.AutoSize = true;
             this.lblProducerName.Location = new System.Drawing.Point(38, 85);
             this.lblProducerName.Name = "lblProducerName";
-            this.lblProducerName.Size = new System.Drawing.Size(139, 23);
+            this.lblProducerName.Size = new System.Drawing.Size(169, 24);
             this.lblProducerName.TabIndex = 2;
             this.lblProducerName.Text = "Producer\'s name";
             // 
@@ -706,7 +711,7 @@
             this.lblProducerID.AutoSize = true;
             this.lblProducerID.Location = new System.Drawing.Point(38, 24);
             this.lblProducerID.Name = "lblProducerID";
-            this.lblProducerID.Size = new System.Drawing.Size(25, 23);
+            this.lblProducerID.Size = new System.Drawing.Size(29, 24);
             this.lblProducerID.TabIndex = 0;
             this.lblProducerID.Text = "ID";
             // 
@@ -730,9 +735,9 @@
             this.tabStaffmanage.Controls.Add(this.lblStaffName);
             this.tabStaffmanage.Controls.Add(this.txtStaffID);
             this.tabStaffmanage.Controls.Add(this.lblStaffID);
-            this.tabStaffmanage.Location = new System.Drawing.Point(4, 32);
+            this.tabStaffmanage.Location = new System.Drawing.Point(4, 33);
             this.tabStaffmanage.Name = "tabStaffmanage";
-            this.tabStaffmanage.Size = new System.Drawing.Size(1019, 578);
+            this.tabStaffmanage.Size = new System.Drawing.Size(1019, 577);
             this.tabStaffmanage.TabIndex = 2;
             this.tabStaffmanage.Text = "Staff management";
             this.tabStaffmanage.UseVisualStyleBackColor = true;
@@ -785,7 +790,7 @@
             // btnUpdateStaff
             // 
             this.btnUpdateStaff.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnUpdateStaff.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateStaff.Location = new System.Drawing.Point(622, 233);
             this.btnUpdateStaff.Name = "btnUpdateStaff";
             this.btnUpdateStaff.Size = new System.Drawing.Size(92, 50);
@@ -796,7 +801,7 @@
             // btnDeleteStaff
             // 
             this.btnDeleteStaff.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnDeleteStaff.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteStaff.Location = new System.Drawing.Point(472, 233);
             this.btnDeleteStaff.Name = "btnDeleteStaff";
             this.btnDeleteStaff.Size = new System.Drawing.Size(92, 50);
@@ -807,7 +812,7 @@
             // btnAddStaff
             // 
             this.btnAddStaff.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAddStaff.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStaff.Location = new System.Drawing.Point(318, 233);
             this.btnAddStaff.Name = "btnAddStaff";
             this.btnAddStaff.Size = new System.Drawing.Size(92, 50);
@@ -820,7 +825,7 @@
             this.cmbGender.FormattingEnabled = true;
             this.cmbGender.Location = new System.Drawing.Point(178, 181);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(230, 31);
+            this.cmbGender.Size = new System.Drawing.Size(230, 32);
             this.cmbGender.TabIndex = 14;
             // 
             // dtpDateOfBirth
@@ -838,7 +843,7 @@
             this.lblDOB.AutoSize = true;
             this.lblDOB.Location = new System.Drawing.Point(32, 129);
             this.lblDOB.Name = "lblDOB";
-            this.lblDOB.Size = new System.Drawing.Size(102, 23);
+            this.lblDOB.Size = new System.Drawing.Size(122, 24);
             this.lblDOB.TabIndex = 12;
             this.lblDOB.Text = "Date of birth";
             // 
@@ -856,7 +861,7 @@
             this.lblAddresss.AutoSize = true;
             this.lblAddresss.Location = new System.Drawing.Point(618, 132);
             this.lblAddresss.Name = "lblAddresss";
-            this.lblAddresss.Size = new System.Drawing.Size(74, 23);
+            this.lblAddresss.Size = new System.Drawing.Size(87, 24);
             this.lblAddresss.TabIndex = 10;
             this.lblAddresss.Text = "Address";
             // 
@@ -874,7 +879,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Location = new System.Drawing.Point(618, 77);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(59, 23);
+            this.lblPhone.Size = new System.Drawing.Size(71, 24);
             this.lblPhone.TabIndex = 8;
             this.lblPhone.Text = "Phone";
             // 
@@ -892,7 +897,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Location = new System.Drawing.Point(618, 19);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(51, 23);
+            this.lblEmail.Size = new System.Drawing.Size(62, 24);
             this.lblEmail.TabIndex = 6;
             this.lblEmail.Text = "Email";
             // 
@@ -901,7 +906,7 @@
             this.lblGender.AutoSize = true;
             this.lblGender.Location = new System.Drawing.Point(32, 184);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(66, 23);
+            this.lblGender.Size = new System.Drawing.Size(80, 24);
             this.lblGender.TabIndex = 4;
             this.lblGender.Text = "Gender";
             // 
@@ -917,7 +922,7 @@
             this.lblStaffName.AutoSize = true;
             this.lblStaffName.Location = new System.Drawing.Point(32, 71);
             this.lblStaffName.Name = "lblStaffName";
-            this.lblStaffName.Size = new System.Drawing.Size(53, 23);
+            this.lblStaffName.Size = new System.Drawing.Size(65, 24);
             this.lblStaffName.TabIndex = 2;
             this.lblStaffName.Text = "Name";
             // 
@@ -933,7 +938,7 @@
             this.lblStaffID.AutoSize = true;
             this.lblStaffID.Location = new System.Drawing.Point(32, 16);
             this.lblStaffID.Name = "lblStaffID";
-            this.lblStaffID.Size = new System.Drawing.Size(25, 23);
+            this.lblStaffID.Size = new System.Drawing.Size(29, 24);
             this.lblStaffID.TabIndex = 0;
             this.lblStaffID.Text = "ID";
             // 
@@ -949,9 +954,9 @@
             this.tabAccount.Controls.Add(this.lblAccountPassword);
             this.tabAccount.Controls.Add(this.txtAccountID);
             this.tabAccount.Controls.Add(this.lblAccountID);
-            this.tabAccount.Location = new System.Drawing.Point(4, 32);
+            this.tabAccount.Location = new System.Drawing.Point(4, 33);
             this.tabAccount.Name = "tabAccount";
-            this.tabAccount.Size = new System.Drawing.Size(1019, 578);
+            this.tabAccount.Size = new System.Drawing.Size(1019, 577);
             this.tabAccount.TabIndex = 4;
             this.tabAccount.Text = "Account management";
             this.tabAccount.UseVisualStyleBackColor = true;
@@ -974,7 +979,7 @@
             // btnSearchAccount
             // 
             this.btnSearchAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearchAccount.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchAccount.Location = new System.Drawing.Point(905, 38);
             this.btnSearchAccount.Name = "btnSearchAccount";
             this.btnSearchAccount.Size = new System.Drawing.Size(92, 34);
@@ -1005,7 +1010,7 @@
             // btnUpdateAccount
             // 
             this.btnUpdateAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdateAccount.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateAccount.Location = new System.Drawing.Point(898, 94);
             this.btnUpdateAccount.Name = "btnUpdateAccount";
             this.btnUpdateAccount.Size = new System.Drawing.Size(102, 81);
@@ -1016,7 +1021,7 @@
             // btnDeleteAccount
             // 
             this.btnDeleteAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteAccount.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteAccount.Location = new System.Drawing.Point(740, 94);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
             this.btnDeleteAccount.Size = new System.Drawing.Size(102, 81);
@@ -1027,7 +1032,7 @@
             // btnAddAccount
             // 
             this.btnAddAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddAccount.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAccount.Location = new System.Drawing.Point(578, 94);
             this.btnAddAccount.Name = "btnAddAccount";
             this.btnAddAccount.Size = new System.Drawing.Size(102, 81);
@@ -1040,7 +1045,7 @@
             this.lblAcccountName.AutoSize = true;
             this.lblAcccountName.Location = new System.Drawing.Point(46, 84);
             this.lblAcccountName.Name = "lblAcccountName";
-            this.lblAcccountName.Size = new System.Drawing.Size(120, 23);
+            this.lblAcccountName.Size = new System.Drawing.Size(145, 24);
             this.lblAcccountName.TabIndex = 8;
             this.lblAcccountName.Text = "Account name";
             // 
@@ -1063,7 +1068,7 @@
             this.lblAccountPassword.AutoSize = true;
             this.lblAccountPassword.Location = new System.Drawing.Point(46, 146);
             this.lblAccountPassword.Name = "lblAccountPassword";
-            this.lblAccountPassword.Size = new System.Drawing.Size(85, 23);
+            this.lblAccountPassword.Size = new System.Drawing.Size(100, 24);
             this.lblAccountPassword.TabIndex = 4;
             this.lblAccountPassword.Text = "Password";
             // 
@@ -1079,16 +1084,16 @@
             this.lblAccountID.AutoSize = true;
             this.lblAccountID.Location = new System.Drawing.Point(46, 31);
             this.lblAccountID.Name = "lblAccountID";
-            this.lblAccountID.Size = new System.Drawing.Size(25, 23);
+            this.lblAccountID.Size = new System.Drawing.Size(29, 24);
             this.lblAccountID.TabIndex = 0;
             this.lblAccountID.Text = "ID";
             // 
             // tabBillmanage
             // 
             this.tabBillmanage.Controls.Add(this.gb_Bill);
-            this.tabBillmanage.Location = new System.Drawing.Point(4, 32);
+            this.tabBillmanage.Location = new System.Drawing.Point(4, 33);
             this.tabBillmanage.Name = "tabBillmanage";
-            this.tabBillmanage.Size = new System.Drawing.Size(1019, 578);
+            this.tabBillmanage.Size = new System.Drawing.Size(1019, 577);
             this.tabBillmanage.TabIndex = 5;
             this.tabBillmanage.Text = "Bill statistics";
             this.tabBillmanage.UseVisualStyleBackColor = true;
@@ -1112,7 +1117,7 @@
             // 
             // btnRefreshBill
             // 
-            this.btnRefreshBill.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefreshBill.Location = new System.Drawing.Point(155, 32);
             this.btnRefreshBill.Name = "btnRefreshBill";
             this.btnRefreshBill.Size = new System.Drawing.Size(90, 39);
@@ -1122,7 +1127,7 @@
             // 
             // btnFilter
             // 
-            this.btnFilter.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilter.Location = new System.Drawing.Point(16, 32);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(82, 39);
@@ -1133,7 +1138,7 @@
             // btnSearchBill
             // 
             this.btnSearchBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearchBill.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchBill.Location = new System.Drawing.Point(887, 37);
             this.btnSearchBill.Name = "btnSearchBill";
             this.btnSearchBill.Size = new System.Drawing.Size(82, 39);
@@ -1177,10 +1182,10 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1019, 578);
+            this.tabPage1.Size = new System.Drawing.Size(1019, 577);
             this.tabPage1.TabIndex = 6;
             this.tabPage1.Text = "Sell";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1238,7 +1243,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(915, 78);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 23);
+            this.label6.Size = new System.Drawing.Size(26, 24);
             this.label6.TabIndex = 10;
             this.label6.Text = "%";
             // 
@@ -1247,7 +1252,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(699, 78);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 23);
+            this.label5.Size = new System.Drawing.Size(91, 24);
             this.label5.TabIndex = 9;
             this.label5.Text = "Discount";
             // 
@@ -1270,7 +1275,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(209, 155);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(181, 31);
+            this.comboBox2.Size = new System.Drawing.Size(181, 32);
             this.comboBox2.TabIndex = 6;
             // 
             // label4
@@ -1278,7 +1283,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(55, 241);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 23);
+            this.label4.Size = new System.Drawing.Size(119, 24);
             this.label4.TabIndex = 5;
             this.label4.Text = "Date of sale";
             // 
@@ -1287,7 +1292,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(55, 241);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 23);
+            this.label3.Size = new System.Drawing.Size(0, 24);
             this.label3.TabIndex = 4;
             // 
             // label2
@@ -1295,7 +1300,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(55, 163);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 23);
+            this.label2.Size = new System.Drawing.Size(82, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Product";
             // 
@@ -1304,7 +1309,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(209, 70);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(181, 31);
+            this.comboBox1.Size = new System.Drawing.Size(181, 32);
             this.comboBox1.TabIndex = 2;
             // 
             // label1
@@ -1312,7 +1317,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(55, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 23);
+            this.label1.Size = new System.Drawing.Size(57, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Type";
             // 
@@ -1322,7 +1327,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GBType.Controls.Add(this.tabControl1);
-            this.GBType.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GBType.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBType.Location = new System.Drawing.Point(12, 93);
             this.GBType.Name = "GBType";
             this.GBType.Size = new System.Drawing.Size(1037, 648);
@@ -1333,10 +1338,10 @@
             // lblTieuDe
             // 
             this.lblTieuDe.AutoSize = true;
-            this.lblTieuDe.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTieuDe.Location = new System.Drawing.Point(346, 35);
             this.lblTieuDe.Name = "lblTieuDe";
-            this.lblTieuDe.Size = new System.Drawing.Size(411, 42);
+            this.lblTieuDe.Size = new System.Drawing.Size(482, 39);
             this.lblTieuDe.TabIndex = 2;
             this.lblTieuDe.Text = "Shop Management Category";
             // 

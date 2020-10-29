@@ -42,7 +42,8 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TypeID" Type="Int32" Nullable="false" />
-    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProducerID" Type="Int32" Nullable="false" />
     <Property Name="Price" Type="Double" />
     <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Producer" Relationship="Self.FK_ProducerID" FromRole="Product" ToRole="Producer" />
@@ -76,7 +77,7 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="Product">
-        <PropertyRef Name="ProductID" />
+        <PropertyRef Name="ProducerID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
