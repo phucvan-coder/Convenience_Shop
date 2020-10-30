@@ -18,7 +18,12 @@ namespace MyProJect
         public int BillID { get; set; }
         public int TypeID { get; set; }
         public int ProductID { get; set; }
+        public Nullable<int> Amount { get; set; }
         public Nullable<int> Discount { get; set; }
         public Nullable<double> TotalPrice { get; set; }
+    
+        public virtual Bill Bill { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual TypeOfProduct TypeOfProduct { get; set; }
     }
 }

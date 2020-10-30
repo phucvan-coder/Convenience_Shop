@@ -85,6 +85,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ConvenienceShop.edmx</DependentUpon>
     </Compile>
+    <Compile Include="FormAccountManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAccountManagement.Designer.cs">
+      <DependentUpon>FormAccountManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBillManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBillManagement.Designer.cs">
+      <DependentUpon>FormBillManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,11 +109,23 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormManage.cs">
+    <Compile Include="FormProducerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormManage.Designer.cs">
-      <DependentUpon>FormManage.cs</DependentUpon>
+    <Compile Include="FormProducerManagement.Designer.cs">
+      <DependentUpon>FormProducerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductManagement.Designer.cs">
+      <DependentUpon>FormProductManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSale.Designer.cs">
+      <DependentUpon>FormSale.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSignUp.cs">
       <SubType>Form</SubType>
@@ -109,8 +133,23 @@
     <Compile Include="FormSignUp.Designer.cs">
       <DependentUpon>FormSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormStaffManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaffManagement.Designer.cs">
+      <DependentUpon>FormStaffManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTypeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTypeManagement.Designer.cs">
+      <DependentUpon>FormTypeManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Object\AccountInfo.cs" />
+    <Compile Include="Object\BillInfo_Class.cs" />
     <Compile Include="Object\ProducerInfo.cs" />
     <Compile Include="Object\ProductInfo.cs" />
+    <Compile Include="Object\StaffInfo.cs" />
     <Compile Include="Object\TypeInfo.cs" />
     <Compile Include="Producer.cs">
       <DependentUpon>ConvenienceShop.tt</DependentUpon>
@@ -129,17 +168,35 @@
     <EmbeddedResource Include="BillFilter.resx">
       <DependentUpon>BillFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAccountManagement.resx">
+      <DependentUpon>FormAccountManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBillManagement.resx">
+      <DependentUpon>FormBillManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormManage.resx">
-      <DependentUpon>FormManage.cs</DependentUpon>
+    <EmbeddedResource Include="FormProducerManagement.resx">
+      <DependentUpon>FormProducerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductManagement.resx">
+      <DependentUpon>FormProductManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSale.resx">
+      <DependentUpon>FormSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSignUp.resx">
       <DependentUpon>FormSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaffManagement.resx">
+      <DependentUpon>FormStaffManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTypeManagement.resx">
+      <DependentUpon>FormTypeManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

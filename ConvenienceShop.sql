@@ -7,11 +7,11 @@ CREATE TABLE TypeOfProduct(
 	TypeName NVARCHAR(50) NULL
 )
 
---Insert
+/*--Insert
 go
 insert into TypeOfProduct values('A1'),('A2'), ('A3')
 go
---end
+--end*/
 
 GO
 CREATE TABLE Producer(
@@ -58,7 +58,11 @@ CREATE TABLE BillInfo(
 	BillID INT NOT NULL,
 	TypeID INT NOT NULL,
 	ProductID INT NOT NULL,
+	Amount INT NULL,
 	Discount INT NULL,
-	TotalPrice FLOAT NULL
+	TotalPrice FLOAT NULL,
+	CONSTRAINT FK_BillID FOREIGN KEY(BillID) REFERENCES Bill(Id),
+	CONSTRAINT FK_Type_ID FOREIGN KEY(TypeID) REFERENCES TypeOfProduct(Id),
+	CONSTRAINT FK_ProductID FOREIGN KEY(ProductID) REFERENCES Product(Id)
 )
 GO

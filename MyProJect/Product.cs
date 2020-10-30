@@ -14,6 +14,12 @@ namespace MyProJect
     
     public partial class Product
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Product()
+        {
+            this.BillInfoes = new HashSet<BillInfo>();
+        }
+    
         public int Id { get; set; }
         public int TypeID { get; set; }
         public string ProductName { get; set; }
@@ -21,6 +27,8 @@ namespace MyProJect
         public Nullable<double> Price { get; set; }
         public string Status { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BillInfo> BillInfoes { get; set; }
         public virtual Producer Producer { get; set; }
         public virtual TypeOfProduct TypeOfProduct { get; set; }
     }
