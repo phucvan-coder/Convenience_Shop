@@ -40,8 +40,8 @@ namespace MyProJect
             {
                 MessageBox.Show("Sign up success press 'ok' to continue", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                FormManage manage = new FormManage();
-                manage.Show();
+                FormMenu menu = new FormMenu();
+                menu.Show();
             }
         }
         // nút back

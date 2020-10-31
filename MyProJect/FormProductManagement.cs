@@ -138,5 +138,11 @@ namespace MyProJect
             FormProductManagement_Load(sender, e);
         }
         #endregion
+
+        private void FormProductManagement_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormMenu menu = new FormMenu();
+            menu.Show();
+        }
     }
 }

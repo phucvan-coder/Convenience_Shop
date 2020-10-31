@@ -10,7 +10,6 @@ D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.csproj.CoreCompileInput
 D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.exe
 D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.pdb
 D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormSignUp.resources
-D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormManage.resources
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\bin\Debug\MyProJect.exe.config
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\bin\Debug\MyProJect.exe
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\bin\Debug\MyProJect.pdb
@@ -49,3 +48,17 @@ C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csproj.Core
 C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csproj.CopyComplete
 C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.exe
 C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.pdb
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormBillFilter.resources
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormAccountManagement.resources
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormBillManagement.resources
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormProducerManagement.resources
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormProductManagement.resources
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormSale.resources
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormStaffManagement.resources
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormTypeManagement.resources
+D:\ProJectWindow\MyProJect\MyProJect\bin\Debug\EntityFramework.dll
+D:\ProJectWindow\MyProJect\MyProJect\bin\Debug\EntityFramework.SqlServer.dll
+D:\ProJectWindow\MyProJect\MyProJect\bin\Debug\EntityFramework.xml
+D:\ProJectWindow\MyProJect\MyProJect\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormMenu.resources
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.csproj.CopyComplete

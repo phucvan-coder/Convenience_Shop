@@ -41,10 +41,10 @@ namespace MyProJect
             // kiểm tra dữ liệu nếu đúng thì đăng nhập thành công nếu sai thì thành thụ :v
             else if ((string.Compare(username, user1, false) == 0 && password.Length > 6) || (string.Compare(username, user2, false) == 0 && password.Length > 6))
             {
-                //MessageBox.Show("Login success", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //this.Hide();
-                //FormManage manage = new FormManage();
-                //manage.Show();
+                MessageBox.Show("Login success", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                FormMenu menu = new FormMenu();
+                menu.Show();
             }
             // nếu sai thông tin đăng nhập thì báo cmn lỗi luôn
             else if (string.Compare(username, user1, false) != 0 || string.Compare(username, user2, false) == 0)

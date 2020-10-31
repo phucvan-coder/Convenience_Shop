@@ -109,5 +109,11 @@ namespace MyProJect
             FormStaffManagement_Load(sender, e);
         }
         #endregion
+
+        private void FormStaffManagement_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormMenu menu = new FormMenu();
+            menu.Show();
+        }
     }
 }

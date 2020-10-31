@@ -30,8 +30,13 @@ namespace MyProJect
         {
 
         }
+
         #endregion
 
-
+        private void FormSale_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormMenu menu = new FormMenu();
+            menu.Show();
+        }
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nmrAmount = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnUpdateProduct = new System.Windows.Forms.Button();
             this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,10 +44,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnPayment = new System.Windows.Forms.Button();
             this.dgvOrderList = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.nmrAmount = new System.Windows.Forms.NumericUpDown();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,12 +53,12 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnPayment = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrDiscount)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmrAmount)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -83,6 +83,23 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Order Details";
+            // 
+            // nmrAmount
+            // 
+            this.nmrAmount.Location = new System.Drawing.Point(612, 21);
+            this.nmrAmount.Name = "nmrAmount";
+            this.nmrAmount.Size = new System.Drawing.Size(81, 20);
+            this.nmrAmount.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(528, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 19);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Amount";
             // 
             // btnUpdateProduct
             // 
@@ -206,6 +223,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bill";
             // 
+            // btnPayment
+            // 
+            this.btnPayment.Location = new System.Drawing.Point(695, 19);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(75, 23);
+            this.btnPayment.TabIndex = 17;
+            this.btnPayment.Text = "Payment";
+            this.btnPayment.UseVisualStyleBackColor = true;
+            // 
             // dgvOrderList
             // 
             this.dgvOrderList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -220,35 +246,9 @@
             this.Column7});
             this.dgvOrderList.Location = new System.Drawing.Point(6, 51);
             this.dgvOrderList.Name = "dgvOrderList";
+            this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrderList.Size = new System.Drawing.Size(764, 193);
             this.dgvOrderList.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(361, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Sale";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(528, 22);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 19);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Amount";
-            // 
-            // nmrAmount
-            // 
-            this.nmrAmount.Location = new System.Drawing.Point(612, 21);
-            this.nmrAmount.Name = "nmrAmount";
-            this.nmrAmount.Size = new System.Drawing.Size(81, 20);
-            this.nmrAmount.TabIndex = 16;
             // 
             // Column1
             // 
@@ -285,14 +285,15 @@
             this.Column7.HeaderText = "Total Price";
             this.Column7.Name = "Column7";
             // 
-            // btnPayment
+            // label1
             // 
-            this.btnPayment.Location = new System.Drawing.Point(695, 19);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(75, 23);
-            this.btnPayment.TabIndex = 17;
-            this.btnPayment.Text = "Payment";
-            this.btnPayment.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(361, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Sale";
             // 
             // FormSale
             // 
@@ -303,13 +304,15 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormSale";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sale";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormSale_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrDiscount)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmrAmount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

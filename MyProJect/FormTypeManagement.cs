@@ -100,8 +100,13 @@ namespace MyProJect
             FormTypeManagement_Load(sender, e);
         }
 
+
         #endregion
 
-        
+        private void FormTypeManagement_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormMenu menu = new FormMenu();
+            menu.Show();
+        }
     }
 }

@@ -135,7 +135,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "FormBillManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bill Management";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormBillManagement_FormClosed);
             this.Load += new System.EventHandler(this.FormBillManagement_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

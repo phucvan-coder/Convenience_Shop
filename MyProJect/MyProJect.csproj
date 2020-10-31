@@ -109,6 +109,12 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProducerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProducerManagement.resx">
       <DependentUpon>FormProducerManagement.cs</DependentUpon>
@@ -252,6 +261,14 @@
       <DependentUpon>ConvenienceShop.edmx</DependentUpon>
       <LastGenOutput>ConvenienceShop.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\log-out.png" />
+    <None Include="Resources\timeline.png" />
+    <None Include="Resources\packing-machine.png" />
+    <None Include="Resources\sell.png" />
+    <None Include="Resources\user_128.png" />
+    <None Include="Resources\Employ-card.png" />
+    <None Include="Resources\manufacturing1.png" />
+    <None Include="Resources\Product1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
