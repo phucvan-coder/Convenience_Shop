@@ -25,6 +25,7 @@
           <ScalarProperty Name="BillID" ColumnName="BillID" />
           <ScalarProperty Name="TypeID" ColumnName="TypeID" />
           <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
           <ScalarProperty Name="Discount" ColumnName="Discount" />
           <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
         </MappingFragment>

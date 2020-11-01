@@ -133,8 +133,8 @@ namespace MyProJect
             if (result == DialogResult.Yes)
             {
                 this.Hide();
-                FormMain main = new FormMain();
-                main.Show();
+                FormLogin login = new FormLogin();
+                login.Show();
             }
         }
         // từ label
@@ -148,8 +148,8 @@ namespace MyProJect
             if (result == DialogResult.Yes)
             {
                 this.Hide();
-                FormMain main = new FormMain();
-                main.Show();
+                FormLogin login = new FormLogin();
+                login.Show();
             }
         }
         // action close form
@@ -163,8 +163,8 @@ namespace MyProJect
             if (result == DialogResult.Yes)
             {
                 this.Hide();
-                FormMain main = new FormMain();
-                main.Show();
+                FormLogin login = new FormLogin();
+                login.Show();
             }
             else
             {

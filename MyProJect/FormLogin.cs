@@ -51,13 +51,11 @@ namespace MyProJect
                 MessageBox.Show("Information not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         // về menu chính
-        private void ButtonBack_Click(object sender, EventArgs e)
+        private void btnQuit_Click(object sender, EventArgs e)
         {
-            // ẩn đi để quay về cửa sổ kia
-            this.Hide();
-            FormMain f1 = new FormMain();
-            f1.Show();
+            Application.Exit();
         }
+
         // password char s-> set sup ký tự mật khẩu cho giống mấy ông FB, Insta đồ
         private void Textpassword_TextChanged(object sender, EventArgs e)
         {
@@ -123,6 +121,14 @@ namespace MyProJect
         private void txt_Password_Mouse_Click(object sender, MouseEventArgs e)
         {
             Textpassword.Clear();
+        }
+        //Ask before closing
+        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Do you want to exit ?", "Message", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

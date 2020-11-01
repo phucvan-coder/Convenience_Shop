@@ -20,9 +20,6 @@ F:\Lập trình window\final project\Convenience_Shop\MyProJect\bin\Debug\Entity
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csprojAssemblyReference.cache
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormBillFilter.resources
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormLogin.resources
-F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormMain.resources
-F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormManage.resources
-F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormSignUp.resources
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.Properties.Resources.resources
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csproj.GenerateResource.cache
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csproj.CoreCompileInputs.cache
@@ -62,3 +59,11 @@ D:\ProJectWindow\MyProJect\MyProJect\bin\Debug\EntityFramework.xml
 D:\ProJectWindow\MyProJect\MyProJect\bin\Debug\EntityFramework.SqlServer.xml
 D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormMenu.resources
 D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.csproj.CopyComplete
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormAccountManagement.resources
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormBillManagement.resources
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormMenu.resources
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormProducerManagement.resources
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormProductManagement.resources
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormSale.resources
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormStaffManagement.resources
+F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormTypeManagement.resources

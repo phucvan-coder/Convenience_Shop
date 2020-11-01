@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnLogin = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnQuit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TextUser = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -57,20 +57,20 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.ButtonLogin_Click);
             // 
-            // btnBack
+            // btnQuit
             // 
-            this.btnBack.AutoSize = true;
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.Black;
-            this.btnBack.Location = new System.Drawing.Point(182, 222);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(124, 50);
-            this.btnBack.TabIndex = 21;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.ButtonBack_Click);
+            this.btnQuit.AutoSize = true;
+            this.btnQuit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuit.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuit.ForeColor = System.Drawing.Color.Black;
+            this.btnQuit.Location = new System.Drawing.Point(182, 222);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(124, 50);
+            this.btnQuit.TabIndex = 21;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = false;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // panel1
             // 
@@ -165,7 +165,7 @@
             this.Controls.Add(this.pictureBoxPassword);
             this.Controls.Add(this.TextUser);
             this.Controls.Add(this.pictureBox_User);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
@@ -173,6 +173,7 @@
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_User)).EndInit();
@@ -186,7 +187,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TextUser;
         private System.Windows.Forms.PictureBox pictureBox_User;

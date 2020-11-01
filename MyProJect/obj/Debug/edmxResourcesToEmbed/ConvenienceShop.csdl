@@ -14,6 +14,7 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="DateOfSale" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="BillInfoes" Relationship="Self.FK_BillID" FromRole="Bill" ToRole="BillInfo" />
   </EntityType>
   <EntityType Name="BillInfo">
     <Key>
@@ -23,8 +24,12 @@
     <Property Name="BillID" Type="Int32" Nullable="false" />
     <Property Name="TypeID" Type="Int32" Nullable="false" />
     <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Int32" />
     <Property Name="Discount" Type="Int32" />
     <Property Name="TotalPrice" Type="Double" />
+    <NavigationProperty Name="Bill" Relationship="Self.FK_BillID" FromRole="BillInfo" ToRole="Bill" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_ProductID" FromRole="BillInfo" ToRole="Product" />
+    <NavigationProperty Name="TypeOfProduct" Relationship="Self.FK_Type_ID" FromRole="BillInfo" ToRole="TypeOfProduct" />
   </EntityType>
   <EntityType Name="Producer">
     <Key>
@@ -46,6 +51,7 @@
     <Property Name="ProducerID" Type="Int32" Nullable="false" />
     <Property Name="Price" Type="Double" />
     <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BillInfoes" Relationship="Self.FK_ProductID" FromRole="Product" ToRole="BillInfo" />
     <NavigationProperty Name="Producer" Relationship="Self.FK_ProducerID" FromRole="Product" ToRole="Producer" />
     <NavigationProperty Name="TypeOfProduct" Relationship="Self.FK_TypeID" FromRole="Product" ToRole="TypeOfProduct" />
   </EntityType>
@@ -67,8 +73,45 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BillInfoes" Relationship="Self.FK_Type_ID" FromRole="TypeOfProduct" ToRole="BillInfo" />
     <NavigationProperty Name="Products" Relationship="Self.FK_TypeID" FromRole="TypeOfProduct" ToRole="Product" />
   </EntityType>
+  <Association Name="FK_BillID">
+    <End Role="Bill" Type="Self.Bill" Multiplicity="1" />
+    <End Role="BillInfo" Type="Self.BillInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BillInfo">
+        <PropertyRef Name="BillID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductID">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="BillInfo" Type="Self.BillInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BillInfo">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Type_ID">
+    <End Role="TypeOfProduct" Type="Self.TypeOfProduct" Multiplicity="1" />
+    <End Role="BillInfo" Type="Self.BillInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeOfProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BillInfo">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_ProducerID">
     <End Role="Producer" Type="Self.Producer" Multiplicity="1" />
     <End Role="Product" Type="Self.Product" Multiplicity="*" />
@@ -101,6 +144,18 @@
     <EntitySet Name="Products" EntityType="Self.Product" />
     <EntitySet Name="Staffs" EntityType="Self.Staff" />
     <EntitySet Name="TypeOfProducts" EntityType="Self.TypeOfProduct" />
+    <AssociationSet Name="FK_BillID" Association="Self.FK_BillID">
+      <End Role="Bill" EntitySet="Bills" />
+      <End Role="BillInfo" EntitySet="BillInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductID" Association="Self.FK_ProductID">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="BillInfo" EntitySet="BillInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Type_ID" Association="Self.FK_Type_ID">
+      <End Role="TypeOfProduct" EntitySet="TypeOfProducts" />
+      <End Role="BillInfo" EntitySet="BillInfoes" />
+    </AssociationSet>
     <AssociationSet Name="FK_ProducerID" Association="Self.FK_ProducerID">
       <End Role="Producer" EntitySet="Producers" />
       <End Role="Product" EntitySet="Products" />

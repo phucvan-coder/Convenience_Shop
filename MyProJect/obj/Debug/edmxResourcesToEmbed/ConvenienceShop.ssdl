@@ -23,6 +23,7 @@
     <Property Name="BillID" Type="int" Nullable="false" />
     <Property Name="TypeID" Type="int" Nullable="false" />
     <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="int" />
     <Property Name="Discount" Type="int" />
     <Property Name="TotalPrice" Type="float" />
   </EntityType>
@@ -65,6 +66,18 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TypeName" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <Association Name="FK_BillID">
+    <End Role="Bill" Type="Self.Bill" Multiplicity="1" />
+    <End Role="BillInfo" Type="Self.BillInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BillInfo">
+        <PropertyRef Name="BillID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_ProducerID">
     <End Role="Producer" Type="Self.Producer" Multiplicity="1" />
     <End Role="Product" Type="Self.Product" Multiplicity="*" />
@@ -74,6 +87,30 @@
       </Principal>
       <Dependent Role="Product">
         <PropertyRef Name="ProducerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductID">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="BillInfo" Type="Self.BillInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BillInfo">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Type_ID">
+    <End Role="TypeOfProduct" Type="Self.TypeOfProduct" Multiplicity="1" />
+    <End Role="BillInfo" Type="Self.BillInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeOfProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BillInfo">
+        <PropertyRef Name="TypeID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -97,9 +134,21 @@
     <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypeOfProduct" EntityType="Self.TypeOfProduct" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_BillID" Association="Self.FK_BillID">
+      <End Role="Bill" EntitySet="Bill" />
+      <End Role="BillInfo" EntitySet="BillInfo" />
+    </AssociationSet>
     <AssociationSet Name="FK_ProducerID" Association="Self.FK_ProducerID">
       <End Role="Producer" EntitySet="Producer" />
       <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductID" Association="Self.FK_ProductID">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="BillInfo" EntitySet="BillInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Type_ID" Association="Self.FK_Type_ID">
+      <End Role="TypeOfProduct" EntitySet="TypeOfProduct" />
+      <End Role="BillInfo" EntitySet="BillInfo" />
     </AssociationSet>
     <AssociationSet Name="FK_TypeID" Association="Self.FK_TypeID">
       <End Role="TypeOfProduct" EntitySet="TypeOfProduct" />

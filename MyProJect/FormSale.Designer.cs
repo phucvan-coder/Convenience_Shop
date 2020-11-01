@@ -109,6 +109,7 @@
             this.btnUpdateProduct.TabIndex = 14;
             this.btnUpdateProduct.Text = "Update";
             this.btnUpdateProduct.UseVisualStyleBackColor = true;
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
             // 
             // btnDeleteProduct
             // 
@@ -231,6 +232,7 @@
             this.btnPayment.TabIndex = 17;
             this.btnPayment.Text = "Payment";
             this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // dgvOrderList
             // 
@@ -246,9 +248,10 @@
             this.Column7});
             this.dgvOrderList.Location = new System.Drawing.Point(6, 51);
             this.dgvOrderList.Name = "dgvOrderList";
-            this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvOrderList.Size = new System.Drawing.Size(764, 193);
             this.dgvOrderList.TabIndex = 0;
+            this.dgvOrderList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrderList_CellClick);
             // 
             // Column1
             // 
