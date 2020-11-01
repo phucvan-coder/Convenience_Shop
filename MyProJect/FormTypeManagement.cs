@@ -18,6 +18,8 @@ namespace MyProJect
             InitializeComponent();
         }
 
+        public bool SIGNAL;
+
         #region Method
         //Function display information of product type from database to datagridview
         public void DisplayType()
@@ -53,8 +55,17 @@ namespace MyProJect
             bool result = false;
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
-                var a = entity.TypeOfProducts.FirstOrDefault();
+                
+                TypeOfProduct a = entity.TypeOfProducts.SqlQuery("select * from TypeOfProduct where Id=" + dgvTypeList.SelectedRows[0].Cells[0].Value.ToString()).FirstOrDefault();
+                List<Product> lstProduct = new List<Product>();
+                lstProduct = entity.Products.SqlQuery("select * from Product where TypeID=" + dgvTypeList.SelectedRows[0].Cells[0].Value.ToString()).ToList();
+                foreach (Product x in lstProduct)
+                {
+                    entity.Products.Remove(x);
+                    entity.SaveChanges();
+                }
                 entity.TypeOfProducts.Remove(a);
+                entity.SaveChanges();
                 result = true;
             }
             return result;
@@ -66,6 +77,14 @@ namespace MyProJect
         private void FormTypeManagement_Load(object sender, EventArgs e)
         {
             DisplayType();
+
+            SIGNAL = false;
+
+            btnUpdateType.Enabled = false;
+            btnDeleteType.Enabled = false;
+
+            txtTypeID.Text = "";
+            txtTypeName.Text = "";
         }
         //Event Add type onto database
         private void btnAddType_Click(object sender, EventArgs e)
@@ -107,6 +126,47 @@ namespace MyProJect
         {
             FormMenu menu = new FormMenu();
             menu.Show();
+        }
+
+        private void btnUpdateType_Click(object sender, EventArgs e)
+        {
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            {
+                entity.Database.ExecuteSqlCommand("update TypeOfProduct set " +
+                    "TypeName='" + txtTypeName.Text + "' " +
+                    " where Id=" + dgvTypeList.SelectedRows[0].Cells[0].Value.ToString());
+                entity.SaveChanges();
+                MessageBox.Show("Update Successed!");
+                FormTypeManagement_Load(sender, e);
+            }
+        }
+
+        private void dgvTypeList_SelectionChanged(object sender, EventArgs e)
+        {
+            if (SIGNAL == true)
+            {
+                if (dgvTypeList.SelectedRows.Count > 0)
+                {
+                    txtTypeID.Text = dgvTypeList.SelectedRows[0].Cells[0].Value.ToString();
+                    txtTypeName.Text = dgvTypeList.SelectedRows[0].Cells[1].Value.ToString();
+
+                }
+            }
+        }
+
+        private void dgvTypeList_Click(object sender, EventArgs e)
+        {
+            SIGNAL = true;
+            btnDeleteType.Enabled = true;
+            btnUpdateType.Enabled = true;
+
+            if (dgvTypeList.SelectedRows.Count > 0)
+            {
+                txtTypeID.Text = dgvTypeList.SelectedRows[0].Cells[0].Value.ToString();
+                txtTypeName.Text = dgvTypeList.SelectedRows[0].Cells[1].Value.ToString();
+
+            }
+
         }
     }
 }

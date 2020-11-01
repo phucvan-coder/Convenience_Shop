@@ -99,6 +99,7 @@
             this.btnUpdateStaff.TabIndex = 20;
             this.btnUpdateStaff.Text = "Update";
             this.btnUpdateStaff.UseVisualStyleBackColor = true;
+            this.btnUpdateStaff.Click += new System.EventHandler(this.btnUpdateStaff_Click);
             // 
             // btnDeleteStaff
             // 
@@ -251,8 +252,11 @@
             this.dgvStaffList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStaffList.Location = new System.Drawing.Point(6, 38);
             this.dgvStaffList.Name = "dgvStaffList";
+            this.dgvStaffList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStaffList.Size = new System.Drawing.Size(764, 169);
             this.dgvStaffList.TabIndex = 22;
+            this.dgvStaffList.SelectionChanged += new System.EventHandler(this.dgvStaffList_SelectionChanged);
+            this.dgvStaffList.Click += new System.EventHandler(this.dgvStaffList_Click);
             // 
             // btnSearchStaff
             // 
@@ -262,6 +266,7 @@
             this.btnSearchStaff.TabIndex = 21;
             this.btnSearchStaff.Text = "Search";
             this.btnSearchStaff.UseVisualStyleBackColor = true;
+            this.btnSearchStaff.Click += new System.EventHandler(this.btnSearchStaff_Click);
             // 
             // txtSearchStaff
             // 
@@ -273,10 +278,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(316, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 25);
+            this.label1.Size = new System.Drawing.Size(203, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Staff Management";
             // 

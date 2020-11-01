@@ -16,7 +16,9 @@ namespace MyProJect
         public FormProductManagement()
         {
             InitializeComponent();
+            ComboboxStatus();
         }
+        public int SIGNAL;
 
         #region Method
         //Function display product onto datagridview
@@ -87,10 +89,14 @@ namespace MyProJect
             bool result = false;
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
-                var a = entity.Products.FirstOrDefault();
-                entity.Products.Remove(a);
-                entity.SaveChanges();
-                result = true;
+                if (dgvProductList.SelectedRows.Count > 0)
+                {
+                    Product a = entity.Products.SqlQuery("select * from Product where Id=" + dgvProductList.SelectedRows[0].Cells[0].Value.ToString()).FirstOrDefault();
+                    entity.Products.Remove(a);
+                    entity.SaveChanges();
+                    result = true;
+                }
+                
             }
             return result;
         }
@@ -101,6 +107,19 @@ namespace MyProJect
         private void FormProductManagement_Load(object sender, EventArgs e)
         {
             DisplayProduct();
+            ComboboxProducer();
+            ComboboxType();
+            SIGNAL = 0;
+            btnDeleteProduct.Enabled = false;
+            btnUpdateProduct.Enabled = false;
+
+            txtPrice.Text = "";
+            txtProductID.Text = "";
+            txtProductName.Text = "";
+            txtProductSearch.Text = "";
+            cmbProducer.SelectedIndex = -1;
+            cmbStatus.SelectedIndex = -1;
+            cmbType.SelectedIndex = -1;
         }
         //Event add product onto database
         private void btnAddProduct_Click(object sender, EventArgs e)
@@ -143,6 +162,91 @@ namespace MyProJect
         {
             FormMenu menu = new FormMenu();
             menu.Show();
+        }
+
+        private void btnUpdateProduct_Click(object sender, EventArgs e)
+        {
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            {
+                entity.Database.ExecuteSqlCommand("update Product set " +
+                    "TypeID=" + cmbType.SelectedValue + "," +
+                    "ProducerID=" + cmbProducer.SelectedValue + "," +
+                    "Price=" + txtPrice.Text + ", " +
+                    "ProductName='" + txtProductName.Text + "'," +
+                    "Status='" + cmbStatus.GetItemText(cmbStatus.SelectedItem) + "'" +
+                    " where Id=" + dgvProductList.SelectedRows[0].Cells[0].Value);
+                entity.SaveChanges();
+                MessageBox.Show("Update Successed!");
+                FormProductManagement_Load(sender, e);
+            }
+        }
+
+        private void dgvProductList_SelectionChanged(object sender, EventArgs e)
+        {
+            if (SIGNAL == 1)
+            {
+                if (dgvProductList.SelectedRows.Count > 0)
+                {
+                    txtProductID.Text = dgvProductList.SelectedRows[0].Cells[0].Value.ToString();
+                    cmbType.SelectedIndex = cmbType.FindStringExact(dgvProductList.SelectedRows[0].Cells[1].Value.ToString());
+                    txtProductName.Text = dgvProductList.SelectedRows[0].Cells[2].Value.ToString();
+                    txtPrice.Text = dgvProductList.SelectedRows[0].Cells[3].Value.ToString();
+                    cmbProducer.SelectedIndex = cmbProducer.FindStringExact(dgvProductList.SelectedRows[0].Cells[4].Value.ToString());
+                    cmbStatus.SelectedItem = dgvProductList.SelectedRows[0].Cells[5].Value.ToString();
+
+                }
+            }
+            
+
+        }
+
+        private void dgvProductList_Click(object sender, EventArgs e)
+        {
+            SIGNAL = 1;
+            btnDeleteProduct.Enabled = true;
+            btnUpdateProduct.Enabled = true;
+
+            if (dgvProductList.SelectedRows.Count > 0)
+            {
+                txtProductID.Text = dgvProductList.SelectedRows[0].Cells[0].Value.ToString();
+                cmbType.SelectedIndex = cmbType.FindStringExact(dgvProductList.SelectedRows[0].Cells[1].Value.ToString());
+                txtProductName.Text = dgvProductList.SelectedRows[0].Cells[2].Value.ToString();
+                txtPrice.Text = dgvProductList.SelectedRows[0].Cells[3].Value.ToString();
+                cmbProducer.SelectedIndex = cmbProducer.FindStringExact(dgvProductList.SelectedRows[0].Cells[4].Value.ToString());
+                cmbStatus.SelectedItem = dgvProductList.SelectedRows[0].Cells[5].Value.ToString();
+
+            }
+        }
+
+        private void btnSearchProduct_Click(object sender, EventArgs e)
+        {
+            string query = txtProductSearch.Text.ToLower();
+            List<ProductInfo> data = new List<ProductInfo>();
+
+            DisplayProduct();
+            foreach (DataGridViewRow a in dgvProductList.Rows)
+            {
+                if (a.Cells[0].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[1].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[2].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[3].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[4].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[5].Value.ToString().ToLower().Contains(query))
+                {
+                    ProductInfo x = new ProductInfo();
+                    x.Id = Convert.ToInt32(a.Cells[0].Value);
+                    x.TypeName = a.Cells[1].Value.ToString();
+                    x.ProductName = a.Cells[2].Value.ToString();
+                    x.Price = Convert.ToDouble(a.Cells[3].Value);
+                    x.ProducerName = a.Cells[4].Value.ToString();
+                    x.Status = a.Cells[5].Value.ToString();
+
+                    data.Add(x);
+                }
+                
+            }
+
+            dgvProductList.DataSource = data;
         }
     }
 }

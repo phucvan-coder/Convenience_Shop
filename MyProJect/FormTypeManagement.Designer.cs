@@ -49,10 +49,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(145, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 25);
+            this.label1.Size = new System.Drawing.Size(206, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Type Management";
             // 
@@ -90,6 +90,7 @@
             this.btnUpdateType.TabIndex = 6;
             this.btnUpdateType.Text = "Update";
             this.btnUpdateType.UseVisualStyleBackColor = true;
+            this.btnUpdateType.Click += new System.EventHandler(this.btnUpdateType_Click);
             // 
             // txtTypeID
             // 
@@ -101,10 +102,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 89);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 20);
+            this.label3.Size = new System.Drawing.Size(115, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Name of type";
             // 
@@ -128,10 +129,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(42, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 20);
+            this.label2.Size = new System.Drawing.Size(28, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "ID";
             // 
@@ -169,8 +170,11 @@
             this.dgvTypeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTypeList.Location = new System.Drawing.Point(80, 68);
             this.dgvTypeList.Name = "dgvTypeList";
+            this.dgvTypeList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTypeList.Size = new System.Drawing.Size(278, 159);
             this.dgvTypeList.TabIndex = 0;
+            this.dgvTypeList.SelectionChanged += new System.EventHandler(this.dgvTypeList_SelectionChanged);
+            this.dgvTypeList.Click += new System.EventHandler(this.dgvTypeList_Click);
             // 
             // FormTypeManagement
             // 

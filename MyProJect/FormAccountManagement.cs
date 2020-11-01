@@ -17,7 +17,7 @@ namespace MyProJect
         {
             InitializeComponent();
         }
-
+        public bool SIGNAL;
         #region Method
         //Function display information of Account from database to datagridview
         public void DisplayAccount()
@@ -54,9 +54,14 @@ namespace MyProJect
             bool result = false;
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
-                var a = entity.Accounts.FirstOrDefault();
-                entity.Accounts.Remove(a);
-                result = true;
+                if (dgvAccountList.SelectedRows.Count > 0)
+                {
+                    Account a = entity.Accounts.SqlQuery("select * from Account where Id=" + dgvAccountList.SelectedRows[0].Cells[0].Value.ToString()).FirstOrDefault();
+                    entity.Accounts.Remove(a);
+                    entity.SaveChanges();
+                    result = true;
+                }
+                
             }
             return result;
         }
@@ -67,6 +72,14 @@ namespace MyProJect
         private void FormAccountManagement_Load(object sender, EventArgs e)
         {
             DisplayAccount();
+
+            SIGNAL = false;
+            btnUpdateAccount.Enabled = false;
+            btnDeleteAccount.Enabled = false;
+
+            txtAccountID.Text = "";
+            txtAccountName.Text = "";
+            txtPassword.Text = "";
         }
         //Event add Account onto database
         private void btnAddAccount_Click(object sender, EventArgs e)
@@ -107,6 +120,76 @@ namespace MyProJect
         {
             FormMenu menu = new FormMenu();
             menu.Show();
+        }
+
+        private void btnUpdateAccount_Click(object sender, EventArgs e)
+        {
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            {
+                entity.Database.ExecuteSqlCommand("update Account set " +
+                    "AccountName='" + txtAccountName.Text + "', " +
+                    "Password='" + txtPassword.Text + "' " +
+                    " where Id=" + dgvAccountList.SelectedRows[0].Cells[0].Value.ToString());
+                entity.SaveChanges();
+                MessageBox.Show("Update Successed!");
+                FormAccountManagement_Load(sender, e);
+            }
+        }
+
+        private void dgvAccountList_SelectionChanged(object sender, EventArgs e)
+        {
+            if (SIGNAL == true)
+            {
+                if (dgvAccountList.SelectedRows.Count > 0)
+                {
+                    txtAccountID.Text = dgvAccountList.SelectedRows[0].Cells[0].Value.ToString();
+                    txtAccountName.Text = dgvAccountList.SelectedRows[0].Cells[1].Value.ToString();
+                    txtPassword.Text = dgvAccountList.SelectedRows[0].Cells[2].Value.ToString();
+
+                }
+            }
+        }
+
+        private void dgvAccountList_Click(object sender, EventArgs e)
+        {
+            SIGNAL = true;
+            btnDeleteAccount.Enabled = true;
+            btnUpdateAccount.Enabled = true;
+
+
+            if (dgvAccountList.SelectedRows.Count > 0)
+            {
+                txtAccountID.Text = dgvAccountList.SelectedRows[0].Cells[0].Value.ToString();
+                txtAccountName.Text = dgvAccountList.SelectedRows[0].Cells[1].Value.ToString();
+                txtPassword.Text = dgvAccountList.SelectedRows[0].Cells[2].Value.ToString();
+
+            }
+
+        }
+
+        private void btnSearchAccount_Click(object sender, EventArgs e)
+        {
+            string query = txtSearchAccount.Text.ToLower();
+            List<AccountInfo> data = new List<AccountInfo>();
+
+            DisplayAccount();
+            foreach (DataGridViewRow a in dgvAccountList.Rows)
+            {
+                if (a.Cells[0].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[1].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[2].Value.ToString().ToLower().Contains(query))
+                {
+                    AccountInfo x = new AccountInfo();
+                    x.Id = Convert.ToInt32(a.Cells[0].Value);
+                    x.AccountName = a.Cells[1].Value.ToString();
+                    x.Password = a.Cells[2].Value.ToString();
+
+                    data.Add(x);
+                }
+
+            }
+
+            dgvAccountList.DataSource = data;
         }
     }
 }

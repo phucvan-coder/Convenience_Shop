@@ -74,6 +74,7 @@
             this.btnUpdateAccount.TabIndex = 11;
             this.btnUpdateAccount.Text = "Update";
             this.btnUpdateAccount.UseVisualStyleBackColor = true;
+            this.btnUpdateAccount.Click += new System.EventHandler(this.btnUpdateAccount_Click);
             // 
             // btnDeleteAccount
             // 
@@ -164,8 +165,11 @@
             this.dgvAccountList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAccountList.Location = new System.Drawing.Point(6, 45);
             this.dgvAccountList.Name = "dgvAccountList";
+            this.dgvAccountList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAccountList.Size = new System.Drawing.Size(460, 157);
             this.dgvAccountList.TabIndex = 13;
+            this.dgvAccountList.SelectionChanged += new System.EventHandler(this.dgvAccountList_SelectionChanged);
+            this.dgvAccountList.Click += new System.EventHandler(this.dgvAccountList_Click);
             // 
             // btnSearchAccount
             // 
@@ -175,6 +179,7 @@
             this.btnSearchAccount.TabIndex = 12;
             this.btnSearchAccount.Text = "Search";
             this.btnSearchAccount.UseVisualStyleBackColor = true;
+            this.btnSearchAccount.Click += new System.EventHandler(this.btnSearchAccount_Click);
             // 
             // txtSearchAccount
             // 

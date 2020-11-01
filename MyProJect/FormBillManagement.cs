@@ -69,5 +69,10 @@ namespace MyProJect
             FormMenu menu = new FormMenu();
             menu.Show();
         }
+
+        private void btnSearchBill_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

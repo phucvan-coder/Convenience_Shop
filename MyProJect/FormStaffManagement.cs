@@ -16,7 +16,12 @@ namespace MyProJect
         public FormStaffManagement()
         {
             InitializeComponent();
+
+            cmbGender.Items.Add("Male");
+            cmbGender.Items.Add("Female");
+            cmbGender.Items.Add("Other");
         }
+        public bool SIGNAL;
 
         #region Method
         //Function display information of Staff from database to datagridview
@@ -29,7 +34,7 @@ namespace MyProJect
                 {
                     Id = x.Id,
                     Name = x.Name,
-                    DateOfBirth = x.DateOfBirth,
+                    DateOfBirth = x.DateOfBirth.Value.Day + "/" + x.DateOfBirth.Value.Month + "/" + x.DateOfBirth.Value.Year,
                     Gender = x.Gender,
                     Email = x.Email,
                     Phone = x.Phone,
@@ -58,8 +63,9 @@ namespace MyProJect
             bool result = false;
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
-                var a = entity.Staffs.FirstOrDefault();
+                Staff a = entity.Staffs.SqlQuery("select * from Staff where Id=" + dgvStaffList.SelectedRows[0].Cells[0].Value.ToString()).FirstOrDefault();
                 entity.Staffs.Remove(a);
+                entity.SaveChanges();
                 result = true;
             }
             return result;
@@ -71,6 +77,18 @@ namespace MyProJect
         private void FormStaffManagement_Load(object sender, EventArgs e)
         {
             DisplayStaff();
+
+            SIGNAL = false;
+            btnUpdateStaff.Enabled = false;
+            btnDeleteStaff.Enabled = false;
+
+            txtStaffID.Text = "";
+            txtSearchStaff.Text = "";
+            txtStaffAddress.Text = "";
+            txtStaffEmail.Text = "";
+            txtStaffName.Text = "";
+            txtStaffPhone.Text = "";
+            cmbGender.SelectedIndex = -1;
         }
         //Event add Staff onto database
         private void btnAddStaff_Click(object sender, EventArgs e)
@@ -114,6 +132,97 @@ namespace MyProJect
         {
             FormMenu menu = new FormMenu();
             menu.Show();
+        }
+
+        private void btnUpdateStaff_Click(object sender, EventArgs e)
+        {
+            string DOB = dtpDateOfBirth.Value.Day + "/" + dtpDateOfBirth.Value.Month + "/" + dtpDateOfBirth.Value.Year;
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            {
+                entity.Database.ExecuteSqlCommand("update Staff set " +
+                    "Name='" + txtStaffName.Text + "', " +
+                    "Gender='" + cmbGender.GetItemText(cmbGender.SelectedItem) + "', " +
+                    "Email='" + txtStaffEmail.Text + "', " +
+                    "Phone='" + txtStaffPhone.Text+ "', " +
+                    "Address='" + txtStaffAddress.Text + "', " +
+                    "DateOfBirth='" + Convert.ToDateTime(DOB) + "' " +
+                    " where Id=" + dgvStaffList.SelectedRows[0].Cells[0].Value.ToString());
+                entity.SaveChanges();
+                MessageBox.Show("Update Successed!");
+                FormStaffManagement_Load(sender, e);
+            }
+        }
+
+        private void dgvStaffList_SelectionChanged(object sender, EventArgs e)
+        {
+            if (SIGNAL == true)
+            {
+                if (dgvStaffList.SelectedRows.Count > 0)
+                {
+                    txtStaffID.Text = dgvStaffList.SelectedRows[0].Cells[0].Value.ToString();
+                    txtStaffName.Text = dgvStaffList.SelectedRows[0].Cells[1].Value.ToString();
+                    dtpDateOfBirth.Value = Convert.ToDateTime(dgvStaffList.SelectedRows[0].Cells[2].Value.ToString());
+                    cmbGender.SelectedItem = dgvStaffList.SelectedRows[0].Cells[3].Value.ToString();
+                    txtStaffEmail.Text = dgvStaffList.SelectedRows[0].Cells[4].Value.ToString();
+                    txtStaffPhone.Text = dgvStaffList.SelectedRows[0].Cells[5].Value.ToString();
+                    txtStaffAddress.Text = dgvStaffList.SelectedRows[0].Cells[6].Value.ToString();
+
+                }
+            }
+        }
+
+        private void dgvStaffList_Click(object sender, EventArgs e)
+        {
+            SIGNAL = true;
+
+            btnDeleteStaff.Enabled = true;
+            btnUpdateStaff.Enabled = true;
+
+            if (dgvStaffList.SelectedRows.Count > 0)
+            {
+                txtStaffID.Text = dgvStaffList.SelectedRows[0].Cells[0].Value.ToString();
+                txtStaffName.Text = dgvStaffList.SelectedRows[0].Cells[1].Value.ToString();
+                dtpDateOfBirth.Value = Convert.ToDateTime(dgvStaffList.SelectedRows[0].Cells[2].Value.ToString());
+                cmbGender.SelectedItem = dgvStaffList.SelectedRows[0].Cells[3].Value.ToString();
+                txtStaffEmail.Text = dgvStaffList.SelectedRows[0].Cells[4].Value.ToString();
+                txtStaffPhone.Text = dgvStaffList.SelectedRows[0].Cells[5].Value.ToString();
+                txtStaffAddress.Text = dgvStaffList.SelectedRows[0].Cells[6].Value.ToString();
+
+            }
+
+        }
+
+        private void btnSearchStaff_Click(object sender, EventArgs e)
+        {
+            string query = txtSearchStaff.Text.ToLower();
+            List<StaffInfo> data = new List<StaffInfo>();
+
+            DisplayStaff();
+            foreach (DataGridViewRow a in dgvStaffList.Rows)
+            {
+                if (a.Cells[0].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[1].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[2].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[3].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[4].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[5].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[6].Value.ToString().ToLower().Contains(query))
+                {
+                    StaffInfo x = new StaffInfo();
+                    x.Id = Convert.ToInt32(a.Cells[0].Value);
+                    x.Name = a.Cells[1].Value.ToString();
+                    x.DateOfBirth = a.Cells[2].Value.ToString();
+                    x.Gender = a.Cells[3].Value.ToString();
+                    x.Email = a.Cells[4].Value.ToString();
+                    x.Phone = a.Cells[5].Value.ToString();
+                    x.Address = a.Cells[6].Value.ToString();
+
+                    data.Add(x);
+                }
+
+            }
+
+            dgvStaffList.DataSource = data;
         }
     }
 }

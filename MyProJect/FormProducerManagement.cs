@@ -18,6 +18,7 @@ namespace MyProJect
             InitializeComponent();
         }
 
+        public bool SIGNAL;
         #region Method
         //Function display information of producer onto datagridview
         public void DisplayProducer()
@@ -54,9 +55,21 @@ namespace MyProJect
             bool result = false;
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
-                var a = entity.Producers.FirstOrDefault();
-                entity.Producers.Remove(a);
-                result = true;
+                if (dgvProducerList.SelectedRows.Count > 0)
+                {
+                    Producer a = entity.Producers.SqlQuery("select * from Producer where Id=" + dgvProducerList.SelectedRows[0].Cells[0].Value.ToString()).FirstOrDefault();
+                    List<Product> lstProduct = new List<Product>();
+                    lstProduct = entity.Products.SqlQuery("select * from Product where ProducerID=" + dgvProducerList.SelectedRows[0].Cells[0].Value.ToString()).ToList();
+                    foreach(Product x in lstProduct)
+                    {
+                        entity.Products.Remove(x);
+                        entity.SaveChanges();
+                    }
+                    entity.Producers.Remove(a);
+                    entity.SaveChanges();
+                    result = true;
+                }
+                
             }
             return result;
         }
@@ -67,6 +80,15 @@ namespace MyProJect
         private void FormProducerManagement_Load(object sender, EventArgs e)
         {
             DisplayProducer();
+            SIGNAL = false;
+
+            txtProducerAddress.Text = "";
+            txtProducerID.Text = "";
+            txtProducerName.Text = "";
+            txtProducerPhone.Text = "";
+
+            btnDeleteProducer.Enabled = false;
+            btnUpdateProducer.Enabled = false;
         }
 
         //Event Add producer onto database
@@ -110,6 +132,85 @@ namespace MyProJect
         {
             FormMenu menu = new FormMenu();
             menu.Show();
+        }
+
+        private void btnUpdateProducer_Click(object sender, EventArgs e)
+        {
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            {
+                entity.Database.ExecuteSqlCommand("update Producer set " +
+                    "Phone='" + txtProducerPhone.Text + "', " +
+                    "ProducerName='" + txtProducerName.Text + "', " +
+                    "Address='" + txtProducerAddress.Text + "'" +
+                    " where Id=" + dgvProducerList.SelectedRows[0].Cells[0].Value);
+                entity.SaveChanges();
+                MessageBox.Show("Update Successed!");
+                FormProducerManagement_Load(sender, e);
+            }
+        }
+
+        private void dgvProducerList_SelectionChanged(object sender, EventArgs e)
+        {
+            if (SIGNAL == true)
+            {
+                if (dgvProducerList.SelectedRows.Count > 0)
+                {
+                    txtProducerID.Text = dgvProducerList.SelectedRows[0].Cells[0].Value.ToString();
+                    txtProducerName.Text = dgvProducerList.SelectedRows[0].Cells[1].Value.ToString();
+                    txtProducerAddress.Text = dgvProducerList.SelectedRows[0].Cells[2].Value.ToString();
+                    txtProducerPhone.Text = dgvProducerList.SelectedRows[0].Cells[3].Value.ToString();
+
+                }
+            }
+
+        }
+
+        private void dgvProducerList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvProducerList_Click(object sender, EventArgs e)
+        {
+            SIGNAL = true;
+            btnDeleteProducer.Enabled = true;
+            btnUpdateProducer.Enabled = true;
+
+            if (dgvProducerList.SelectedRows.Count > 0)
+            {
+                txtProducerID.Text = dgvProducerList.SelectedRows[0].Cells[0].Value.ToString();
+                txtProducerName.Text = dgvProducerList.SelectedRows[0].Cells[1].Value.ToString();
+                txtProducerAddress.Text = dgvProducerList.SelectedRows[0].Cells[2].Value.ToString();
+                txtProducerPhone.Text = dgvProducerList.SelectedRows[0].Cells[3].Value.ToString();
+
+            }
+        }
+
+        private void btnSearchProducer_Click(object sender, EventArgs e)
+        {
+            string query = txtSearchProducer.Text.ToLower();
+            List<ProducerInfo> data = new List<ProducerInfo>();
+
+            DisplayProducer();
+            foreach (DataGridViewRow a in dgvProducerList.Rows)
+            {
+                if (a.Cells[0].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[1].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[2].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[3].Value.ToString().ToLower().Contains(query) )
+                {
+                    ProducerInfo x = new ProducerInfo();
+                    x.Id = Convert.ToInt32(a.Cells[0].Value);
+                    x.ProducerName = a.Cells[1].Value.ToString();
+                    x.Address = a.Cells[2].Value.ToString();
+                    x.Phone = a.Cells[3].Value.ToString();
+
+                    data.Add(x);
+                }
+
+            }
+
+            dgvProducerList.DataSource = data;
         }
     }
 }

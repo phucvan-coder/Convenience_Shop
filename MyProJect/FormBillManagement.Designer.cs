@@ -101,6 +101,7 @@
             this.btnSearchBill.TabIndex = 3;
             this.btnSearchBill.Text = "Search";
             this.btnSearchBill.UseVisualStyleBackColor = true;
+            this.btnSearchBill.Click += new System.EventHandler(this.btnSearchBill_Click);
             // 
             // btnFilter
             // 

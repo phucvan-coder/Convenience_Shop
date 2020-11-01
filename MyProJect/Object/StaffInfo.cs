@@ -10,7 +10,7 @@ namespace MyProJect.Object
     {
         private int id;
         private string name;
-        private DateTime? dateOfBirth;
+        private string dateOfBirth;
         private string gender;
         private string email;
         private string phone;
@@ -18,7 +18,7 @@ namespace MyProJect.Object
 
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
-        public DateTime? DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }
+        public string DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }
         public string Gender { get => gender; set => gender = value; }
         public string Email { get => email; set => email = value; }
         public string Phone { get => phone; set => phone = value; }

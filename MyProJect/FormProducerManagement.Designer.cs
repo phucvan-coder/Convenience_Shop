@@ -78,6 +78,7 @@
             this.btnUpdateProducer.TabIndex = 16;
             this.btnUpdateProducer.Text = "Update";
             this.btnUpdateProducer.UseVisualStyleBackColor = true;
+            this.btnUpdateProducer.Click += new System.EventHandler(this.btnUpdateProducer_Click);
             // 
             // btnDeleteProducer
             // 
@@ -185,8 +186,12 @@
             this.dgvProducerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProducerList.Location = new System.Drawing.Point(6, 47);
             this.dgvProducerList.Name = "dgvProducerList";
+            this.dgvProducerList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProducerList.Size = new System.Drawing.Size(719, 150);
             this.dgvProducerList.TabIndex = 18;
+            this.dgvProducerList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducerList_CellContentClick);
+            this.dgvProducerList.SelectionChanged += new System.EventHandler(this.dgvProducerList_SelectionChanged);
+            this.dgvProducerList.Click += new System.EventHandler(this.dgvProducerList_Click);
             // 
             // btnSearchProducer
             // 
@@ -196,6 +201,7 @@
             this.btnSearchProducer.TabIndex = 17;
             this.btnSearchProducer.Text = "Search";
             this.btnSearchProducer.UseVisualStyleBackColor = true;
+            this.btnSearchProducer.Click += new System.EventHandler(this.btnSearchProducer_Click);
             // 
             // txtSearchProducer
             // 

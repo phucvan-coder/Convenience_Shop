@@ -36,9 +36,6 @@ C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\bin\Debug\EntityFramework.SqlSe
 C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csprojAssemblyReference.cache
 C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormBillFilter.resources
 C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormLogin.resources
-C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormMain.resources
-C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormManage.resources
-C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormSignUp.resources
 C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.Properties.Resources.resources
 C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csproj.GenerateResource.cache
 C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.csproj.CoreCompileInputs.cache
@@ -67,3 +64,11 @@ F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJ
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormSale.resources
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormStaffManagement.resources
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormTypeManagement.resources
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormAccountManagement.resources
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormBillManagement.resources
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormMenu.resources
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormProducerManagement.resources
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormProductManagement.resources
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormSale.resources
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormStaffManagement.resources
+C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormTypeManagement.resources

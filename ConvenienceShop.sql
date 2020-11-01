@@ -21,6 +21,10 @@ CREATE TABLE Producer(
 	Phone NVARCHAR(11) NULL
 )
 GO
+/*
+insert into Producer values ('P1','add1','phone1'),('P2','add2','phone2')
+*/
+
 CREATE TABLE Product(
 	Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	TypeID INT NOT NULL,
@@ -32,6 +36,10 @@ CREATE TABLE Product(
 	CONSTRAINT FK_ProducerID FOREIGN KEY(ProducerID) REFERENCES Producer(Id)
 )
 GO
+/*
+insert into Product values (1,'pro1',1,12.0, 'Status1'),(1,'pro2',2,22.0,'Status2')
+*/
+
 CREATE TABLE Staff(
 	Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	Name NVARCHAR(50) NULL,
