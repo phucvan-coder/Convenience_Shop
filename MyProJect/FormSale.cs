@@ -52,14 +52,14 @@ namespace MyProJect
             }
         }
         //Function save orders onto database
-        public bool SaveOrder(BillInfo billInfo)
+        public int SaveOrder(BillInfo billInfo)
         {
-            bool result = false;
+            int result = 0;
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
                 entity.BillInfoes.Add(billInfo);
                 entity.SaveChanges();
-                result = true;
+                result = 1;
             }
             return result;
         }
@@ -69,25 +69,24 @@ namespace MyProJect
         //Event add
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            using(ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
-                double? price = 0;
-                price = Convert.ToDouble(entity.Products.Where(x => x.ProductName.Equals(cmbProduct.Text)).Select(x => x.Price));
-                double? totalPrice = Convert.ToInt32(nmrAmount.Value) * price * Convert.ToInt32(nmrDiscount.Value)/100;
-                string[] order = new string[] { cmbType.Text, cmbProduct.Text, dtpSaleDate.Text, nmrAmount.Value.ToString(), price.ToString(), nmrDiscount.Value.ToString(), totalPrice.ToString()};
+                var price = Convert.ToDouble(entity.Products.Where(x => x.ProductName == cmbProduct.Text).First().Price);
+                double? totalPrice = (Convert.ToInt32(nmrAmount.Value) * price) -(Convert.ToInt32(nmrAmount.Value) * price * Convert.ToInt32(nmrDiscount.Value)/100);
+                string[] order = new string[] { cmbType.Text, cmbProduct.Text, dtpSaleDate.Value.ToString("dd/MM/yyyy"), nmrAmount.Value.ToString(), price.ToString(), nmrDiscount.Value.ToString(), totalPrice.ToString()};
                 dgvOrderList.Rows.Add(order);
             }
         }
         //Event delete
         private void btnDeleteProduct_Click(object sender, EventArgs e)
         {
-            if(dgvOrderList.Rows.Count == 0)
+            if(dgvOrderList.Rows.Count == 1)
             {
-                dgvOrderList.Rows.RemoveAt(dgvOrderList.Rows[0].Index);
+                MessageBox.Show("The list is empty!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("The list is empty!","Message",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                dgvOrderList.Rows.RemoveAt(dgvOrderList.Rows[0].Index);
             }
         }
         //Event update 
@@ -95,12 +94,11 @@ namespace MyProJect
         {
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
-                double? price = 0;
-                price = Convert.ToDouble(entity.Products.Where(x => x.ProductName == cmbProduct.Text).Select(x => x.Price));
-                double? totalPrice = Convert.ToInt32(nmrAmount.Value) * price * Convert.ToInt32(nmrDiscount.Value) / 100;
+                var price = Convert.ToDouble(entity.Products.Where(x => x.ProductName == cmbProduct.Text).First().Price);
+                double? totalPrice = (Convert.ToInt32(nmrAmount.Value) * price) - (Convert.ToInt32(nmrAmount.Value) * price * Convert.ToInt32(nmrDiscount.Value) / 100);
                 dgvOrderList.Rows[index].Cells[0].Value = cmbType.Text;
                 dgvOrderList.Rows[index].Cells[1].Value = cmbProduct.Text;
-                dgvOrderList.Rows[index].Cells[2].Value = dtpSaleDate.Value;
+                dgvOrderList.Rows[index].Cells[2].Value = dtpSaleDate.Value.ToString("dd/MM/yyyy");
                 dgvOrderList.Rows[index].Cells[3].Value = nmrAmount.Value;
                 dgvOrderList.Rows[index].Cells[0].Value = cmbType.Text;
                 dgvOrderList.Rows[index].Cells[5].Value = nmrDiscount.Value;
@@ -121,24 +119,36 @@ namespace MyProJect
         //Event payment
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            /*using(ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            using(ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
                 Bill bill = new Bill();
                 bill.DateOfSale = dtpSaleDate.Value;
                 SaveBill(bill);
-                BillInfo billInfo = new BillInfo();
-                billInfo.BillID = entity.Bills.Where(x => x.Bill)
 
-                 bool result = SaveOrder(billInfo);
-                if (result)
+                int result = 0, index = 0;
+                BillInfo billInfo = new BillInfo();
+                for(int i = 0; i < dgvOrderList.Rows.Count - 1; i++)
                 {
-                    MessageBox.Show("Saved successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    index++;
+                    DataGridViewRow row = dgvOrderList.Rows[i];
+                    billInfo.BillID = entity.Bills.Where(x => x.DateOfSale.Value == Convert.ToDateTime(row.Cells[2].Value)).First().Id;
+                    billInfo.TypeID = entity.TypeOfProducts.Where(x => x.TypeName == row.Cells[0].ToString()).First().Id;
+                    billInfo.ProductID = entity.Products.Where(x => x.ProductName ==row.Cells[1].ToString()).First().Id;
+                    billInfo.Amount = Convert.ToInt32(row.Cells[3].Value);
+                    billInfo.Discount = Convert.ToInt32(row.Cells[5].Value);
+                    billInfo.TotalPrice = Convert.ToInt32(row.Cells[5].Value);
+                    result = SaveOrder(billInfo);
+                }
+
+                if (result == index)
+                {
+                    MessageBox.Show("Pay successfully!\n", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Can not be saved!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Can not be paid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }*/
+            }
         }
         //Event Load Form
         private void FormSale_Load(object sender, EventArgs e)

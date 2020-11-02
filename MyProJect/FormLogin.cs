@@ -45,6 +45,7 @@ namespace MyProJect
                 this.Hide();
                 FormMenu menu = new FormMenu();
                 menu.ShowDialog();
+                this.Show();
             }
             // nếu sai thông tin đăng nhập thì báo cmn lỗi luôn
             else if (string.Compare(username, user1, false) != 0 || string.Compare(username, user2, false) == 0)

@@ -141,7 +141,6 @@
     </Compile>
     <Compile Include="Object\AccountInfo.cs" />
     <Compile Include="Object\BillInfo_Class.cs" />
-    <Compile Include="Object\Order.cs" />
     <Compile Include="Object\ProducerInfo.cs" />
     <Compile Include="Object\ProductInfo.cs" />
     <Compile Include="Object\StaffInfo.cs" />
