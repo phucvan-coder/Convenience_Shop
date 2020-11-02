@@ -172,6 +172,7 @@
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(160, 21);
             this.cmbType.TabIndex = 7;
+            this.cmbType.SelectedIndexChanged += new System.EventHandler(this.cmbType_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -310,6 +311,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sale";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormSale_FormClosed);
+            this.Load += new System.EventHandler(this.FormSale_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrAmount)).EndInit();

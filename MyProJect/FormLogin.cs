@@ -44,7 +44,7 @@ namespace MyProJect
                 MessageBox.Show("Login success", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 FormMenu menu = new FormMenu();
-                menu.Show();
+                menu.ShowDialog();
             }
             // nếu sai thông tin đăng nhập thì báo cmn lỗi luôn
             else if (string.Compare(username, user1, false) != 0 || string.Compare(username, user2, false) == 0)

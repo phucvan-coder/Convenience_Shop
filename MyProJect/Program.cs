@@ -16,7 +16,7 @@ namespace MyProJect
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormStaffManagement());
+            Application.Run(new FormMenu());
         }
     }
 }

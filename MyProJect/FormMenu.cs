@@ -125,50 +125,19 @@ namespace MyProJect
         //từ picture box
         private void ptbx_Logout_Click(object sender, EventArgs e)
         {
-            string message = "Are you sure want to logout?";
-            string title = "Question";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            MessageBoxIcon boxIcon = MessageBoxIcon.Question;
-            DialogResult result = MessageBox.Show(message, title, buttons, boxIcon);
-            if (result == DialogResult.Yes)
-            {
-                this.Hide();
-                FormLogin login = new FormLogin();
-                login.Show();
-            }
+            this.Close();
         }
         // từ label
         private void lbl_Logout_Click(object sender, EventArgs e)
         {
-            string message = "Are you sure want to logout?";
-            string title = "Question";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            MessageBoxIcon boxIcon = MessageBoxIcon.Question;
-            DialogResult result = MessageBox.Show(message, title, buttons, boxIcon);
-            if (result == DialogResult.Yes)
-            {
-                this.Hide();
-                FormLogin login = new FormLogin();
-                login.Show();
-            }
+            this.Close();
         }
         // action close form
         private void FormMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            string message = "Are you sure want to logout?";
-            string title = "Question";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            MessageBoxIcon boxIcon = MessageBoxIcon.Question;
-            DialogResult result = MessageBox.Show(message, title, buttons, boxIcon);
-            if (result == DialogResult.Yes)
+            if(MessageBox.Show("Do you want to log out?", "Message", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
-                this.Hide();
-                FormLogin login = new FormLogin();
-                login.Show();
-            }
-            else
-            {
-                e.Cancel = false;
+                e.Cancel = true;
             }
         }
     }

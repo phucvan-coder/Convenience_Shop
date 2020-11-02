@@ -72,7 +72,7 @@ namespace MyProJect
             using(ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
                 double? price = 0;
-                price = Convert.ToDouble(entity.Products.Where(x => x.ProductName == cmbProduct.Text).Select(x => x.Price));
+                price = Convert.ToDouble(entity.Products.Where(x => x.ProductName.Equals(cmbProduct.Text)).Select(x => x.Price));
                 double? totalPrice = Convert.ToInt32(nmrAmount.Value) * price * Convert.ToInt32(nmrDiscount.Value)/100;
                 string[] order = new string[] { cmbType.Text, cmbProduct.Text, dtpSaleDate.Text, nmrAmount.Value.ToString(), price.ToString(), nmrDiscount.Value.ToString(), totalPrice.ToString()};
                 dgvOrderList.Rows.Add(order);
@@ -140,12 +140,25 @@ namespace MyProJect
                 }
             }*/
         }
+        //Event Load Form
+        private void FormSale_Load(object sender, EventArgs e)
+        {
+            ComboboxType();
+            
+        }
+        //Event Load cmbProduct after choosing type
+        private void cmbType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboboxProduct();
+        }
         //Event closed form 
         private void FormSale_FormClosed(object sender, FormClosedEventArgs e)
         {
             FormMenu menu = new FormMenu();
             menu.Show();
         }
+
+
         #endregion
 
         
