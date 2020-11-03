@@ -158,11 +158,6 @@ namespace MyProJect
         }
         #endregion
 
-        private void FormProductManagement_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            FormMenu menu = new FormMenu();
-            menu.Show();
-        }
 
         private void btnUpdateProduct_Click(object sender, EventArgs e)
         {

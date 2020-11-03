@@ -49,6 +49,7 @@ namespace MyProJect
             {
                 entity.Bills.Add(bill);
                 entity.SaveChanges();
+
             }
         }
         //Function save orders onto database
@@ -124,24 +125,31 @@ namespace MyProJect
                 Bill bill = new Bill();
                 bill.DateOfSale = dtpSaleDate.Value;
                 SaveBill(bill);
+                Bill tmp = new Bill();
+                tmp = entity.Bills.SqlQuery("Select * from Bill order by Id DESC").FirstOrDefault();
 
-                int result = 0, index = 0;
-                BillInfo billInfo = new BillInfo();
+                int idx = tmp.Id;
+
+                int result = 0;
+               
                 for(int i = 0; i < dgvOrderList.Rows.Count - 1; i++)
                 {
-                    index++;
+                    
+                    BillInfo billInfo = new BillInfo();
                     DataGridViewRow row = dgvOrderList.Rows[i];
-                    billInfo.BillID = entity.Bills.Where(x => x.DateOfSale.Value == Convert.ToDateTime(row.Cells[2].Value)).First().Id;
-                    billInfo.TypeID = entity.TypeOfProducts.Where(x => x.TypeName == row.Cells[0].ToString()).First().Id;
-                    billInfo.ProductID = entity.Products.Where(x => x.ProductName ==row.Cells[1].ToString()).First().Id;
+                    billInfo.BillID = idx;
+                    billInfo.TypeID = entity.TypeOfProducts.SqlQuery("Select * from TypeOfProduct where TypeName = N'" + row.Cells[0].Value.ToString() + "'").FirstOrDefault().Id;
+                    billInfo.ProductID = entity.Products.SqlQuery("Select * from Product where ProductName = N'" + row.Cells[1].Value.ToString() + "'").FirstOrDefault().Id;
                     billInfo.Amount = Convert.ToInt32(row.Cells[3].Value);
                     billInfo.Discount = Convert.ToInt32(row.Cells[5].Value);
-                    billInfo.TotalPrice = Convert.ToInt32(row.Cells[5].Value);
+                    billInfo.TotalPrice = Convert.ToInt32(row.Cells[6].Value);
                     result = SaveOrder(billInfo);
                 }
 
-                if (result == index)
+                if (result == 1)
                 {
+                    dgvOrderList.Rows.Clear();
+
                     MessageBox.Show("Pay successfully!\n", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -161,13 +169,6 @@ namespace MyProJect
         {
             ComboboxProduct();
         }
-        //Event closed form 
-        private void FormSale_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            FormMenu menu = new FormMenu();
-            menu.Show();
-        }
-
 
         #endregion
 

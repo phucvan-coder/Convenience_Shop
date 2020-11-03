@@ -23,31 +23,31 @@ namespace MyProJect
         //Function Display Bill onto database
         public void DisplayBill()
         {
-            //using(ConvenienceShopEntities entity = new ConvenienceShopEntities())
-            //{
-            //    List < BillInfo_Class> billList = new List<BillInfo_Class>();
-            //    billList = entity.BillInfoes.Select(x => new BillInfo_Class
-            //    {
-            //        Id = x.Id,
-            //        BillID = x.BillID,
-            //        SaleDate = x.Bill.DateOfSale,
-            //        Type = x.TypeOfProduct.TypeName,
-            //        Product = x.Product.ProductName,
-            //        Price = x.Product.Price,
-            //        Amount = x.Amount,
-            //        Discount = x.Discount,
-            //        TotalPrice = x.TotalPrice
-            //    }).ToList();
-            //    dgvBillList.DataSource = billList;
-            //}
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            {
+                List<BillInfo_Class> billList = new List<BillInfo_Class>();
+                billList = entity.BillInfoes.Select(x => new BillInfo_Class
+                {
+                    Id = x.Id,
+                    BillID = x.BillID,
+                    SaleDate = x.Bill.DateOfSale,
+                    Type = x.TypeOfProduct.TypeName,
+                    Product = x.Product.ProductName,
+                    Price = x.Product.Price,
+                    Amount = x.Amount,
+                    Discount = x.Discount,
+                    TotalPrice = x.TotalPrice
+                }).ToList();
+                dgvBillList.DataSource = billList;
+            }
         }
         //Function moneyStatistics
         private double moneyStatistics;
         public void MoneyStatistics()
         {
-            foreach (DataGridView a in dgvBillList.Rows)
+            foreach (DataGridViewRow a in dgvBillList.Rows)
             {
-                moneyStatistics += Convert.ToDouble(a.Columns[8]);
+                moneyStatistics += Convert.ToDouble(a.Cells[8].Value);
             }
             CultureInfo culture = new CultureInfo("vi-VN");
             txtMoneyStatistics.Text = moneyStatistics.ToString("c", culture);
@@ -63,12 +63,6 @@ namespace MyProJect
         }
 
         #endregion
-
-        private void FormBillManagement_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            FormMenu menu = new FormMenu();
-            menu.Show();
-        }
 
         private void btnSearchBill_Click(object sender, EventArgs e)
         {

@@ -116,12 +116,6 @@ namespace MyProJect
 
         #endregion
 
-        private void FormAccountManagement_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            FormMenu menu = new FormMenu();
-            menu.Show();
-        }
-
         private void btnUpdateAccount_Click(object sender, EventArgs e)
         {
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())

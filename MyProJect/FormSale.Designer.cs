@@ -249,7 +249,7 @@
             this.Column7});
             this.dgvOrderList.Location = new System.Drawing.Point(6, 51);
             this.dgvOrderList.Name = "dgvOrderList";
-            this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrderList.Size = new System.Drawing.Size(764, 193);
             this.dgvOrderList.TabIndex = 0;
             this.dgvOrderList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrderList_CellClick);
@@ -310,7 +310,6 @@
             this.Name = "FormSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sale";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormSale_FormClosed);
             this.Load += new System.EventHandler(this.FormSale_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

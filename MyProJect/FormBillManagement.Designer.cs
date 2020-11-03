@@ -90,6 +90,7 @@
             this.dgvBillList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBillList.Location = new System.Drawing.Point(6, 48);
             this.dgvBillList.Name = "dgvBillList";
+            this.dgvBillList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBillList.Size = new System.Drawing.Size(670, 212);
             this.dgvBillList.TabIndex = 4;
             // 
@@ -138,7 +139,6 @@
             this.Name = "FormBillManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bill Management";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormBillManagement_FormClosed);
             this.Load += new System.EventHandler(this.FormBillManagement_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

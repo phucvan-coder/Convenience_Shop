@@ -231,7 +231,6 @@
             this.Name = "FormProducerManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Producer Management";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormProducerManagement_FormClosed);
             this.Load += new System.EventHandler(this.FormProducerManagement_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

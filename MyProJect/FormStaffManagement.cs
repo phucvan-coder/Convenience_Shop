@@ -128,11 +128,6 @@ namespace MyProJect
         }
         #endregion
 
-        private void FormStaffManagement_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            FormMenu menu = new FormMenu();
-            menu.Show();
-        }
 
         private void btnUpdateStaff_Click(object sender, EventArgs e)
         {

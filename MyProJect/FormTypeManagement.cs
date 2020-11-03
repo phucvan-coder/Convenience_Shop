@@ -122,11 +122,6 @@ namespace MyProJect
 
         #endregion
 
-        private void FormTypeManagement_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            FormMenu menu = new FormMenu();
-            menu.Show();
-        }
 
         private void btnUpdateType_Click(object sender, EventArgs e)
         {

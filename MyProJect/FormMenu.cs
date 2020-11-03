@@ -22,14 +22,16 @@ namespace MyProJect
         {
             this.Hide();
             FormTypeManagement formType = new FormTypeManagement();
-            formType.Show();
+            formType.ShowDialog();
+            this.Show();
         }
         // phần của label
         private void lbl_Type_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            this.Hide();
             FormTypeManagement formType = new FormTypeManagement();
-            formType.Show();
+            formType.ShowDialog();
+            this.Show();
         }
         // vào product manage
         // của picture box
@@ -37,14 +39,16 @@ namespace MyProJect
         {
             this.Hide();
             FormProductManagement formProduct = new FormProductManagement();
-            formProduct.Show();
+            formProduct.ShowDialog();
+            this.Show();
         }
         // của label 
         private void lbl_Product_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormProductManagement formProduct = new FormProductManagement();
-            formProduct.Show();
+            formProduct.ShowDialog();
+            this.Show();
         }
         // vào form producer
         // của phần picture box
@@ -52,14 +56,16 @@ namespace MyProJect
         {
             this.Hide();
             FormProducerManagement formProducer = new FormProducerManagement();
-            formProducer.Show();
+            formProducer.ShowDialog();
+            this.Show();
         }
         // của label
         private void lbl_Producer_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormProducerManagement formProducer = new FormProducerManagement();
-            formProducer.Show();
+            formProducer.ShowDialog();
+            this.Show();
         }
         // vào form staff manage
         // của picture box
@@ -67,14 +73,16 @@ namespace MyProJect
         {
             this.Hide();
             FormStaffManagement formStaff = new FormStaffManagement();
-            formStaff.Show();
+            formStaff.ShowDialog();
+            this.Show();
         }
         // của label
         private void lbl_Staff_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormStaffManagement formStaff = new FormStaffManagement();
-            formStaff.Show();
+            formStaff.ShowDialog();
+            this.Show();
         }
         // vào phần account form
         // của phần picture box
@@ -82,14 +90,16 @@ namespace MyProJect
         {
             this.Hide();
             FormAccountManagement formAccount = new FormAccountManagement();
-            formAccount.Show();
+            formAccount.ShowDialog();
+            this.Show();
         }
         // của phần label
         private void lbl_Account_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormAccountManagement formAccount = new FormAccountManagement();
-            formAccount.Show();
+            formAccount.ShowDialog();
+            this.Show();
         }
         // vào form bill manage
         // cảu picture box
@@ -97,14 +107,16 @@ namespace MyProJect
         {
             this.Hide();
             FormBillManagement formBill = new FormBillManagement();
-            formBill.Show();
+            formBill.ShowDialog();
+            this.Show();
         }
         // của label
         private void lbl_Bill_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormBillManagement formBill = new FormBillManagement();
-            formBill.Show();
+            formBill.ShowDialog();
+            this.Show();
         }
         // vào form sale 
         // của phần picture box
@@ -112,14 +124,16 @@ namespace MyProJect
         {
             this.Hide();
             FormSale sale = new FormSale();
-            sale.Show();
+            sale.ShowDialog();
+            this.Show();
         }
         // của label
         private void lbl_Sale_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormSale sale = new FormSale();
-            sale.Show();
+            sale.ShowDialog();
+            this.Show();
         }
         // logout ra cmn ngoài
         //từ picture box

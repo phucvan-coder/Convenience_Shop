@@ -296,7 +296,6 @@
             this.Name = "FormStaffManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Staff Management";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormStaffManagement_FormClosed);
             this.Load += new System.EventHandler(this.FormStaffManagement_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

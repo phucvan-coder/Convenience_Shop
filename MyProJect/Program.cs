@@ -16,7 +16,7 @@ namespace MyProJect
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormBillManagement());
+            Application.Run(new FormLogin());
         }
     }
 }
