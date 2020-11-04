@@ -136,6 +136,7 @@
             this.txtProducerPhone.Name = "txtProducerPhone";
             this.txtProducerPhone.Size = new System.Drawing.Size(158, 20);
             this.txtProducerPhone.TabIndex = 10;
+            this.txtProducerPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProducerPhone_KeyPress);
             // 
             // txtProducerAddress
             // 

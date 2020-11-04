@@ -10,7 +10,7 @@ namespace MyProJect.Object
     {
         private int id;
         private int? billID;
-        private DateTime? saleDate;
+        private string saleDate;
         private string type;
         private string product;
         private double? price;
@@ -20,7 +20,7 @@ namespace MyProJect.Object
 
         public int Id { get => id; set => id = value; }
         public int? BillID { get => billID; set => billID = value; }
-        public DateTime? SaleDate { get => saleDate; set => saleDate = value; }
+        public string SaleDate { get => saleDate; set => saleDate = value; }
         public string Type { get => type; set => type = value; }
         public string Product { get => product; set => product = value; }
         public double? Price { get => price; set => price = value; }

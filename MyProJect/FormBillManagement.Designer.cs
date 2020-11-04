@@ -93,6 +93,7 @@
             this.dgvBillList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBillList.Size = new System.Drawing.Size(670, 212);
             this.dgvBillList.TabIndex = 4;
+            this.dgvBillList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBillList_CellContentClick);
             // 
             // btnSearchBill
             // 
@@ -112,6 +113,7 @@
             this.btnFilter.TabIndex = 2;
             this.btnFilter.Text = "Filter";
             this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // btnRefreshBill
             // 
@@ -121,6 +123,7 @@
             this.btnRefreshBill.TabIndex = 1;
             this.btnRefreshBill.Text = "Refresh";
             this.btnRefreshBill.UseVisualStyleBackColor = true;
+            this.btnRefreshBill.Click += new System.EventHandler(this.btnRefreshBill_Click);
             // 
             // txtSearchBill
             // 

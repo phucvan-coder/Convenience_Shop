@@ -92,6 +92,13 @@ namespace MyProJect
                 if (dgvProductList.SelectedRows.Count > 0)
                 {
                     Product a = entity.Products.SqlQuery("select * from Product where Id=" + dgvProductList.SelectedRows[0].Cells[0].Value.ToString()).FirstOrDefault();
+                    List<BillInfo> lstBillInfo = new List<BillInfo>();
+                    lstBillInfo = entity.BillInfoes.SqlQuery("select * from BillInfo where ProductID=" + a.Id).ToList();
+                    foreach (BillInfo x in lstBillInfo)
+                    {
+                        entity.BillInfoes.Remove(x);
+                        entity.SaveChanges();
+                    }
                     entity.Products.Remove(a);
                     entity.SaveChanges();
                     result = true;
@@ -123,10 +130,11 @@ namespace MyProJect
         }
         //Event add product onto database
         private void btnAddProduct_Click(object sender, EventArgs e)
-        {
+        {   
+
             Product pro = new Product();
-            pro.Price = Convert.ToInt32(txtPrice.Text);
-            pro.ProductName = txtProductName.Text;
+            pro.Price = Convert.ToInt32(txtPrice.Text.Trim());
+            pro.ProductName = txtProductName.Text.Trim();
             pro.TypeID = Convert.ToInt32(cmbType.SelectedValue);
             pro.ProducerID = Convert.ToInt32(cmbProducer.SelectedValue);
             pro.Status = cmbStatus.GetItemText(cmbStatus.SelectedItem);
@@ -145,16 +153,22 @@ namespace MyProJect
         //Event Delete Product from database
         private void btnDeleteProduct_Click(object sender, EventArgs e)
         {
-            bool result = DeleteProduct();
-            if (result)
+
+            DialogResult res = MessageBox.Show("Do you want Delete it?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (res == DialogResult.Yes)
             {
-                MessageBox.Show("Deleted successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool result = DeleteProduct();
+                if (result)
+                {
+                    MessageBox.Show("Deleted successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Can not be deleted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                FormProductManagement_Load(sender, e);
             }
-            else
-            {
-                MessageBox.Show("Can not be deleted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            FormProductManagement_Load(sender, e);
+            
         }
         #endregion
 
@@ -215,7 +229,7 @@ namespace MyProJect
 
         private void btnSearchProduct_Click(object sender, EventArgs e)
         {
-            string query = txtProductSearch.Text.ToLower();
+            string query = txtProductSearch.Text.Trim().ToLower();
             List<ProductInfo> data = new List<ProductInfo>();
 
             DisplayProduct();
@@ -242,6 +256,35 @@ namespace MyProJect
             }
 
             dgvProductList.DataSource = data;
+        }
+
+
+        public void ValidateInput()
+        {
+            if (txtProductName.Text == string.Empty)
+            {
+                MessageBox.Show("Please Type Product's Name!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtProductName.Focus();
+                return;
+            }
+
+            
+        }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtPrice.Text == string.Empty && e.KeyChar == '.')
+            {
+                e.Handled = true;
+            }
+            if (txtPrice.Text.Count(c => c == '.') == 1 && e.KeyChar == '.' )
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar < (char)Keys.D0 || e.KeyChar > (char)Keys.D9) && e.KeyChar != (char)Keys.Back && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

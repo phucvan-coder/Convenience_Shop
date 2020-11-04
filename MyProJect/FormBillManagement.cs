@@ -30,7 +30,7 @@ namespace MyProJect
                 {
                     Id = x.Id,
                     BillID = x.BillID,
-                    SaleDate = x.Bill.DateOfSale,
+                    SaleDate = x.Bill.DateOfSale.Value.Day + "/" + x.Bill.DateOfSale.Value.Month + "/" + x.Bill.DateOfSale.Value.Year,
                     Type = x.TypeOfProduct.TypeName,
                     Product = x.Product.ProductName,
                     Price = x.Product.Price,
@@ -38,6 +38,7 @@ namespace MyProJect
                     Discount = x.Discount,
                     TotalPrice = x.TotalPrice
                 }).ToList();
+                billList.Reverse();
                 dgvBillList.DataSource = billList;
             }
         }
@@ -66,7 +67,86 @@ namespace MyProJect
 
         private void btnSearchBill_Click(object sender, EventArgs e)
         {
+            string query = txtSearchBill.Text.ToLower().Trim();
+            DisplayBill();
+            List<BillInfo_Class> lst = new List<BillInfo_Class>();
+            foreach (DataGridViewRow a in dgvBillList.Rows)
+            {
+                if (a.Cells[1].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[3].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[4].Value.ToString().ToLower().Contains(query))
+                {
+                    BillInfo_Class n = new BillInfo_Class();
+                    n.Id = Convert.ToInt32(a.Cells[0].Value.ToString());
+                    n.BillID = Convert.ToInt32(a.Cells[1].Value.ToString());
+                    n.SaleDate = a.Cells[2].Value.ToString();
+                    n.Type = a.Cells[3].Value.ToString();
+                    n.Product = a.Cells[4].Value.ToString();
+                    n.Price = Convert.ToDouble(a.Cells[5].Value.ToString());
+                    n.Amount = Convert.ToInt32(a.Cells[6].Value.ToString());
+                    n.Discount = Convert.ToInt32(a.Cells[7].Value.ToString()); 
+                    n.TotalPrice= Convert.ToDouble(a.Cells[8].Value.ToString());
 
+                    lst.Add(n);
+
+                }
+            }
+
+            dgvBillList.DataSource = lst;
+            moneyStatistics = 0;
+            MoneyStatistics();
+        }
+
+        public void filterByDate(string f, string t)
+        {
+            DateTime from = Convert.ToDateTime(f);
+            DateTime to = Convert.ToDateTime(t);
+
+            DisplayBill();
+            List<BillInfo_Class> lst = new List<BillInfo_Class>();
+            foreach (DataGridViewRow a in dgvBillList.Rows)
+            {
+                if (from <= Convert.ToDateTime(a.Cells[2].Value.ToString()) && Convert.ToDateTime(a.Cells[2].Value.ToString()) <= to)
+                {
+                    BillInfo_Class n = new BillInfo_Class();
+                    n.Id = Convert.ToInt32(a.Cells[0].Value.ToString());
+                    n.BillID = Convert.ToInt32(a.Cells[1].Value.ToString());
+                    n.SaleDate = a.Cells[2].Value.ToString();
+                    n.Type = a.Cells[3].Value.ToString();
+                    n.Product = a.Cells[4].Value.ToString();
+                    n.Price = Convert.ToDouble(a.Cells[5].Value.ToString());
+                    n.Amount = Convert.ToInt32(a.Cells[6].Value.ToString());
+                    n.Discount = Convert.ToInt32(a.Cells[7].Value.ToString());
+                    n.TotalPrice = Convert.ToDouble(a.Cells[8].Value.ToString());
+
+                    lst.Add(n);
+
+                }
+            }
+
+            dgvBillList.DataSource = lst;
+            moneyStatistics = 0;
+            MoneyStatistics();
+
+
+        }
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            FormBillFilter frm = new FormBillFilter();
+
+            frm.passData = new FormBillFilter.PassData(filterByDate);
+
+            frm.ShowDialog();
+        }
+
+        private void dgvBillList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnRefreshBill_Click(object sender, EventArgs e)
+        {
+            FormBillManagement_Load(sender, e);
         }
     }
 }

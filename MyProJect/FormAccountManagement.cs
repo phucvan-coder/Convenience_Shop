@@ -85,8 +85,8 @@ namespace MyProJect
         private void btnAddAccount_Click(object sender, EventArgs e)
         {
             Account account = new Account();
-            account.AccountName = txtAccountName.Text;
-            account.Password = txtPassword.Text;
+            account.AccountName = txtAccountName.Text.Trim();
+            account.Password = txtPassword.Text.Trim();
 
             bool result = AddAccount(account);
             if (result)
@@ -102,16 +102,21 @@ namespace MyProJect
         //Event delete Account from database
         private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-            bool result = DeleteAccount();
-            if (result)
+            DialogResult res = MessageBox.Show("Do you want Delete it?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (res == DialogResult.Yes)
             {
-                MessageBox.Show("Deleted successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool result = DeleteAccount();
+                if (result)
+                {
+                    MessageBox.Show("Deleted successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Can not be deleted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                FormAccountManagement_Load(sender, e);
             }
-            else
-            {
-                MessageBox.Show("Can not be deleted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            FormAccountManagement_Load(sender, e);
+            
         }
 
         #endregion
@@ -163,7 +168,7 @@ namespace MyProJect
 
         private void btnSearchAccount_Click(object sender, EventArgs e)
         {
-            string query = txtSearchAccount.Text.ToLower();
+            string query = txtSearchAccount.Text.ToLower().Trim();
             List<AccountInfo> data = new List<AccountInfo>();
 
             DisplayAccount();

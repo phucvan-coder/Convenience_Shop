@@ -142,6 +142,7 @@
             this.txtStaffPhone.Name = "txtStaffPhone";
             this.txtStaffPhone.Size = new System.Drawing.Size(164, 20);
             this.txtStaffPhone.TabIndex = 13;
+            this.txtStaffPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStaffPhone_KeyPress);
             // 
             // txtStaffEmail
             // 

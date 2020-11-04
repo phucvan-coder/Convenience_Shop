@@ -253,6 +253,7 @@
             this.dgvOrderList.Size = new System.Drawing.Size(764, 193);
             this.dgvOrderList.TabIndex = 0;
             this.dgvOrderList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrderList_CellClick);
+            this.dgvOrderList.Click += new System.EventHandler(this.dgvOrderList_Click);
             // 
             // Column1
             // 

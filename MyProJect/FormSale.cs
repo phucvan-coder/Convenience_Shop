@@ -16,6 +16,8 @@ namespace MyProJect
         {
             InitializeComponent();
         }
+
+        public bool SIGNAL;
         private int index;
         #region Method
         //Function display Type on combobox
@@ -70,13 +72,22 @@ namespace MyProJect
         //Event add
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            if (cmbType.SelectedIndex == -1 || cmbProduct.SelectedIndex == -1 || nmrAmount.Value == 0)
             {
-                var price = Convert.ToDouble(entity.Products.Where(x => x.ProductName == cmbProduct.Text).First().Price);
-                double? totalPrice = (Convert.ToInt32(nmrAmount.Value) * price) -(Convert.ToInt32(nmrAmount.Value) * price * Convert.ToInt32(nmrDiscount.Value)/100);
-                string[] order = new string[] { cmbType.Text, cmbProduct.Text, dtpSaleDate.Value.ToString("dd/MM/yyyy"), nmrAmount.Value.ToString(), price.ToString(), nmrDiscount.Value.ToString(), totalPrice.ToString()};
-                dgvOrderList.Rows.Add(order);
+                return;
             }
+            else
+            {
+                using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+                {
+                    var price = Convert.ToDouble(entity.Products.Where(x => x.ProductName == cmbProduct.Text).First().Price);
+                    double? totalPrice = (Convert.ToInt32(nmrAmount.Value) * price) - (Convert.ToInt32(nmrAmount.Value) * price * Convert.ToInt32(nmrDiscount.Value) / 100);
+                    string[] order = new string[] { cmbType.Text, cmbProduct.Text, dtpSaleDate.Value.ToString("dd/MM/yyyy"), nmrAmount.Value.ToString(), price.ToString(), nmrDiscount.Value.ToString(), totalPrice.ToString() };
+                    dgvOrderList.Rows.Add(order);
+                    FormSale_Load(sender, e);
+                }
+            }
+            
         }
         //Event delete
         private void btnDeleteProduct_Click(object sender, EventArgs e)
@@ -89,6 +100,7 @@ namespace MyProJect
             {
                 dgvOrderList.Rows.RemoveAt(dgvOrderList.Rows[0].Index);
             }
+            FormSale_Load(sender, e);
         }
         //Event update 
         private void btnUpdateProduct_Click(object sender, EventArgs e)
@@ -104,6 +116,8 @@ namespace MyProJect
                 dgvOrderList.Rows[index].Cells[0].Value = cmbType.Text;
                 dgvOrderList.Rows[index].Cells[5].Value = nmrDiscount.Value;
                 dgvOrderList.Rows[index].Cells[6].Value = totalPrice;
+
+                FormSale_Load(sender, e);
             }
         }
         //Event choose cell
@@ -111,11 +125,15 @@ namespace MyProJect
         {
             dgvOrderList.Focus();
             index = e.RowIndex;
-            cmbType.Text = dgvOrderList.Rows[index].Cells[0].Value.ToString();
-            cmbProduct.Text = dgvOrderList.Rows[index].Cells[1].Value.ToString();
-            dtpSaleDate.Value = Convert.ToDateTime(dgvOrderList.Rows[index].Cells[2].Value);
-            nmrAmount.Value = Convert.ToInt32(dgvOrderList.Rows[index].Cells[3].Value);
-            nmrDiscount.Value = Convert.ToInt32(dgvOrderList.Rows[index].Cells[5].Value);
+            if (dgvOrderList.Rows[index].Cells[0].Value != null)
+            {
+                cmbType.Text = dgvOrderList.Rows[index].Cells[0].Value.ToString();
+                cmbProduct.Text = dgvOrderList.Rows[index].Cells[1].Value.ToString();
+                dtpSaleDate.Value = Convert.ToDateTime(dgvOrderList.Rows[index].Cells[2].Value);
+                nmrAmount.Value = Convert.ToInt32(dgvOrderList.Rows[index].Cells[3].Value);
+                nmrDiscount.Value = Convert.ToInt32(dgvOrderList.Rows[index].Cells[5].Value);
+            }
+            
         }
         //Event payment
         private void btnPayment_Click(object sender, EventArgs e)
@@ -156,22 +174,58 @@ namespace MyProJect
                 {
                     MessageBox.Show("Can not be paid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+                FormSale_Load(sender, e);
             }
         }
         //Event Load Form
         private void FormSale_Load(object sender, EventArgs e)
         {
             ComboboxType();
+
+
+            SIGNAL = false;
+            btnDeleteProduct.Enabled = false;
+            btnUpdateProduct.Enabled = false;
+
+            cmbProduct.SelectedIndex = -1;
+            cmbType.SelectedIndex = -1;
+            nmrAmount.Value = 0;
+            nmrDiscount.Value = 0;
+            dtpSaleDate.Value = DateTime.Now;
             
         }
         //Event Load cmbProduct after choosing type
         private void cmbType_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboboxProduct();
+            cmbProduct.SelectedIndex = -1;
         }
+
 
         #endregion
 
-        
+        private void dgvOrderList_Click(object sender, EventArgs e)
+        {
+            SIGNAL = true;
+            btnDeleteProduct.Enabled = true;
+            btnUpdateProduct.Enabled = true;
+
+            if (dgvOrderList.SelectedRows.Count > 0)
+            {
+                if (dgvOrderList.SelectedRows[0].Cells[0].Value != null)
+                {
+                    cmbType.Text = dgvOrderList.SelectedRows[0].Cells[0].Value.ToString();
+                    cmbProduct.Text = dgvOrderList.SelectedRows[0].Cells[1].Value.ToString();
+                    dtpSaleDate.Value = Convert.ToDateTime(dgvOrderList.SelectedRows[0].Cells[2].Value);
+                    nmrAmount.Value = Convert.ToInt32(dgvOrderList.SelectedRows[0].Cells[3].Value);
+                    nmrDiscount.Value = Convert.ToInt32(dgvOrderList.SelectedRows[0].Cells[5].Value);
+                }
+                    
+
+            }
+
+
+        }
     }
 }

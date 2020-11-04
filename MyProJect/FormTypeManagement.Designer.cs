@@ -50,11 +50,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(145, 22);
+            this.label1.Location = new System.Drawing.Point(109, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(206, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Type Management";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox1
             // 
@@ -67,7 +68,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 66);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(466, 133);
+            this.groupBox1.Size = new System.Drawing.Size(409, 133);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Type Details";
@@ -143,32 +144,33 @@
             this.groupBox2.Controls.Add(this.dgvTypeList);
             this.groupBox2.Location = new System.Drawing.Point(12, 205);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(466, 233);
+            this.groupBox2.Size = new System.Drawing.Size(409, 233);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Type List";
             // 
             // txtSearchType
             // 
-            this.txtSearchType.Location = new System.Drawing.Point(121, 35);
+            this.txtSearchType.Location = new System.Drawing.Point(102, 20);
             this.txtSearchType.Name = "txtSearchType";
             this.txtSearchType.Size = new System.Drawing.Size(156, 20);
             this.txtSearchType.TabIndex = 8;
             // 
             // btnSearchType
             // 
-            this.btnSearchType.Location = new System.Drawing.Point(283, 33);
+            this.btnSearchType.Location = new System.Drawing.Point(264, 18);
             this.btnSearchType.Name = "btnSearchType";
             this.btnSearchType.Size = new System.Drawing.Size(75, 23);
             this.btnSearchType.TabIndex = 8;
             this.btnSearchType.Text = "Search";
             this.btnSearchType.UseVisualStyleBackColor = true;
+            this.btnSearchType.Click += new System.EventHandler(this.btnSearchType_Click);
             // 
             // dgvTypeList
             // 
             this.dgvTypeList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTypeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTypeList.Location = new System.Drawing.Point(80, 68);
+            this.dgvTypeList.Location = new System.Drawing.Point(61, 53);
             this.dgvTypeList.Name = "dgvTypeList";
             this.dgvTypeList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTypeList.Size = new System.Drawing.Size(278, 159);
@@ -180,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 450);
+            this.ClientSize = new System.Drawing.Size(431, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);

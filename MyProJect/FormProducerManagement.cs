@@ -62,6 +62,13 @@ namespace MyProJect
                     lstProduct = entity.Products.SqlQuery("select * from Product where ProducerID=" + dgvProducerList.SelectedRows[0].Cells[0].Value.ToString()).ToList();
                     foreach(Product x in lstProduct)
                     {
+                        List<BillInfo> lstBillInfo = new List<BillInfo>();
+                        lstBillInfo = entity.BillInfoes.SqlQuery("select * from BillInfo where ProductID=" + x.Id).ToList();
+                        foreach (BillInfo bill in lstBillInfo)
+                        {
+                            entity.BillInfoes.Remove(bill);
+                            entity.SaveChanges();
+                        }
                         entity.Products.Remove(x);
                         entity.SaveChanges();
                     }
@@ -95,9 +102,9 @@ namespace MyProJect
         private void btnAddProducer_Click(object sender, EventArgs e)
         {
             Producer producer = new Producer();
-            producer.ProducerName = txtProducerName.Text;
-            producer.Address = txtProducerAddress.Text;
-            producer.Phone = txtProducerPhone.Text;
+            producer.ProducerName = txtProducerName.Text.Trim();
+            producer.Address = txtProducerAddress.Text.Trim();
+            producer.Phone = txtProducerPhone.Text.Trim();
 
             bool result = AddProducer(producer);
             if (result)
@@ -114,16 +121,22 @@ namespace MyProJect
         //Event Delete producer from database
         private void btnDeleteProducer_Click(object sender, EventArgs e)
         {
-            bool result = DeleteProducer();
-            if (result)
+            DialogResult res = MessageBox.Show("Do you want Delete it?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (res == DialogResult.Yes)
             {
-                MessageBox.Show("Deleted successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool result = DeleteProducer();
+                if (result)
+                {
+                    MessageBox.Show("Deleted successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Can not be deleted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                FormProducerManagement_Load(sender, e);
             }
-            else
-            {
-                MessageBox.Show("Can not be deleted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            FormProducerManagement_Load(sender, e);
+
+            
         }
 
         #endregion
@@ -183,7 +196,7 @@ namespace MyProJect
 
         private void btnSearchProducer_Click(object sender, EventArgs e)
         {
-            string query = txtSearchProducer.Text.ToLower();
+            string query = txtSearchProducer.Text.Trim().ToLower();
             List<ProducerInfo> data = new List<ProducerInfo>();
 
             DisplayProducer();
@@ -206,6 +219,14 @@ namespace MyProJect
             }
 
             dgvProducerList.DataSource = data;
+        }
+
+        private void txtProducerPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -61,6 +61,13 @@ namespace MyProJect
                 lstProduct = entity.Products.SqlQuery("select * from Product where TypeID=" + dgvTypeList.SelectedRows[0].Cells[0].Value.ToString()).ToList();
                 foreach (Product x in lstProduct)
                 {
+                    List<BillInfo> lstBillInfo = new List<BillInfo>();
+                    lstBillInfo = entity.BillInfoes.SqlQuery("select * from BillInfo where ProductID=" + x.Id).ToList();
+                    foreach (BillInfo bill in lstBillInfo)
+                    {
+                        entity.BillInfoes.Remove(bill);
+                        entity.SaveChanges();
+                    }
                     entity.Products.Remove(x);
                     entity.SaveChanges();
                 }
@@ -90,7 +97,7 @@ namespace MyProJect
         private void btnAddType_Click(object sender, EventArgs e)
         {
             TypeOfProduct typeOfProduct = new TypeOfProduct();
-            typeOfProduct.TypeName = txtTypeName.Text;
+            typeOfProduct.TypeName = txtTypeName.Text.Trim();
 
             bool result = AddType(typeOfProduct);
             if (result)
@@ -107,16 +114,21 @@ namespace MyProJect
         //Event delete Type from database
         private void btnDeleteType_Click(object sender, EventArgs e)
         {
-            bool result = DeleteType();
-            if (result)
+            
+            DialogResult res = MessageBox.Show("Do you want Delete it?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (res == DialogResult.Yes)
             {
-                MessageBox.Show("Deleted successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool result = DeleteType();
+                if (result)
+                {
+                    MessageBox.Show("Deleted successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Can not be deleted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                FormTypeManagement_Load(sender, e);
             }
-            else
-            {
-                MessageBox.Show("Can not be deleted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            FormTypeManagement_Load(sender, e);
         }
 
 
@@ -142,8 +154,12 @@ namespace MyProJect
             {
                 if (dgvTypeList.SelectedRows.Count > 0)
                 {
-                    txtTypeID.Text = dgvTypeList.SelectedRows[0].Cells[0].Value.ToString();
-                    txtTypeName.Text = dgvTypeList.SelectedRows[0].Cells[1].Value.ToString();
+                    if (dgvTypeList.SelectedRows[0].Cells[0].Value != null)
+                    {
+                        txtTypeID.Text = dgvTypeList.SelectedRows[0].Cells[0].Value.ToString();
+                        txtTypeName.Text = dgvTypeList.SelectedRows[0].Cells[1].Value.ToString();
+                    }
+                    
 
                 }
             }
@@ -157,10 +173,40 @@ namespace MyProJect
 
             if (dgvTypeList.SelectedRows.Count > 0)
             {
-                txtTypeID.Text = dgvTypeList.SelectedRows[0].Cells[0].Value.ToString();
-                txtTypeName.Text = dgvTypeList.SelectedRows[0].Cells[1].Value.ToString();
+                if (dgvTypeList.SelectedRows[0].Cells[0].Value != null)
+                {
+                    txtTypeID.Text = dgvTypeList.SelectedRows[0].Cells[0].Value.ToString();
+                    txtTypeName.Text = dgvTypeList.SelectedRows[0].Cells[1].Value.ToString();
+                }
+            }
+
+        }
+
+        private void btnSearchType_Click(object sender, EventArgs e)
+        {
+            string query = txtSearchType.Text.Trim().ToLower();
+            List<TypeOfProduct> data = new List<TypeOfProduct>();
+
+            DisplayType();
+            foreach (DataGridViewRow a in dgvTypeList.Rows)
+            {
+                if (a.Cells[0].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[1].Value.ToString().ToLower().Contains(query))
+                {
+                    TypeOfProduct x = new TypeOfProduct();
+                    x.Id = Convert.ToInt32(a.Cells[0].Value);
+                    x.TypeName = a.Cells[1].Value.ToString();
+
+                    data.Add(x);
+                }
 
             }
+
+            dgvTypeList.DataSource = data;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

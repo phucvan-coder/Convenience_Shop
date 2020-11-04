@@ -94,12 +94,12 @@ namespace MyProJect
         private void btnAddStaff_Click(object sender, EventArgs e)
         {
             Staff staff = new Staff();
-            staff.Name = txtStaffName.Text;
+            staff.Name = txtStaffName.Text.Trim();
             staff.DateOfBirth = dtpDateOfBirth.Value;
             staff.Gender = cmbGender.Text;
-            staff.Email = txtStaffEmail.Text;
-            staff.Phone = txtStaffPhone.Text;
-            staff.Address = txtStaffAddress.Text;
+            staff.Email = txtStaffEmail.Text.Trim();
+            staff.Phone = txtStaffPhone.Text.Trim();
+            staff.Address = txtStaffAddress.Text.Trim();
 
             bool result = AddStaff(staff);
             if (result)
@@ -115,16 +115,21 @@ namespace MyProJect
         //Event delete Staff from database
         private void btnDeleteStaff_Click(object sender, EventArgs e)
         {
-            bool result = DeleteStaff();
-            if (result)
+            DialogResult res = MessageBox.Show("Do you want Delete it?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (res == DialogResult.Yes)
             {
-                MessageBox.Show("Deleted successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool result = DeleteStaff();
+                if (result)
+                {
+                    MessageBox.Show("Deleted successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Can not be deleted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                FormStaffManagement_Load(sender, e);
             }
-            else
-            {
-                MessageBox.Show("Can not be deleted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            FormStaffManagement_Load(sender, e);
+            
         }
         #endregion
 
@@ -189,7 +194,7 @@ namespace MyProJect
 
         private void btnSearchStaff_Click(object sender, EventArgs e)
         {
-            string query = txtSearchStaff.Text.ToLower();
+            string query = txtSearchStaff.Text.Trim().ToLower();
             List<StaffInfo> data = new List<StaffInfo>();
 
             DisplayStaff();
@@ -218,6 +223,14 @@ namespace MyProJect
             }
 
             dgvStaffList.DataSource = data;
+        }
+
+        private void txtStaffPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
