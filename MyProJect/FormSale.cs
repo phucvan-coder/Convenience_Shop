@@ -173,7 +173,7 @@ namespace MyProJect
                 }
                 else
                 {
-                    MessageBox.Show("Product is gone!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Product is not enough!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             
