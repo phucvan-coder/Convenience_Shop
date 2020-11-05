@@ -45,6 +45,8 @@
     <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
     <Property Name="ProducerID" Type="int" Nullable="false" />
     <Property Name="Price" Type="float" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Date" Type="datetime" />
     <Property Name="Status" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="Staff">

@@ -14,6 +14,8 @@ namespace MyProJect.Object
         private Double? price;
         private string producerName;
         private string status;
+        private int? amount;
+        private string date;
 
         public int Id { get => id; set => id = value; }
         public string TypeName { get => typeName; set => typeName = value; }
@@ -21,5 +23,8 @@ namespace MyProJect.Object
         public Double? Price { get => price; set => price = value; }
         public string ProducerName { get => producerName; set => producerName = value; }
         public string Status { get => status; set => status = value; }
+
+        public int? Amount { get => amount; set => amount = value; }
+        public string Date { get => date; set => date = value; }
     }
 }

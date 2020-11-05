@@ -50,6 +50,8 @@
           <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
           <Property Name="ProducerID" Type="int" Nullable="false" />
           <Property Name="Price" Type="float" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="Date" Type="datetime" />
           <Property Name="Status" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="Staff">
@@ -215,6 +217,8 @@
           <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ProducerID" Type="Int32" Nullable="false" />
           <Property Name="Price" Type="Double" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
           <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="BillInfoes" Relationship="Self.FK_ProductID" FromRole="Product" ToRole="BillInfo" />
           <NavigationProperty Name="Producer" Relationship="Self.FK_ProducerID" FromRole="Product" ToRole="Producer" />
@@ -384,6 +388,8 @@
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
                 <ScalarProperty Name="ProducerID" ColumnName="ProducerID" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
               </MappingFragment>
             </EntityTypeMapping>

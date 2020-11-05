@@ -24,8 +24,8 @@ namespace MyProJect
             {
                 using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
                 {
-                    int check = 0;
-                    check = entity.Accounts.Where(x => x.AccountName == txtUser.Text && x.Password == txtPassword.Text).FirstOrDefault().Id;
+                   
+                    var check = entity.Accounts.Where(x => x.AccountName == txtUser.Text && x.Password == txtPassword.Text).FirstOrDefault();
                     if (check != null)
                     {
                         result = true;

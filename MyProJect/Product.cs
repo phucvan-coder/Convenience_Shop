@@ -25,6 +25,8 @@ namespace MyProJect
         public string ProductName { get; set; }
         public int ProducerID { get; set; }
         public Nullable<double> Price { get; set; }
+        public Nullable<int> Amount { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
         public string Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

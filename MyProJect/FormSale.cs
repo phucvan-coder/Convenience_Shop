@@ -40,6 +40,8 @@ namespace MyProJect
             {
                 List<Product> product = new List<Product>();
                 product = entity.Products.Where(x => x.TypeOfProduct.TypeName == cmbType.Text).ToList();
+                product = product.GroupBy(x => x.ProductName).Select(y => y.First()).OrderBy(z => z.ProductName).ToList();
+                
                 cmbProduct.DataSource = product;
                 cmbProduct.DisplayMember = "ProductName";
                 cmbProduct.ValueMember = "Id";
@@ -79,14 +81,20 @@ namespace MyProJect
             return result;
         }
         //Function check status of product
-        public bool CheckStatus(string product)
+        public bool CheckStatus(string product, int price)
         {
             bool result = false;
             using(ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
-                string check;
-                check = entity.Products.Where(x => x.ProductName == product).FirstOrDefault().Status;
-                if(check == "Còn Hàng")
+
+                List<Product> tmp = new List<Product>();
+                tmp = entity.Products.Where(x => x.ProductName == cmbProduct.Text && x.Price == price).ToList();
+                int amountAll = 0;
+                foreach (Product ii in tmp)
+                {
+                    amountAll += Convert.ToInt32(ii.Amount);
+                }
+                if (amountAll >= Convert.ToInt32(nmrAmount.Value))
                 {
                     result = true;
                 }
@@ -99,13 +107,37 @@ namespace MyProJect
         //Event add
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
+            List<Product> tmp = new List<Product>();
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            {
+                int idx = Convert.ToInt32(cmbType.SelectedValue);
+                tmp = entity.Products.Where(x => x.ProductName == cmbProduct.Text && x.TypeID == idx).ToList();
+            }
+            int amountAll = 0; 
+            foreach (Product ii in tmp)
+            {
+                amountAll += Convert.ToInt32(ii.Amount);
+            }
+
+            if (amountAll < Convert.ToInt32(nmrAmount.Value))
+            {
+                MessageBox.Show("Not Enough Amount! Available is " + amountAll, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                nmrAmount.Value = Convert.ToInt32(amountAll);
+                return;
+            }
             if (cmbType.SelectedIndex == -1 || cmbProduct.SelectedIndex == -1 || nmrAmount.Value == 0)
             {
                 return;
             }
             else
             {
-                bool result = CheckStatus(cmbProduct.Text);
+                Product pro = new Product();
+                using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+                {
+                    int idx = Convert.ToInt32(cmbType.SelectedValue);
+                    pro = entity.Products.Where(x => x.ProductName == cmbProduct.Text && x.TypeID == idx).FirstOrDefault();
+                }
+                bool result = CheckStatus(cmbProduct.Text, Convert.ToInt32(pro.Price));
                 if (result)
                 {
                     using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
@@ -113,6 +145,28 @@ namespace MyProJect
                         var price = Convert.ToDouble(entity.Products.Where(x => x.ProductName == cmbProduct.Text).First().Price);
                         double totalPrice = (Convert.ToInt32(nmrAmount.Value) * price) - (Convert.ToInt32(nmrAmount.Value) * price * Convert.ToInt32(nmrDiscount.Value) / 100);
                         string[] order = new string[] { cmbType.Text, cmbProduct.Text, dtpSaleDate.Value.ToString("dd/MM/yyyy"), nmrAmount.Value.ToString(), price.ToString(), nmrDiscount.Value.ToString(), totalPrice.ToString() };
+                        
+                        
+                        for (int i = 0; i <= dgvOrderList.Rows.Count -1; i++)
+                        {
+                            DataGridViewRow row = dgvOrderList.Rows[i];
+                            if (row.Cells[0].Value != null)
+                            {
+                                if (amountAll < Convert.ToInt32(nmrAmount.Value) + Convert.ToInt32(row.Cells[3].Value))
+                                {
+                                    MessageBox.Show("Not Enough Amount! Available is " + ( amountAll - Convert.ToInt32(row.Cells[3].Value)).ToString(), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    nmrAmount.Value = (amountAll - Convert.ToInt32(row.Cells[3].Value));
+                                    return;
+                                }
+                                if (row.Cells[1].Value.ToString() == pro.ProductName && row.Cells[0].Value.ToString() == cmbType.Text)
+                                {
+                                    row.Cells[3].Value = Convert.ToInt32(row.Cells[3].Value) + Convert.ToInt32(nmrAmount.Value);
+                                    FormSale_Load(sender, e);
+                                    return;
+                                }
+                            }
+                        }
+                        
                         dgvOrderList.Rows.Add(order);
                         FormSale_Load(sender, e);
                     }
@@ -185,7 +239,9 @@ namespace MyProJect
 
                 int result = 0;
 
-                for(int i = 0; i < dgvOrderList.Rows.Count - 1; i++)
+                
+
+                for (int i = 0; i < dgvOrderList.Rows.Count - 1; i++)
                 {
                     
                     BillInfo billInfo = new BillInfo();
@@ -197,6 +253,24 @@ namespace MyProJect
                     billInfo.Discount = Convert.ToInt32(row.Cells[5].Value);
                     billInfo.TotalPrice = Convert.ToInt32(row.Cells[6].Value);
                     result = SaveOrder(billInfo);
+
+                    List<Product> t = new List<Product>();
+                    t = entity.Products.SqlQuery("select * from Product where ProductName= N'" + row.Cells[1].Value.ToString() + "' " +
+                                                    " and TypeID="+ billInfo.TypeID + " " +
+                                                    " and Amount > 0").ToList();
+                    foreach (Product ii in t)
+                    {
+                        if (billInfo.Amount <= ii.Amount)
+                        {
+                            entity.Database.ExecuteSqlCommand("update Product set Amount="+ (ii.Amount - billInfo.Amount) + " where Id=" + ii.Id);
+                            entity.SaveChanges();
+                            break;
+                        }
+                        entity.Database.ExecuteSqlCommand("update Product set Amount= 0 where Id=" + ii.Id);
+                        billInfo.Amount -= ii.Amount;
+                    }
+
+
                 }
 
                 if (result == 1)

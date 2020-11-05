@@ -49,9 +49,14 @@
             this.dgvProductList = new System.Windows.Forms.DataGridView();
             this.btnSearchProduct = new System.Windows.Forms.Button();
             this.txtProductSearch = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.nmrAmount = new System.Windows.Forms.NumericUpDown();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrAmount)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,6 +71,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtpDate);
+            this.groupBox1.Controls.Add(this.nmrAmount);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.btnUpdateProduct);
             this.groupBox1.Controls.Add(this.btnDeleteProduct);
             this.groupBox1.Controls.Add(this.btnAddProduct);
@@ -90,7 +99,7 @@
             // 
             // btnUpdateProduct
             // 
-            this.btnUpdateProduct.Location = new System.Drawing.Point(647, 121);
+            this.btnUpdateProduct.Location = new System.Drawing.Point(647, 169);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
             this.btnUpdateProduct.Size = new System.Drawing.Size(75, 23);
             this.btnUpdateProduct.TabIndex = 13;
@@ -100,7 +109,7 @@
             // 
             // btnDeleteProduct
             // 
-            this.btnDeleteProduct.Location = new System.Drawing.Point(565, 121);
+            this.btnDeleteProduct.Location = new System.Drawing.Point(565, 169);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
             this.btnDeleteProduct.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteProduct.TabIndex = 12;
@@ -110,7 +119,7 @@
             // 
             // btnAddProduct
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(483, 121);
+            this.btnAddProduct.Location = new System.Drawing.Point(483, 169);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(75, 23);
             this.btnAddProduct.TabIndex = 11;
@@ -122,7 +131,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(479, 76);
+            this.label7.Location = new System.Drawing.Point(479, 144);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 19);
             this.label7.TabIndex = 10;
@@ -197,7 +206,7 @@
             // cmbStatus
             // 
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(565, 74);
+            this.cmbStatus.Location = new System.Drawing.Point(565, 142);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(157, 21);
             this.cmbStatus.TabIndex = 3;
@@ -265,6 +274,47 @@
             this.txtProductSearch.Size = new System.Drawing.Size(157, 20);
             this.txtProductSearch.TabIndex = 3;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(479, 110);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 19);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Date";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(479, 73);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(69, 19);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Amount";
+            // 
+            // nmrAmount
+            // 
+            this.nmrAmount.Location = new System.Drawing.Point(565, 72);
+            this.nmrAmount.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.nmrAmount.Name = "nmrAmount";
+            this.nmrAmount.Size = new System.Drawing.Size(157, 20);
+            this.nmrAmount.TabIndex = 16;
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.CustomFormat = "dd/MM/yyyy";
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDate.Location = new System.Drawing.Point(565, 108);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(157, 20);
+            this.dtpDate.TabIndex = 22;
+            // 
             // FormProductManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,6 +332,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrAmount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,5 +361,9 @@
         private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.Button btnSearchProduct;
         private System.Windows.Forms.DataGridView dgvProductList;
+        private System.Windows.Forms.NumericUpDown nmrAmount;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker dtpDate;
     }
 }

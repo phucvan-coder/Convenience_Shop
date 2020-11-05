@@ -34,7 +34,9 @@ namespace MyProJect
                     ProductName = x.ProductName,
                     Price = x.Price,
                     ProducerName = x.Producer.ProducerName,
-                    Status = x.Status
+                    Status = x.Status,
+                    Amount = x.Amount,
+                    Date = x.Date.Value.Day + "/" + x.Date.Value.Month + "/" + x.Date.Value.Year
                 }).ToList();
                 dgvProductList.DataSource = productList;
             }
@@ -76,6 +78,37 @@ namespace MyProJect
             bool result = false;
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
+                Product test = new Product();
+                test = entity.Products.Where(x => x.ProductName == product.ProductName && x.TypeID == product.TypeID && x.ProducerID == product.ProducerID).FirstOrDefault();
+                if (test != null)
+                {
+                    entity.Database.ExecuteSqlCommand("update Product set " +
+                        " Amount=" + Convert.ToInt32(product.Amount + test.Amount) + ", " +
+                        " Price=" + Convert.ToInt32(product.Price) + ", " +
+                        " Date='" + (dtpDate.Value.Year + "/" + dtpDate.Value.Month + "/" + dtpDate.Value.Day) + "' " +
+                        " where ProductName= N'" + product.ProductName + "' and " +
+                        " TypeID =" + product.TypeID + " and" +
+                        " ProducerID= " + product.ProducerID);
+
+                    entity.Database.ExecuteSqlCommand("update Product set " +
+                        " Price=" + (product.Price) + " " +
+                        " where ProductName= N'" + product.ProductName + "' and " +
+                        " TypeID =" + product.TypeID);
+
+                    entity.SaveChanges();
+                    return true;
+                }
+
+                test = entity.Products.Where(x => x.ProductName == product.ProductName && x.TypeID == product.TypeID).FirstOrDefault();
+                if (test != null)
+                {
+                    entity.Database.ExecuteSqlCommand("update Product set " +
+                        " Price=" + (product.Price) + " " +
+                        " where ProductName= N'" + product.ProductName + "' and " +
+                        " TypeID =" + product.TypeID);
+                    entity.SaveChanges();
+                }
+
                 entity.Products.Add(product);
                 entity.SaveChanges();
                 result = true;
@@ -139,6 +172,8 @@ namespace MyProJect
             cmbProducer.SelectedIndex = -1;
             cmbStatus.SelectedIndex = -1;
             cmbType.SelectedIndex = -1;
+            nmrAmount.Value = 0;
+            dtpDate.Value = DateTime.Now;
         }
         //Event add product onto database
         private void btnAddProduct_Click(object sender, EventArgs e)
@@ -150,6 +185,8 @@ namespace MyProJect
             pro.TypeID = Convert.ToInt32(cmbType.SelectedValue);
             pro.ProducerID = Convert.ToInt32(cmbProducer.SelectedValue);
             pro.Status = cmbStatus.GetItemText(cmbStatus.SelectedItem);
+            pro.Amount = Convert.ToInt32(nmrAmount.Value);
+            pro.Date = Convert.ToDateTime(dtpDate.Value.Day + "/" + dtpDate.Value.Month + "/" + dtpDate.Value.Year);
 
             bool result = AddProduct(pro); 
             if (result)
@@ -192,8 +229,16 @@ namespace MyProJect
                     "ProducerID=" + cmbProducer.SelectedValue + "," +
                     "Price=" + txtPrice.Text + ", " +
                     "ProductName='" + txtProductName.Text + "'," +
+                    " Amount =" + nmrAmount.Value + ", " +
+                    " Date ='" + (dtpDate.Value.Year + "/" + dtpDate.Value.Month + "/" + dtpDate.Value.Day) + "', " +
                     "Status='" + cmbStatus.GetItemText(cmbStatus.SelectedItem) + "'" +
                     " where Id=" + dgvProductList.SelectedRows[0].Cells[0].Value);
+
+                entity.Database.ExecuteSqlCommand("update Product set " +
+                    " Price=" + txtPrice.Text + " " +
+                    " where ProductName= N'" + txtProductName.Text + "' and " +
+                    " TypeID =" + cmbType.SelectedValue);
+
                 entity.SaveChanges();
                 MessageBox.Show("Update Successed!");
                 FormProductManagement_Load(sender, e);
@@ -212,6 +257,8 @@ namespace MyProJect
                     txtPrice.Text = dgvProductList.SelectedRows[0].Cells[3].Value.ToString();
                     cmbProducer.SelectedIndex = cmbProducer.FindStringExact(dgvProductList.SelectedRows[0].Cells[4].Value.ToString());
                     cmbStatus.SelectedItem = dgvProductList.SelectedRows[0].Cells[5].Value.ToString();
+                    nmrAmount.Value = Convert.ToInt32(dgvProductList.SelectedRows[0].Cells[6].Value.ToString());
+                    dtpDate.Value = Convert.ToDateTime(dgvProductList.SelectedRows[0].Cells[7].Value.ToString());
 
                 }
             }
@@ -233,6 +280,8 @@ namespace MyProJect
                 txtPrice.Text = dgvProductList.SelectedRows[0].Cells[3].Value.ToString();
                 cmbProducer.SelectedIndex = cmbProducer.FindStringExact(dgvProductList.SelectedRows[0].Cells[4].Value.ToString());
                 cmbStatus.SelectedItem = dgvProductList.SelectedRows[0].Cells[5].Value.ToString();
+                nmrAmount.Value = Convert.ToInt32(dgvProductList.SelectedRows[0].Cells[6].Value.ToString());
+                dtpDate.Value = Convert.ToDateTime(dgvProductList.SelectedRows[0].Cells[7].Value.ToString());
 
             }
         }
@@ -248,9 +297,7 @@ namespace MyProJect
                 if (a.Cells[0].Value.ToString().ToLower().Contains(query) ||
                     a.Cells[1].Value.ToString().ToLower().Contains(query) ||
                     a.Cells[2].Value.ToString().ToLower().Contains(query) ||
-                    a.Cells[3].Value.ToString().ToLower().Contains(query) ||
-                    a.Cells[4].Value.ToString().ToLower().Contains(query) ||
-                    a.Cells[5].Value.ToString().ToLower().Contains(query))
+                    a.Cells[4].Value.ToString().ToLower().Contains(query) )
                 {
                     ProductInfo x = new ProductInfo();
                     x.Id = Convert.ToInt32(a.Cells[0].Value);
@@ -259,6 +306,8 @@ namespace MyProJect
                     x.Price = Convert.ToDouble(a.Cells[3].Value);
                     x.ProducerName = a.Cells[4].Value.ToString();
                     x.Status = a.Cells[5].Value.ToString();
+                    x.Amount = Convert.ToInt32(a.Cells[5].Value.ToString());
+                    x.Date = a.Cells[5].Value.ToString();
 
                     data.Add(x);
                 }
