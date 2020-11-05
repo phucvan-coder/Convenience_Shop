@@ -43,9 +43,9 @@ namespace MyProJect
             }
         }
         //Function moneyStatistics
-        private double moneyStatistics;
         public void MoneyStatistics()
         {
+            double moneyStatistics = 0;
             foreach (DataGridViewRow a in dgvBillList.Rows)
             {
                 moneyStatistics += Convert.ToDouble(a.Cells[8].Value);
@@ -93,11 +93,10 @@ namespace MyProJect
             }
 
             dgvBillList.DataSource = lst;
-            moneyStatistics = 0;
             MoneyStatistics();
         }
 
-        public void filterByDate(string f, string t)
+        public void Filter(string f, string t, int id)
         {
             DateTime from = Convert.ToDateTime(f);
             DateTime to = Convert.ToDateTime(t);
@@ -106,7 +105,7 @@ namespace MyProJect
             List<BillInfo_Class> lst = new List<BillInfo_Class>();
             foreach (DataGridViewRow a in dgvBillList.Rows)
             {
-                if (from <= Convert.ToDateTime(a.Cells[2].Value.ToString()) && Convert.ToDateTime(a.Cells[2].Value.ToString()) <= to)
+                if (from <= Convert.ToDateTime(a.Cells[2].Value.ToString()) && Convert.ToDateTime(a.Cells[2].Value.ToString()) <= to || id == Convert.ToInt32(a.Cells[1].Value))
                 {
                     BillInfo_Class n = new BillInfo_Class();
                     n.Id = Convert.ToInt32(a.Cells[0].Value.ToString());
@@ -125,7 +124,6 @@ namespace MyProJect
             }
 
             dgvBillList.DataSource = lst;
-            moneyStatistics = 0;
             MoneyStatistics();
 
 
@@ -134,7 +132,7 @@ namespace MyProJect
         {
             FormBillFilter frm = new FormBillFilter();
 
-            frm.passData = new FormBillFilter.PassData(filterByDate);
+            frm.passData = new FormBillFilter.PassData(Filter);
 
             frm.ShowDialog();
         }

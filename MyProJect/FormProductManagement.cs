@@ -66,8 +66,8 @@ namespace MyProJect
 
         public void ComboboxStatus()
         {
-            cmbStatus.Items.Add("Status1");
-            cmbStatus.Items.Add("Status2");
+            cmbStatus.Items.Add("Còn Hàng");
+            cmbStatus.Items.Add("Hết Hàng");
         }
 
         //Function add product onto database
@@ -106,6 +106,18 @@ namespace MyProJect
                 
             }
             return result;
+        }
+
+        public void ValidateInput()
+        {
+            if (txtProductName.Text == string.Empty)
+            {
+                MessageBox.Show("Please Type Product's Name!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtProductName.Focus();
+                return;
+            }
+
+
         }
         #endregion
 
@@ -170,8 +182,6 @@ namespace MyProJect
             }
             
         }
-        #endregion
-
 
         private void btnUpdateProduct_Click(object sender, EventArgs e)
         {
@@ -205,7 +215,7 @@ namespace MyProJect
 
                 }
             }
-            
+
 
         }
 
@@ -252,23 +262,10 @@ namespace MyProJect
 
                     data.Add(x);
                 }
-                
+
             }
 
             dgvProductList.DataSource = data;
-        }
-
-
-        public void ValidateInput()
-        {
-            if (txtProductName.Text == string.Empty)
-            {
-                MessageBox.Show("Please Type Product's Name!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtProductName.Focus();
-                return;
-            }
-
-            
         }
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
@@ -277,7 +274,7 @@ namespace MyProJect
             {
                 e.Handled = true;
             }
-            if (txtPrice.Text.Count(c => c == '.') == 1 && e.KeyChar == '.' )
+            if (txtPrice.Text.Count(c => c == '.') == 1 && e.KeyChar == '.')
             {
                 e.Handled = true;
             }
@@ -286,5 +283,6 @@ namespace MyProJect
                 e.Handled = true;
             }
         }
+        #endregion
     }
 }

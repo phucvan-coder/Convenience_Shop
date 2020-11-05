@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +45,17 @@ namespace MyProJect
                 cmbProduct.ValueMember = "Id";
             }
         }
+        //Function display total cost
+        public void DisplayTotalCost()
+        {
+            double totalCost = 0;
+            foreach(DataGridViewRow a in dgvOrderList.Rows)
+            {
+                totalCost += Convert.ToDouble(a.Cells[6].Value);
+            }
+            CultureInfo culture = new CultureInfo("vi-VN");
+            txtTotalCost.Text = totalCost.ToString("c",culture);
+        }
         //Function save Bill onto database
         public void SaveBill(Bill bill)
         {
@@ -66,6 +78,21 @@ namespace MyProJect
             }
             return result;
         }
+        //Function check status of product
+        public bool CheckStatus(string product)
+        {
+            bool result = false;
+            using(ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            {
+                string check;
+                check = entity.Products.Where(x => x.ProductName == product).FirstOrDefault().Status;
+                if(check == "Còn Hàng")
+                {
+                    result = true;
+                }
+            }
+            return result;
+        }
         #endregion
 
         #region Event
@@ -78,13 +105,21 @@ namespace MyProJect
             }
             else
             {
-                using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+                bool result = CheckStatus(cmbProduct.Text);
+                if (result)
                 {
-                    var price = Convert.ToDouble(entity.Products.Where(x => x.ProductName == cmbProduct.Text).First().Price);
-                    double? totalPrice = (Convert.ToInt32(nmrAmount.Value) * price) - (Convert.ToInt32(nmrAmount.Value) * price * Convert.ToInt32(nmrDiscount.Value) / 100);
-                    string[] order = new string[] { cmbType.Text, cmbProduct.Text, dtpSaleDate.Value.ToString("dd/MM/yyyy"), nmrAmount.Value.ToString(), price.ToString(), nmrDiscount.Value.ToString(), totalPrice.ToString() };
-                    dgvOrderList.Rows.Add(order);
-                    FormSale_Load(sender, e);
+                    using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+                    {
+                        var price = Convert.ToDouble(entity.Products.Where(x => x.ProductName == cmbProduct.Text).First().Price);
+                        double totalPrice = (Convert.ToInt32(nmrAmount.Value) * price) - (Convert.ToInt32(nmrAmount.Value) * price * Convert.ToInt32(nmrDiscount.Value) / 100);
+                        string[] order = new string[] { cmbType.Text, cmbProduct.Text, dtpSaleDate.Value.ToString("dd/MM/yyyy"), nmrAmount.Value.ToString(), price.ToString(), nmrDiscount.Value.ToString(), totalPrice.ToString() };
+                        dgvOrderList.Rows.Add(order);
+                        FormSale_Load(sender, e);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Product is gone!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             
@@ -108,12 +143,12 @@ namespace MyProJect
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
                 var price = Convert.ToDouble(entity.Products.Where(x => x.ProductName == cmbProduct.Text).First().Price);
-                double? totalPrice = (Convert.ToInt32(nmrAmount.Value) * price) - (Convert.ToInt32(nmrAmount.Value) * price * Convert.ToInt32(nmrDiscount.Value) / 100);
+                double totalPrice = (Convert.ToInt32(nmrAmount.Value) * price) - (Convert.ToInt32(nmrAmount.Value) * price * Convert.ToInt32(nmrDiscount.Value) / 100);
                 dgvOrderList.Rows[index].Cells[0].Value = cmbType.Text;
                 dgvOrderList.Rows[index].Cells[1].Value = cmbProduct.Text;
                 dgvOrderList.Rows[index].Cells[2].Value = dtpSaleDate.Value.ToString("dd/MM/yyyy");
                 dgvOrderList.Rows[index].Cells[3].Value = nmrAmount.Value;
-                dgvOrderList.Rows[index].Cells[0].Value = cmbType.Text;
+                dgvOrderList.Rows[index].Cells[4].Value = price;
                 dgvOrderList.Rows[index].Cells[5].Value = nmrDiscount.Value;
                 dgvOrderList.Rows[index].Cells[6].Value = totalPrice;
 
@@ -149,7 +184,7 @@ namespace MyProJect
                 int idx = tmp.Id;
 
                 int result = 0;
-               
+
                 for(int i = 0; i < dgvOrderList.Rows.Count - 1; i++)
                 {
                     
@@ -168,7 +203,7 @@ namespace MyProJect
                 {
                     dgvOrderList.Rows.Clear();
 
-                    MessageBox.Show("Pay successfully!\n", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Pay successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -193,7 +228,7 @@ namespace MyProJect
             nmrAmount.Value = 0;
             nmrDiscount.Value = 0;
             dtpSaleDate.Value = DateTime.Now;
-            
+            DisplayTotalCost();
         }
         //Event Load cmbProduct after choosing type
         private void cmbType_SelectedIndexChanged(object sender, EventArgs e)
@@ -201,9 +236,6 @@ namespace MyProJect
             ComboboxProduct();
             cmbProduct.SelectedIndex = -1;
         }
-
-
-        #endregion
 
         private void dgvOrderList_Click(object sender, EventArgs e)
         {
@@ -221,11 +253,14 @@ namespace MyProJect
                     nmrAmount.Value = Convert.ToInt32(dgvOrderList.SelectedRows[0].Cells[3].Value);
                     nmrDiscount.Value = Convert.ToInt32(dgvOrderList.SelectedRows[0].Cells[5].Value);
                 }
-                    
+
 
             }
 
 
         }
+        #endregion
+
+
     }
 }

@@ -131,10 +131,6 @@ namespace MyProJect
             }
         }
 
-
-        #endregion
-
-
         private void btnUpdateType_Click(object sender, EventArgs e)
         {
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
@@ -159,7 +155,7 @@ namespace MyProJect
                         txtTypeID.Text = dgvTypeList.SelectedRows[0].Cells[0].Value.ToString();
                         txtTypeName.Text = dgvTypeList.SelectedRows[0].Cells[1].Value.ToString();
                     }
-                    
+
 
                 }
             }
@@ -204,10 +200,7 @@ namespace MyProJect
 
             dgvTypeList.DataSource = data;
         }
+        #endregion
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
