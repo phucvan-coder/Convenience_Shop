@@ -31,13 +31,15 @@ CREATE TABLE Product(
 	ProductName NVARCHAR(50) NULL,
 	ProducerID INT NOT NULL,
 	Price FLOAT NULL,
-	Status NVARCHAR(10) NULL,
+	Amount int NULL,
+	Date DATETIME null,
+	Status NVARCHAR(50) NULL,
 	CONSTRAINT FK_TypeID FOREIGN KEY(TypeID) REFERENCES TypeOfProduct(Id),
 	CONSTRAINT FK_ProducerID FOREIGN KEY(ProducerID) REFERENCES Producer(Id)
 )
 GO
 /*
-insert into Product values (1,'pro1',1,12.0, 'Status1'),(1,'pro2',2,22.0,'Status2')
+insert into Product values (1,'pro1',1,12.0,10, '2000-12-18','Status1'),(1,'pro2',2,22.0,0,'2019-12-12','Status2')
 */
 
 CREATE TABLE Staff(
@@ -56,6 +58,10 @@ CREATE TABLE Account(
 	Password NVARCHAR(30) NULL
 )
 GO
+/*
+insert into Account values ('acc1','pass1'),('acc2','pass2')
+*/
+
 CREATE TABLE Bill(
 	Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	DateOfSale DATETIME NULL
@@ -74,3 +80,7 @@ CREATE TABLE BillInfo(
 	CONSTRAINT FK_ProductID FOREIGN KEY(ProductID) REFERENCES Product(Id)
 )
 GO
+/*
+use master
+drop database ConvenienceShop
+*/
