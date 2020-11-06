@@ -59,6 +59,8 @@ namespace MyProJect
                 MessageBox.Show("Login success", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 FormMenu menu = new FormMenu();
+                //pass data
+                menu.passData(txtUser.Text, txtPassword.Text);
                 menu.ShowDialog();
                 this.Show();
             }
@@ -125,5 +127,7 @@ namespace MyProJect
             }
         }
         #endregion
+
+        
     }
 }

@@ -16,6 +16,64 @@ namespace MyProJect
         {
             InitializeComponent();
         }
+        #region Delegate
+        //Create delegate to pass data from FormLogin to FromMenu
+        public delegate void PassData(string accountName, string password);
+        public PassData passData;
+        #endregion
+
+        #region Method
+        //Check permission of person who are logged in
+        public void CheckStaffManagementPermission(string accountName, string password)
+        {
+            bool result = false;
+            using(ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            {
+                string check = entity.Accounts.Where(x => x.AccountName == accountName && x.Password == password).FirstOrDefault().Rank;
+                if(check == "Quản Lý")
+                {
+                    result = true;
+                }
+            }
+            if (result)
+            {
+                this.Hide();
+                FormStaffManagement formStaff = new FormStaffManagement();
+                formStaff.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Access is not allowed", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        public void CheckAccountManagementPermission(string accountName, string password)
+        {
+            bool result = false;
+            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
+            {
+                string check = entity.Accounts.Where(x => x.AccountName == accountName && x.Password == password).FirstOrDefault().Rank;
+                if (check == "Quản Lý")
+                {
+                    result = true;
+                }
+            }
+            if (result)
+            {
+                this.Hide();
+                FormAccountManagement formAccount = new FormAccountManagement();
+                formAccount.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Access is not allowed", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        #endregion
+
+        #region Event
         // vào loại sp type manage
         // phần của picture box
         private void ptrbx_Type_Click(object sender, EventArgs e)
@@ -71,35 +129,23 @@ namespace MyProJect
         // của picture box
         private void ptbx_Staff_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormStaffManagement formStaff = new FormStaffManagement();
-            formStaff.ShowDialog();
-            this.Show();
+            passData = new PassData(CheckStaffManagementPermission);
         }
         // của label
         private void lbl_Staff_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormStaffManagement formStaff = new FormStaffManagement();
-            formStaff.ShowDialog();
-            this.Show();
+            passData = new PassData(CheckStaffManagementPermission);
         }
         // vào phần account form
         // của phần picture box
         private void ptrbx_Account_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormAccountManagement formAccount = new FormAccountManagement();
-            formAccount.ShowDialog();
-            this.Show();
+            passData = new PassData(CheckAccountManagementPermission);
         }
         // của phần label
         private void lbl_Account_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormAccountManagement formAccount = new FormAccountManagement();
-            formAccount.ShowDialog();
-            this.Show();
+            passData = new PassData(CheckAccountManagementPermission);
         }
         // vào form bill manage
         // cảu picture box
@@ -149,10 +195,11 @@ namespace MyProJect
         // action close form
         private void FormMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(MessageBox.Show("Do you want to log out?", "Message", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Do you want to log out?", "Message", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
             }
         }
+        #endregion
     }
 }

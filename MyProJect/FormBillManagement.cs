@@ -53,48 +53,6 @@ namespace MyProJect
             CultureInfo culture = new CultureInfo("vi-VN");
             txtMoneyStatistics.Text = moneyStatistics.ToString("c", culture);
         }
-        #endregion
-
-        #region Event
-        //Event Load Form
-        private void FormBillManagement_Load(object sender, EventArgs e)
-        {
-            DisplayBill();
-            MoneyStatistics();
-        }
-
-        #endregion
-
-        private void btnSearchBill_Click(object sender, EventArgs e)
-        {
-            string query = txtSearchBill.Text.ToLower().Trim();
-            DisplayBill();
-            List<BillInfo_Class> lst = new List<BillInfo_Class>();
-            foreach (DataGridViewRow a in dgvBillList.Rows)
-            {
-                if (a.Cells[1].Value.ToString().ToLower().Contains(query) ||
-                    a.Cells[3].Value.ToString().ToLower().Contains(query) ||
-                    a.Cells[4].Value.ToString().ToLower().Contains(query))
-                {
-                    BillInfo_Class n = new BillInfo_Class();
-                    n.Id = Convert.ToInt32(a.Cells[0].Value.ToString());
-                    n.BillID = Convert.ToInt32(a.Cells[1].Value.ToString());
-                    n.SaleDate = a.Cells[2].Value.ToString();
-                    n.Type = a.Cells[3].Value.ToString();
-                    n.Product = a.Cells[4].Value.ToString();
-                    n.Price = Convert.ToDouble(a.Cells[5].Value.ToString());
-                    n.Amount = Convert.ToInt32(a.Cells[6].Value.ToString());
-                    n.Discount = Convert.ToInt32(a.Cells[7].Value.ToString()); 
-                    n.TotalPrice= Convert.ToDouble(a.Cells[8].Value.ToString());
-
-                    lst.Add(n);
-
-                }
-            }
-
-            dgvBillList.DataSource = lst;
-            MoneyStatistics();
-        }
 
         public void Filter(string f, string t, int id)
         {
@@ -125,9 +83,48 @@ namespace MyProJect
 
             dgvBillList.DataSource = lst;
             MoneyStatistics();
-
-
         }
+        #endregion
+
+        #region Event
+        //Event Load Form
+        private void FormBillManagement_Load(object sender, EventArgs e)
+        {
+            DisplayBill();
+            MoneyStatistics();
+        }
+
+        private void btnSearchBill_Click(object sender, EventArgs e)
+        {
+            string query = txtSearchBill.Text.ToLower().Trim();
+            DisplayBill();
+            List<BillInfo_Class> lst = new List<BillInfo_Class>();
+            foreach (DataGridViewRow a in dgvBillList.Rows)
+            {
+                if (a.Cells[1].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[3].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[4].Value.ToString().ToLower().Contains(query))
+                {
+                    BillInfo_Class n = new BillInfo_Class();
+                    n.Id = Convert.ToInt32(a.Cells[0].Value.ToString());
+                    n.BillID = Convert.ToInt32(a.Cells[1].Value.ToString());
+                    n.SaleDate = a.Cells[2].Value.ToString();
+                    n.Type = a.Cells[3].Value.ToString();
+                    n.Product = a.Cells[4].Value.ToString();
+                    n.Price = Convert.ToDouble(a.Cells[5].Value.ToString());
+                    n.Amount = Convert.ToInt32(a.Cells[6].Value.ToString());
+                    n.Discount = Convert.ToInt32(a.Cells[7].Value.ToString());
+                    n.TotalPrice = Convert.ToDouble(a.Cells[8].Value.ToString());
+
+                    lst.Add(n);
+
+                }
+            }
+
+            dgvBillList.DataSource = lst;
+            MoneyStatistics();
+        }
+
         private void btnFilter_Click(object sender, EventArgs e)
         {
             FormBillFilter frm = new FormBillFilter();
@@ -146,5 +143,11 @@ namespace MyProJect
         {
             FormBillManagement_Load(sender, e);
         }
+        #endregion
+
+
+
+
+
     }
 }

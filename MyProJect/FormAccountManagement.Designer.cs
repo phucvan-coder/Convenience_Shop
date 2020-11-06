@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbRank = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnUpdateAccount = new System.Windows.Forms.Button();
             this.btnDeleteAccount = new System.Windows.Forms.Button();
             this.btnAddAccount = new System.Windows.Forms.Button();
@@ -50,6 +52,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbRank);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnUpdateAccount);
             this.groupBox1.Controls.Add(this.btnDeleteAccount);
             this.groupBox1.Controls.Add(this.btnAddAccount);
@@ -61,10 +65,31 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 73);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(472, 151);
+            this.groupBox1.Size = new System.Drawing.Size(472, 178);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Account Details";
+            // 
+            // cmbRank
+            // 
+            this.cmbRank.FormattingEnabled = true;
+            this.cmbRank.Items.AddRange(new object[] {
+            "Quản Lý",
+            "Nhân Viên"});
+            this.cmbRank.Location = new System.Drawing.Point(131, 150);
+            this.cmbRank.Name = "cmbRank";
+            this.cmbRank.Size = new System.Drawing.Size(149, 21);
+            this.cmbRank.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 152);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 19);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Rank";
             // 
             // btnUpdateAccount
             // 
@@ -152,9 +177,9 @@
             this.groupBox2.Controls.Add(this.dgvAccountList);
             this.groupBox2.Controls.Add(this.btnSearchAccount);
             this.groupBox2.Controls.Add(this.txtSearchAccount);
-            this.groupBox2.Location = new System.Drawing.Point(12, 230);
+            this.groupBox2.Location = new System.Drawing.Point(12, 257);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(472, 208);
+            this.groupBox2.Size = new System.Drawing.Size(472, 212);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Account List";
@@ -163,17 +188,17 @@
             // 
             this.dgvAccountList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAccountList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAccountList.Location = new System.Drawing.Point(6, 45);
+            this.dgvAccountList.Location = new System.Drawing.Point(6, 47);
             this.dgvAccountList.Name = "dgvAccountList";
             this.dgvAccountList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAccountList.Size = new System.Drawing.Size(460, 157);
+            this.dgvAccountList.Size = new System.Drawing.Size(460, 159);
             this.dgvAccountList.TabIndex = 13;
             this.dgvAccountList.SelectionChanged += new System.EventHandler(this.dgvAccountList_SelectionChanged);
             this.dgvAccountList.Click += new System.EventHandler(this.dgvAccountList_Click);
             // 
             // btnSearchAccount
             // 
-            this.btnSearchAccount.Location = new System.Drawing.Point(391, 16);
+            this.btnSearchAccount.Location = new System.Drawing.Point(391, 18);
             this.btnSearchAccount.Name = "btnSearchAccount";
             this.btnSearchAccount.Size = new System.Drawing.Size(75, 23);
             this.btnSearchAccount.TabIndex = 12;
@@ -183,7 +208,7 @@
             // 
             // txtSearchAccount
             // 
-            this.txtSearchAccount.Location = new System.Drawing.Point(236, 16);
+            this.txtSearchAccount.Location = new System.Drawing.Point(236, 18);
             this.txtSearchAccount.Name = "txtSearchAccount";
             this.txtSearchAccount.Size = new System.Drawing.Size(149, 20);
             this.txtSearchAccount.TabIndex = 9;
@@ -202,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 450);
+            this.ClientSize = new System.Drawing.Size(496, 481);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -237,5 +262,7 @@
         private System.Windows.Forms.Button btnSearchAccount;
         private System.Windows.Forms.TextBox txtSearchAccount;
         private System.Windows.Forms.DataGridView dgvAccountList;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbRank;
     }
 }

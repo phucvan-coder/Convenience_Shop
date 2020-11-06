@@ -29,7 +29,8 @@ namespace MyProJect
                 {
                     Id = x.Id,
                     AccountName = x.AccountName,
-                    Password = x.Password
+                    Password = x.Password,
+                    Rank = x.Rank
                 }).ToList();
                 dgvAccountList.DataSource = accountList;
             }
@@ -80,6 +81,7 @@ namespace MyProJect
             txtAccountID.Text = "";
             txtAccountName.Text = "";
             txtPassword.Text = "";
+            cmbRank.Text = "";
         }
         //Event add Account onto database
         private void btnAddAccount_Click(object sender, EventArgs e)
@@ -87,6 +89,7 @@ namespace MyProJect
             Account account = new Account();
             account.AccountName = txtAccountName.Text.Trim();
             account.Password = txtPassword.Text.Trim();
+            account.Rank = cmbRank.Text.Trim();
 
             bool result = AddAccount(account);
             if (result)
@@ -119,15 +122,14 @@ namespace MyProJect
             
         }
 
-        #endregion
-
         private void btnUpdateAccount_Click(object sender, EventArgs e)
         {
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
                 entity.Database.ExecuteSqlCommand("update Account set " +
-                    "AccountName='" + txtAccountName.Text + "', " +
-                    "Password='" + txtPassword.Text + "' " +
+                    "AccountName = N'" + txtAccountName.Text + "', " +
+                    "Password = N'" + txtPassword.Text + "', " +
+                    "Rank = N'" + cmbRank.Text + "' " +
                     " where Id=" + dgvAccountList.SelectedRows[0].Cells[0].Value.ToString());
                 entity.SaveChanges();
                 MessageBox.Show("Update Successed!");
@@ -144,7 +146,7 @@ namespace MyProJect
                     txtAccountID.Text = dgvAccountList.SelectedRows[0].Cells[0].Value.ToString();
                     txtAccountName.Text = dgvAccountList.SelectedRows[0].Cells[1].Value.ToString();
                     txtPassword.Text = dgvAccountList.SelectedRows[0].Cells[2].Value.ToString();
-
+                    cmbRank.Text = dgvAccountList.SelectedRows[0].Cells[3].Value.ToString();
                 }
             }
         }
@@ -161,7 +163,7 @@ namespace MyProJect
                 txtAccountID.Text = dgvAccountList.SelectedRows[0].Cells[0].Value.ToString();
                 txtAccountName.Text = dgvAccountList.SelectedRows[0].Cells[1].Value.ToString();
                 txtPassword.Text = dgvAccountList.SelectedRows[0].Cells[2].Value.ToString();
-
+                cmbRank.Text = dgvAccountList.SelectedRows[0].Cells[3].Value.ToString();
             }
 
         }
@@ -176,13 +178,14 @@ namespace MyProJect
             {
                 if (a.Cells[0].Value.ToString().ToLower().Contains(query) ||
                     a.Cells[1].Value.ToString().ToLower().Contains(query) ||
-                    a.Cells[2].Value.ToString().ToLower().Contains(query))
+                    a.Cells[2].Value.ToString().ToLower().Contains(query) ||
+                    a.Cells[3].Value.ToString().ToLower().Contains(query))
                 {
                     AccountInfo x = new AccountInfo();
                     x.Id = Convert.ToInt32(a.Cells[0].Value);
                     x.AccountName = a.Cells[1].Value.ToString();
                     x.Password = a.Cells[2].Value.ToString();
-
+                    x.Rank = a.Cells[3].Value.ToString();
                     data.Add(x);
                 }
 
@@ -190,5 +193,6 @@ namespace MyProJect
 
             dgvAccountList.DataSource = data;
         }
+        #endregion
     }
 }

@@ -24,8 +24,8 @@ namespace MyProJect
         {
             if (passData != null)
             {
-                string from = dtpFrom.Value.Day.ToString() + "/" + dtpFrom.Value.Month.ToString() + "/" + dtpFrom.Value.Year.ToString();
-                string to = dtpTo.Value.Day.ToString() + "/" + dtpTo.Value.Month.ToString() + "/" + dtpTo.Value.Year.ToString();
+                string from = dtpFrom.Value.ToString("dd/MM/yyyy");
+                string to = dtpTo.Value.ToString("dd/MM/yyyy");
                 int billID = Convert.ToInt32(txtBillID.Text);
                 passData(from, to, billID);
             }

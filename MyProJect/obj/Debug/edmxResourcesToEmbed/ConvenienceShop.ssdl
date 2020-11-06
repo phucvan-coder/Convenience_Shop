@@ -7,6 +7,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="AccountName" Type="nvarchar" MaxLength="30" />
     <Property Name="Password" Type="nvarchar" MaxLength="30" />
+    <Property Name="Rank" Type="nvarchar" MaxLength="30" />
   </EntityType>
   <EntityType Name="Bill">
     <Key>
@@ -47,7 +48,7 @@
     <Property Name="Price" Type="float" />
     <Property Name="Amount" Type="int" />
     <Property Name="Date" Type="datetime" />
-    <Property Name="Status" Type="nvarchar" MaxLength="10" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Staff">
     <Key>

@@ -12,6 +12,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="AccountName" Type="nvarchar" MaxLength="30" />
           <Property Name="Password" Type="nvarchar" MaxLength="30" />
+          <Property Name="Rank" Type="nvarchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="Bill">
           <Key>
@@ -52,7 +53,7 @@
           <Property Name="Price" Type="float" />
           <Property Name="Amount" Type="int" />
           <Property Name="Date" Type="datetime" />
-          <Property Name="Status" Type="nvarchar" MaxLength="10" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Staff">
           <Key>
@@ -174,6 +175,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AccountName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Rank" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Bill">
           <Key>
@@ -219,7 +221,7 @@
           <Property Name="Price" Type="Double" />
           <Property Name="Amount" Type="Int32" />
           <Property Name="Date" Type="DateTime" Precision="3" />
-          <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="BillInfoes" Relationship="Self.FK_ProductID" FromRole="Product" ToRole="BillInfo" />
           <NavigationProperty Name="Producer" Relationship="Self.FK_ProducerID" FromRole="Product" ToRole="Producer" />
           <NavigationProperty Name="TypeOfProduct" Relationship="Self.FK_TypeID" FromRole="Product" ToRole="TypeOfProduct" />
@@ -346,6 +348,7 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="AccountName" ColumnName="AccountName" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

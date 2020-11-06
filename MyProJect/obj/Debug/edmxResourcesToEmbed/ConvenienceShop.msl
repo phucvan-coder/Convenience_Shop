@@ -7,6 +7,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="AccountName" ColumnName="AccountName" />
           <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
