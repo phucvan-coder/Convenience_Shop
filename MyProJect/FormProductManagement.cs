@@ -83,16 +83,16 @@ namespace MyProJect
                 if (test != null)
                 {
                     entity.Database.ExecuteSqlCommand("update Product set " +
-                        " Amount=" + Convert.ToInt32(product.Amount + test.Amount) + ", " +
-                        " Price=" + Convert.ToInt32(product.Price) + ", " +
-                        " Date='" + (dtpDate.Value.Year + "/" + dtpDate.Value.Month + "/" + dtpDate.Value.Day) + "' " +
+                        " Amount = " + Convert.ToInt32(product.Amount + test.Amount) + ", " +
+                        " Price = " + Convert.ToInt32(product.Price) + ", " +
+                        " Date = '" + (dtpDate.Value.Year + "/" + dtpDate.Value.Month + "/" + dtpDate.Value.Day) + "' " +
                         " where ProductName= N'" + product.ProductName + "' and " +
-                        " TypeID =" + product.TypeID + " and" +
-                        " ProducerID= " + product.ProducerID);
+                        " TypeID = " + product.TypeID + " and" +
+                        " ProducerID =  " + product.ProducerID);
 
                     entity.Database.ExecuteSqlCommand("update Product set " +
-                        " Price=" + (product.Price) + " " +
-                        " where ProductName= N'" + product.ProductName + "' and " +
+                        " Price = " + (product.Price) + " " +
+                        " where ProductName = N'" + product.ProductName + "' and " +
                         " TypeID =" + product.TypeID);
 
                     entity.SaveChanges();
@@ -103,9 +103,9 @@ namespace MyProJect
                 if (test != null)
                 {
                     entity.Database.ExecuteSqlCommand("update Product set " +
-                        " Price=" + (product.Price) + " " +
+                        " Price = " + (product.Price) + " " +
                         " where ProductName= N'" + product.ProductName + "' and " +
-                        " TypeID =" + product.TypeID);
+                        " TypeID = " + product.TypeID);
                     entity.SaveChanges();
                 }
 
@@ -124,9 +124,9 @@ namespace MyProJect
             {
                 if (dgvProductList.SelectedRows.Count > 0)
                 {
-                    Product a = entity.Products.SqlQuery("select * from Product where Id=" + dgvProductList.SelectedRows[0].Cells[0].Value.ToString()).FirstOrDefault();
+                    Product a = entity.Products.SqlQuery("select * from Product where Id = " + dgvProductList.SelectedRows[0].Cells[0].Value.ToString()).FirstOrDefault();
                     List<BillInfo> lstBillInfo = new List<BillInfo>();
-                    lstBillInfo = entity.BillInfoes.SqlQuery("select * from BillInfo where ProductID=" + a.Id).ToList();
+                    lstBillInfo = entity.BillInfoes.SqlQuery("select * from BillInfo where ProductID = " + a.Id).ToList();
                     foreach (BillInfo x in lstBillInfo)
                     {
                         entity.BillInfoes.Remove(x);
@@ -225,14 +225,14 @@ namespace MyProJect
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
                 entity.Database.ExecuteSqlCommand("update Product set " +
-                    "TypeID=" + cmbType.SelectedValue + "," +
-                    "ProducerID=" + cmbProducer.SelectedValue + "," +
-                    "Price=" + txtPrice.Text + ", " +
-                    "ProductName='" + txtProductName.Text + "'," +
-                    " Amount =" + nmrAmount.Value + ", " +
-                    " Date ='" + (dtpDate.Value.Year + "/" + dtpDate.Value.Month + "/" + dtpDate.Value.Day) + "', " +
-                    "Status='" + cmbStatus.GetItemText(cmbStatus.SelectedItem) + "'" +
-                    " where Id=" + dgvProductList.SelectedRows[0].Cells[0].Value);
+                    "TypeID = " + cmbType.SelectedValue + "," +
+                    "ProducerID = " + cmbProducer.SelectedValue + "," +
+                    "Price = " + txtPrice.Text + ", " +
+                    "ProductName = N'" + txtProductName.Text + "'," +
+                    " Amount = " + nmrAmount.Value + ", " +
+                    " Date = '" + (dtpDate.Value.Year + "/" + dtpDate.Value.Month + "/" + dtpDate.Value.Day) + "', " +
+                    "Status = N'" + cmbStatus.GetItemText(cmbStatus.SelectedItem) + "'" +
+                    " where Id = " + dgvProductList.SelectedRows[0].Cells[0].Value);
 
                 entity.Database.ExecuteSqlCommand("update Product set " +
                     " Price=" + txtPrice.Text + " " +

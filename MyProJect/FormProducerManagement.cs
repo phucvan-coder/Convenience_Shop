@@ -57,13 +57,13 @@ namespace MyProJect
             {
                 if (dgvProducerList.SelectedRows.Count > 0)
                 {
-                    Producer a = entity.Producers.SqlQuery("select * from Producer where Id=" + dgvProducerList.SelectedRows[0].Cells[0].Value.ToString()).FirstOrDefault();
+                    Producer a = entity.Producers.SqlQuery("select * from Producer where Id = " + dgvProducerList.SelectedRows[0].Cells[0].Value.ToString()).FirstOrDefault();
                     List<Product> lstProduct = new List<Product>();
-                    lstProduct = entity.Products.SqlQuery("select * from Product where ProducerID=" + dgvProducerList.SelectedRows[0].Cells[0].Value.ToString()).ToList();
+                    lstProduct = entity.Products.SqlQuery("select * from Product where ProducerID = " + dgvProducerList.SelectedRows[0].Cells[0].Value.ToString()).ToList();
                     foreach(Product x in lstProduct)
                     {
                         List<BillInfo> lstBillInfo = new List<BillInfo>();
-                        lstBillInfo = entity.BillInfoes.SqlQuery("select * from BillInfo where ProductID=" + x.Id).ToList();
+                        lstBillInfo = entity.BillInfoes.SqlQuery("select * from BillInfo where ProductID = " + x.Id).ToList();
                         foreach (BillInfo bill in lstBillInfo)
                         {
                             entity.BillInfoes.Remove(bill);
@@ -139,18 +139,15 @@ namespace MyProJect
             
         }
 
-        #endregion
-
-
         private void btnUpdateProducer_Click(object sender, EventArgs e)
         {
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
                 entity.Database.ExecuteSqlCommand("update Producer set " +
-                    "Phone='" + txtProducerPhone.Text + "', " +
-                    "ProducerName='" + txtProducerName.Text + "', " +
-                    "Address='" + txtProducerAddress.Text + "'" +
-                    " where Id=" + dgvProducerList.SelectedRows[0].Cells[0].Value);
+                    "Phone = '" + txtProducerPhone.Text + "', " +
+                    "ProducerName = N'" + txtProducerName.Text + "', " +
+                    "Address = N'" + txtProducerAddress.Text + "'" +
+                    " where Id = " + dgvProducerList.SelectedRows[0].Cells[0].Value);
                 entity.SaveChanges();
                 MessageBox.Show("Update Successed!");
                 FormProducerManagement_Load(sender, e);
@@ -205,7 +202,7 @@ namespace MyProJect
                 if (a.Cells[0].Value.ToString().ToLower().Contains(query) ||
                     a.Cells[1].Value.ToString().ToLower().Contains(query) ||
                     a.Cells[2].Value.ToString().ToLower().Contains(query) ||
-                    a.Cells[3].Value.ToString().ToLower().Contains(query) )
+                    a.Cells[3].Value.ToString().ToLower().Contains(query))
                 {
                     ProducerInfo x = new ProducerInfo();
                     x.Id = Convert.ToInt32(a.Cells[0].Value);
@@ -228,5 +225,6 @@ namespace MyProJect
                 e.Handled = true;
             }
         }
+        #endregion
     }
 }

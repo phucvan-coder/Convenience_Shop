@@ -16,15 +16,19 @@ namespace MyProJect
         {
             InitializeComponent();
         }
-        #region Delegate
-        //Create delegate to pass data from FormLogin to FromMenu
-        public delegate void PassData(string accountName, string password);
-        public PassData passData;
+        #region Construction
+        //Create Construction to pass data from FormLogin to FromMenu
+        private bool checkPermission;
+        public FormMenu(string accountName, string password)
+        {
+            InitializeComponent();
+            checkPermission = CheckPermission(accountName, password);
+        }
         #endregion
 
         #region Method
         //Check permission of person who are logged in
-        public void CheckStaffManagementPermission(string accountName, string password)
+        public bool CheckPermission(string accountName, string password)
         {
             bool result = false;
             using(ConvenienceShopEntities entity = new ConvenienceShopEntities())
@@ -35,41 +39,7 @@ namespace MyProJect
                     result = true;
                 }
             }
-            if (result)
-            {
-                this.Hide();
-                FormStaffManagement formStaff = new FormStaffManagement();
-                formStaff.ShowDialog();
-                this.Show();
-            }
-            else
-            {
-                MessageBox.Show("Access is not allowed", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        public void CheckAccountManagementPermission(string accountName, string password)
-        {
-            bool result = false;
-            using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
-            {
-                string check = entity.Accounts.Where(x => x.AccountName == accountName && x.Password == password).FirstOrDefault().Rank;
-                if (check == "Quản Lý")
-                {
-                    result = true;
-                }
-            }
-            if (result)
-            {
-                this.Hide();
-                FormAccountManagement formAccount = new FormAccountManagement();
-                formAccount.ShowDialog();
-                this.Show();
-            }
-            else
-            {
-                MessageBox.Show("Access is not allowed", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            return result;
         }
         #endregion
 
@@ -129,23 +99,63 @@ namespace MyProJect
         // của picture box
         private void ptbx_Staff_Click(object sender, EventArgs e)
         {
-            passData = new PassData(CheckStaffManagementPermission);
+            if (checkPermission)
+            {
+                this.Hide();
+                FormStaffManagement formStaff = new FormStaffManagement();
+                formStaff.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Access is not allowed", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         // của label
         private void lbl_Staff_Click(object sender, EventArgs e)
         {
-            passData = new PassData(CheckStaffManagementPermission);
+            if (checkPermission)
+            {
+                this.Hide();
+                FormStaffManagement formStaff = new FormStaffManagement();
+                formStaff.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Access is not allowed", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         // vào phần account form
         // của phần picture box
         private void ptrbx_Account_Click(object sender, EventArgs e)
         {
-            passData = new PassData(CheckAccountManagementPermission);
+            if (checkPermission)
+            {
+                this.Hide();
+                FormAccountManagement formAccount = new FormAccountManagement();
+                formAccount.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Access is not allowed", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         // của phần label
         private void lbl_Account_Click(object sender, EventArgs e)
         {
-            passData = new PassData(CheckAccountManagementPermission);
+            if (checkPermission)
+            {
+                this.Hide();
+                FormAccountManagement formAccount = new FormAccountManagement();
+                formAccount.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Access is not allowed", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         // vào form bill manage
         // cảu picture box

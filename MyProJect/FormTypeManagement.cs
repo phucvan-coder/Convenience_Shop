@@ -136,7 +136,7 @@ namespace MyProJect
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
                 entity.Database.ExecuteSqlCommand("update TypeOfProduct set " +
-                    "TypeName='" + txtTypeName.Text + "' " +
+                    "TypeName = N'" + txtTypeName.Text + "' " +
                     " where Id=" + dgvTypeList.SelectedRows[0].Cells[0].Value.ToString());
                 entity.SaveChanges();
                 MessageBox.Show("Update Successed!");

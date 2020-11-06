@@ -57,7 +57,7 @@ namespace MyProJect
             {
                 if (dgvAccountList.SelectedRows.Count > 0)
                 {
-                    Account a = entity.Accounts.SqlQuery("select * from Account where Id=" + dgvAccountList.SelectedRows[0].Cells[0].Value.ToString()).FirstOrDefault();
+                    Account a = entity.Accounts.SqlQuery("select * from Account where Id = " + dgvAccountList.SelectedRows[0].Cells[0].Value.ToString()).FirstOrDefault();
                     entity.Accounts.Remove(a);
                     entity.SaveChanges();
                     result = true;
@@ -130,7 +130,7 @@ namespace MyProJect
                     "AccountName = N'" + txtAccountName.Text + "', " +
                     "Password = N'" + txtPassword.Text + "', " +
                     "Rank = N'" + cmbRank.Text + "' " +
-                    " where Id=" + dgvAccountList.SelectedRows[0].Cells[0].Value.ToString());
+                    " where Id = " + dgvAccountList.SelectedRows[0].Cells[0].Value.ToString());
                 entity.SaveChanges();
                 MessageBox.Show("Update Successed!");
                 FormAccountManagement_Load(sender, e);

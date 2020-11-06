@@ -131,8 +131,6 @@ namespace MyProJect
             }
             
         }
-        #endregion
-
 
         private void btnUpdateStaff_Click(object sender, EventArgs e)
         {
@@ -140,12 +138,12 @@ namespace MyProJect
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
                 entity.Database.ExecuteSqlCommand("update Staff set " +
-                    "Name='" + txtStaffName.Text + "', " +
-                    "Gender='" + cmbGender.GetItemText(cmbGender.SelectedItem) + "', " +
-                    "Email='" + txtStaffEmail.Text + "', " +
-                    "Phone='" + txtStaffPhone.Text+ "', " +
-                    "Address='" + txtStaffAddress.Text + "', " +
-                    "DateOfBirth='" + Convert.ToDateTime(DOB) + "' " +
+                    "Name = N'" + txtStaffName.Text + "', " +
+                    "Gender = N'" + cmbGender.GetItemText(cmbGender.SelectedItem) + "', " +
+                    "Email = N'" + txtStaffEmail.Text + "', " +
+                    "Phone = N'" + txtStaffPhone.Text + "', " +
+                    "Address = N'" + txtStaffAddress.Text + "', " +
+                    "DateOfBirth = N'" + Convert.ToDateTime(DOB) + "' " +
                     " where Id=" + dgvStaffList.SelectedRows[0].Cells[0].Value.ToString());
                 entity.SaveChanges();
                 MessageBox.Show("Update Successed!");
@@ -232,5 +230,7 @@ namespace MyProJect
                 e.Handled = true;
             }
         }
+        #endregion
+
     }
 }
