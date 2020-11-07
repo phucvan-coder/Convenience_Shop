@@ -333,5 +333,18 @@ namespace MyProJect
             }
         }
         #endregion
+
+        private void nmrAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            FormProductManagement_Load(sender, e);
+        }
     }
 }

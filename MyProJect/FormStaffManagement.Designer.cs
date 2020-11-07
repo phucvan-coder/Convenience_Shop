@@ -51,6 +51,7 @@
             this.btnSearchStaff = new System.Windows.Forms.Button();
             this.txtSearchStaff = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffList)).BeginInit();
@@ -58,6 +59,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnRefresh);
             this.groupBox1.Controls.Add(this.dtpDateOfBirth);
             this.groupBox1.Controls.Add(this.btnUpdateStaff);
             this.groupBox1.Controls.Add(this.btnDeleteStaff);
@@ -287,6 +289,16 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Staff Management";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(396, 142);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 22;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // FormStaffManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,5 +346,6 @@
         private System.Windows.Forms.Button btnSearchStaff;
         private System.Windows.Forms.DataGridView dgvStaffList;
         private System.Windows.Forms.DateTimePicker dtpDateOfBirth;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

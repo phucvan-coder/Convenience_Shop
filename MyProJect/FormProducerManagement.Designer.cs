@@ -45,6 +45,7 @@
             this.btnSearchProducer = new System.Windows.Forms.Button();
             this.txtSearchProducer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducerList)).BeginInit();
@@ -52,6 +53,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnRefresh);
             this.groupBox1.Controls.Add(this.btnUpdateProducer);
             this.groupBox1.Controls.Add(this.btnDeleteProducer);
             this.groupBox1.Controls.Add(this.btnAddProducer);
@@ -222,6 +224,16 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Producer Management";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(640, 134);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 23;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // FormProducerManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,5 +275,6 @@
         private System.Windows.Forms.Button btnAddProducer;
         private System.Windows.Forms.Button btnSearchProducer;
         private System.Windows.Forms.DataGridView dgvProducerList;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

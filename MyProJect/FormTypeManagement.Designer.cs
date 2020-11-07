@@ -41,6 +41,7 @@
             this.txtSearchType = new System.Windows.Forms.TextBox();
             this.btnSearchType = new System.Windows.Forms.Button();
             this.dgvTypeList = new System.Windows.Forms.DataGridView();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTypeList)).BeginInit();
@@ -58,6 +59,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnRefresh);
             this.groupBox1.Controls.Add(this.btnDeleteType);
             this.groupBox1.Controls.Add(this.btnUpdateType);
             this.groupBox1.Controls.Add(this.txtTypeID);
@@ -74,7 +76,7 @@
             // 
             // btnDeleteType
             // 
-            this.btnDeleteType.Location = new System.Drawing.Point(327, 60);
+            this.btnDeleteType.Location = new System.Drawing.Point(327, 104);
             this.btnDeleteType.Name = "btnDeleteType";
             this.btnDeleteType.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteType.TabIndex = 7;
@@ -84,7 +86,7 @@
             // 
             // btnUpdateType
             // 
-            this.btnUpdateType.Location = new System.Drawing.Point(327, 89);
+            this.btnUpdateType.Location = new System.Drawing.Point(328, 75);
             this.btnUpdateType.Name = "btnUpdateType";
             this.btnUpdateType.Size = new System.Drawing.Size(75, 23);
             this.btnUpdateType.TabIndex = 6;
@@ -112,7 +114,7 @@
             // 
             // btnAddType
             // 
-            this.btnAddType.Location = new System.Drawing.Point(327, 31);
+            this.btnAddType.Location = new System.Drawing.Point(327, 46);
             this.btnAddType.Name = "btnAddType";
             this.btnAddType.Size = new System.Drawing.Size(75, 23);
             this.btnAddType.TabIndex = 2;
@@ -178,6 +180,15 @@
             this.dgvTypeList.SelectionChanged += new System.EventHandler(this.dgvTypeList_SelectionChanged);
             this.dgvTypeList.Click += new System.EventHandler(this.dgvTypeList_Click);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(327, 17);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 23;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            // 
             // FormTypeManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,5 +226,6 @@
         private System.Windows.Forms.TextBox txtTypeID;
         private System.Windows.Forms.Button btnSearchType;
         private System.Windows.Forms.TextBox txtSearchType;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

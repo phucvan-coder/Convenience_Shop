@@ -44,6 +44,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtTotalCost = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnPayment = new System.Windows.Forms.Button();
             this.dgvOrderList = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,8 +56,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtTotalCost = new System.Windows.Forms.TextBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrDiscount)).BeginInit();
@@ -65,6 +66,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnRefresh);
             this.groupBox1.Controls.Add(this.nmrAmount);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.btnUpdateProduct);
@@ -92,6 +94,7 @@
             this.nmrAmount.Name = "nmrAmount";
             this.nmrAmount.Size = new System.Drawing.Size(81, 20);
             this.nmrAmount.TabIndex = 16;
+            this.nmrAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nmrAmount_KeyPress);
             // 
             // label7
             // 
@@ -149,6 +152,7 @@
             this.nmrDiscount.Name = "nmrDiscount";
             this.nmrDiscount.Size = new System.Drawing.Size(81, 20);
             this.nmrDiscount.TabIndex = 10;
+            this.nmrDiscount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nmrDiscount_KeyPress);
             // 
             // dtpSaleDate
             // 
@@ -229,6 +233,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bill";
             // 
+            // txtTotalCost
+            // 
+            this.txtTotalCost.Location = new System.Drawing.Point(95, 257);
+            this.txtTotalCost.Name = "txtTotalCost";
+            this.txtTotalCost.ReadOnly = true;
+            this.txtTotalCost.Size = new System.Drawing.Size(177, 20);
+            this.txtTotalCost.TabIndex = 19;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(6, 258);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 19);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Total cost";
+            // 
             // btnPayment
             // 
             this.btnPayment.Location = new System.Drawing.Point(695, 10);
@@ -304,23 +326,15 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Sale";
             // 
-            // label8
+            // btnRefresh
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 258);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 19);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Total cost";
-            // 
-            // txtTotalCost
-            // 
-            this.txtTotalCost.Location = new System.Drawing.Point(95, 257);
-            this.txtTotalCost.Name = "txtTotalCost";
-            this.txtTotalCost.ReadOnly = true;
-            this.txtTotalCost.Size = new System.Drawing.Size(177, 20);
-            this.txtTotalCost.TabIndex = 19;
+            this.btnRefresh.Location = new System.Drawing.Point(395, 111);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 23;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // FormSale
             // 
@@ -376,5 +390,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.TextBox txtTotalCost;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

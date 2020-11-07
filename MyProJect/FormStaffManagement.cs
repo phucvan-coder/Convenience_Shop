@@ -232,5 +232,9 @@ namespace MyProJect
         }
         #endregion
 
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            FormStaffManagement_Load(sender, e);
+        }
     }
 }

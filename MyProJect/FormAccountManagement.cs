@@ -194,5 +194,10 @@ namespace MyProJect
             dgvAccountList.DataSource = data;
         }
         #endregion
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            FormAccountManagement_Load(sender, e);
+        }
     }
 }

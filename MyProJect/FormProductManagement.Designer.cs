@@ -53,6 +53,7 @@
             this.dgvProductList = new System.Windows.Forms.DataGridView();
             this.btnSearchProduct = new System.Windows.Forms.Button();
             this.txtProductSearch = new System.Windows.Forms.TextBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrAmount)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -71,6 +72,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnRefresh);
             this.groupBox1.Controls.Add(this.dtpDate);
             this.groupBox1.Controls.Add(this.nmrAmount);
             this.groupBox1.Controls.Add(this.label9);
@@ -117,6 +119,7 @@
             this.nmrAmount.Name = "nmrAmount";
             this.nmrAmount.Size = new System.Drawing.Size(157, 20);
             this.nmrAmount.TabIndex = 16;
+            this.nmrAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nmrAmount_KeyPress);
             // 
             // label9
             // 
@@ -316,6 +319,16 @@
             this.txtProductSearch.Size = new System.Drawing.Size(157, 20);
             this.txtProductSearch.TabIndex = 3;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(402, 169);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 23;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // FormProductManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,5 +379,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

@@ -161,6 +161,7 @@ namespace MyProJect
                                 if (row.Cells[1].Value.ToString() == pro.ProductName && row.Cells[0].Value.ToString() == cmbType.Text)
                                 {
                                     row.Cells[3].Value = Convert.ToInt32(row.Cells[3].Value) + Convert.ToInt32(nmrAmount.Value);
+                                    row.Cells[6].Value = Convert.ToInt32(row.Cells[3].Value)*Convert.ToInt32(row.Cells[4].Value);
                                     FormSale_Load(sender, e);
                                     return;
                                 }
@@ -333,8 +334,28 @@ namespace MyProJect
 
 
         }
+
         #endregion
 
+        private void nmrAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
 
+        private void nmrDiscount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            FormSale_Load(sender, e);
+        }
     }
 }

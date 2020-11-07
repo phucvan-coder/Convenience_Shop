@@ -45,6 +45,7 @@
             this.btnSearchAccount = new System.Windows.Forms.Button();
             this.txtSearchAccount = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccountList)).BeginInit();
@@ -52,6 +53,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnRefresh);
             this.groupBox1.Controls.Add(this.cmbRank);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnUpdateAccount);
@@ -223,6 +225,16 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Account Management";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(346, 135);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 23;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // FormAccountManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,5 +276,6 @@
         private System.Windows.Forms.DataGridView dgvAccountList;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbRank;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

@@ -1,4 +1,4 @@
-CREATE DATABASE ConvenienceShop
+﻿CREATE DATABASE ConvenienceShop
 GO
 USE ConvenienceShop
 GO
@@ -60,7 +60,7 @@ CREATE TABLE Account(
 )
 GO
 /*
-insert into Account values ('acc1','pass1'),('acc2','pass2')
+insert into Account values ('acc1','pass1','Quản Lý'),('acc2','pass2','Quản Lý')
 */
 
 CREATE TABLE Bill(
