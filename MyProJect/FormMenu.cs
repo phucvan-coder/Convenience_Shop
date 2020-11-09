@@ -211,5 +211,184 @@ namespace MyProJect
             }
         }
         #endregion
+
+        #region Type product mouse event
+        // picture box 
+        private void ptrbx_Type_MouseEnter(object sender, EventArgs e)
+        {
+            ptrbx_Type.Image = Properties.Resources.Typeproduct_HOV;
+        }
+
+        private void ptrbx_Type_MouseLeave(object sender, EventArgs e)
+        {
+            ptrbx_Type.Image = Properties.Resources.typeofpro;
+        }
+        // label
+        private void lbl_Type_MouseEnter(object sender, EventArgs e)
+        {
+            ptrbx_Type.Image = Properties.Resources.Typeproduct_HOV;
+        }
+        private void lbl_Type_MouseLeave(object sender, EventArgs e)
+        {
+            ptrbx_Type.Image = Properties.Resources.typeofpro;
+        }
+        #endregion
+
+        #region Product mouse event
+        // picture box
+        private void ptrbx_product_MouseEnter(object sender, EventArgs e)
+        {
+            ptrbx_product.Image = Properties.Resources.clipboard_HOV;
+        }
+
+        private void ptrbx_product_MouseLeave(object sender, EventArgs e)
+        {
+            ptrbx_product.Image = Properties.Resources.clipboard;
+        }
+        // label
+        private void lbl_Product_MouseEnter(object sender, EventArgs e)
+        {
+            ptrbx_product.Image = Properties.Resources.clipboard_HOV;
+        }
+        private void lbl_Product_MouseLeave(object sender, EventArgs e)
+        {
+            ptrbx_product.Image = Properties.Resources.clipboard;
+        }
+        #endregion
+
+        #region porudcer mouse event
+        // picture box
+        private void ptrbx_Producer_MouseEnter(object sender, EventArgs e)
+        {
+            ptrbx_Producer.Image = Properties.Resources.Producer_HOV;
+        }
+
+        private void ptrbx_Producer_MouseLeave(object sender, EventArgs e)
+        {
+            ptrbx_Producer.Image = Properties.Resources.Producer_IMG;
+        }
+        // label
+        private void lbl_Producer_MouseEnter(object sender, EventArgs e)
+        {
+            ptrbx_Producer.Image = Properties.Resources.Producer_HOV;
+        }
+        private void lbl_Producer_MouseLeave(object sender, EventArgs e)
+        {
+            ptrbx_Producer.Image = Properties.Resources.Producer_IMG;
+        }
+        #endregion
+
+        #region staff mouse event
+        // picture box
+        private void ptbx_Staff_MouseEnter(object sender, EventArgs e)
+        {
+            ptbx_Staff.Image = Properties.Resources.Staff_HOV;
+        }
+        private void ptbx_Staff_MouseLeave(object sender, EventArgs e)
+        {
+            ptbx_Staff.Image = Properties.Resources.Staff_IMG;
+        }
+        // label
+        private void lbl_Staff_MouseEnter(object sender, EventArgs e)
+        {
+            ptbx_Staff.Image = Properties.Resources.Staff_HOV;
+        }
+        private void lbl_Staff_MouseLeave(object sender, EventArgs e)
+        {
+            ptbx_Staff.Image = Properties.Resources.Staff_IMG;
+        }
+        #endregion
+
+        #region account mouse event
+        // picturebox
+        private void ptrbx_Account_MouseEnter(object sender, EventArgs e)
+        {
+            ptrbx_Account.Image = Properties.Resources.Account_HOV;
+        }
+
+        private void ptrbx_Account_MouseLeave(object sender, EventArgs e)
+        {
+            ptrbx_Account.Image = Properties.Resources.Account_IMG;
+        }
+        // label
+        private void lbl_Account_MouseEnter(object sender, EventArgs e)
+        {
+            ptrbx_Account.Image = Properties.Resources.Account_HOV;
+        }
+
+        private void lbl_Account_MouseLeave(object sender, EventArgs e)
+        {
+            ptrbx_Account.Image = Properties.Resources.Account_IMG;
+        }
+        #endregion
+
+        #region bill mouse event
+        // picture box
+        private void ptbx_Bill_MouseEnter(object sender, EventArgs e)
+        {
+            ptbx_Bill.Image = Properties.Resources.Bill_HOV;
+        }
+
+        private void ptbx_Bill_MouseLeave(object sender, EventArgs e)
+        {
+            ptbx_Bill.Image = Properties.Resources.Bill_IMG;
+        }
+        // label
+        private void lbl_Bill_MouseEnter(object sender, EventArgs e)
+        {
+            ptbx_Bill.Image = Properties.Resources.Bill_HOV;
+        }
+
+        private void lbl_Bill_MouseLeave(object sender, EventArgs e)
+        {
+            ptbx_Bill.Image = Properties.Resources.Bill_IMG;
+        }
+        #endregion
+
+        #region sale mouse event
+        // pivture box
+        private void ptbx_Sale_MouseEnter(object sender, EventArgs e)
+        {
+            ptbx_Sale.Image = Properties.Resources.Cart_HOV;
+        }
+
+        private void ptbx_Sale_MouseLeave(object sender, EventArgs e)
+        {
+            ptbx_Sale.Image = Properties.Resources.Cart_IMG;
+        }
+        //label
+        private void lbl_Sale_MouseEnter(object sender, EventArgs e)
+        {
+            ptbx_Sale.Image = Properties.Resources.Cart_HOV;
+        }
+
+        private void lbl_Sale_MouseLeave(object sender, EventArgs e)
+        {
+            ptbx_Sale.Image = Properties.Resources.Cart_IMG;
+        }
+        #endregion
+
+        #region logout mouse event
+        // picture box
+        private void ptbx_Logout_MouseEnter(object sender, EventArgs e)
+        {
+            ptbx_Logout.Image = Properties.Resources.Logout_HOV;
+        }
+
+        private void ptbx_Logout_MouseLeave(object sender, EventArgs e)
+        {
+            ptbx_Logout.Image = Properties.Resources.log_out;
+        }
+        // label
+        private void lbl_Logout_MouseEnter(object sender, EventArgs e)
+        {
+            ptbx_Logout.Image = Properties.Resources.Logout_HOV;
+        }
+
+        private void lbl_Logout_MouseLeave(object sender, EventArgs e)
+        {
+            ptbx_Logout.Image = Properties.Resources.log_out;
+        }
+        #endregion
     }
 }

@@ -3,13 +3,11 @@ D:\ProJectWindow\MyProJect\MyProJect\bin\Debug\MyProJect.exe
 D:\ProJectWindow\MyProJect\MyProJect\bin\Debug\MyProJect.pdb
 D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.csprojAssemblyReference.cache
 D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormLogin.resources
-D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormMain.resources
 D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.Properties.Resources.resources
 D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.csproj.GenerateResource.cache
 D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.csproj.CoreCompileInputs.cache
 D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.exe
 D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.pdb
-D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormSignUp.resources
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\bin\Debug\MyProJect.exe.config
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\bin\Debug\MyProJect.exe
 F:\Lập trình window\final project\Convenience_Shop\MyProJect\bin\Debug\MyProJect.pdb
@@ -72,3 +70,9 @@ C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormProduct
 C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormSale.resources
 C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormStaffManagement.resources
 C:\Users\Hoan\Desktop\Convenience_Shop\MyProJect\obj\Debug\MyProJect.FormTypeManagement.resources
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormReport.resources
+D:\ProJectWindow\MyProJect\MyProJect\bin\Debug\CircularProgressBar.dll
+D:\ProJectWindow\MyProJect\MyProJect\bin\Debug\WinFormAnimation.dll
+D:\ProJectWindow\MyProJect\MyProJect\bin\Debug\CircularProgressBar.xml
+D:\ProJectWindow\MyProJect\MyProJect\bin\Debug\WinFormAnimation.xml
+D:\ProJectWindow\MyProJect\MyProJect\obj\Debug\MyProJect.FormLoad.resources

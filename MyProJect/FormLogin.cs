@@ -24,7 +24,6 @@ namespace MyProJect
             {
                 using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
                 {
-                   
                     var check = entity.Accounts.Where(x => x.AccountName == txtUser.Text && x.Password == txtPassword.Text).FirstOrDefault();
                     if (check != null)
                     {
@@ -32,7 +31,7 @@ namespace MyProJect
                     }
                 }
             }
-            catch(Exception e2)
+            catch (Exception e2)
             {
                 Console.WriteLine(e2.Message);
             }
@@ -126,8 +125,35 @@ namespace MyProJect
                 e.Cancel = true;
             }
         }
+
         #endregion
 
-        
+        #region Text changed 
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+            string user = txtUser.Text;
+            if (string.IsNullOrWhiteSpace(user) == false)
+            {
+                picturecheck1.Image = Properties.Resources.checked_24;
+            }
+            else
+            {
+                picturecheck1.Image = Properties.Resources._checked;
+            }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            string passw = txtPassword.Text;
+            if (string.IsNullOrWhiteSpace(passw) == false)
+            {
+                picturecheck2.Image = Properties.Resources.checked_24;
+            }
+            else
+            {
+                picturecheck2.Image = Properties.Resources._checked;
+            }
+        }
+        #endregion
     }
 }

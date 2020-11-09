@@ -100,6 +100,8 @@
             this.lbl_Logout.TabIndex = 16;
             this.lbl_Logout.Text = "Logout";
             this.lbl_Logout.Click += new System.EventHandler(this.lbl_Logout_Click);
+            this.lbl_Logout.MouseEnter += new System.EventHandler(this.lbl_Logout_MouseEnter);
+            this.lbl_Logout.MouseLeave += new System.EventHandler(this.lbl_Logout_MouseLeave);
             // 
             // ptbx_Logout
             // 
@@ -111,16 +113,20 @@
             this.ptbx_Logout.TabIndex = 15;
             this.ptbx_Logout.TabStop = false;
             this.ptbx_Logout.Click += new System.EventHandler(this.ptbx_Logout_Click);
+            this.ptbx_Logout.MouseEnter += new System.EventHandler(this.ptbx_Logout_MouseEnter);
+            this.ptbx_Logout.MouseLeave += new System.EventHandler(this.ptbx_Logout_MouseLeave);
             // 
             // ptbx_Staff
             // 
-            this.ptbx_Staff.Image = global::MyProJect.Properties.Resources.Employ_card;
+            this.ptbx_Staff.Image = global::MyProJect.Properties.Resources.Staff_IMG;
             this.ptbx_Staff.Location = new System.Drawing.Point(614, 51);
             this.ptbx_Staff.Name = "ptbx_Staff";
             this.ptbx_Staff.Size = new System.Drawing.Size(130, 130);
             this.ptbx_Staff.TabIndex = 14;
             this.ptbx_Staff.TabStop = false;
             this.ptbx_Staff.Click += new System.EventHandler(this.ptbx_Staff_Click);
+            this.ptbx_Staff.MouseEnter += new System.EventHandler(this.ptbx_Staff_MouseEnter);
+            this.ptbx_Staff.MouseLeave += new System.EventHandler(this.ptbx_Staff_MouseLeave);
             // 
             // lbl_Sale
             // 
@@ -135,17 +141,21 @@
             this.lbl_Sale.TabIndex = 13;
             this.lbl_Sale.Text = "Sale";
             this.lbl_Sale.Click += new System.EventHandler(this.lbl_Sale_Click);
+            this.lbl_Sale.MouseEnter += new System.EventHandler(this.lbl_Sale_MouseEnter);
+            this.lbl_Sale.MouseLeave += new System.EventHandler(this.lbl_Sale_MouseLeave);
             // 
             // ptbx_Sale
             // 
             this.ptbx_Sale.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ptbx_Sale.Image = global::MyProJect.Properties.Resources.sell;
+            this.ptbx_Sale.Image = global::MyProJect.Properties.Resources.Cart_IMG;
             this.ptbx_Sale.Location = new System.Drawing.Point(420, 259);
             this.ptbx_Sale.Name = "ptbx_Sale";
             this.ptbx_Sale.Size = new System.Drawing.Size(130, 130);
             this.ptbx_Sale.TabIndex = 12;
             this.ptbx_Sale.TabStop = false;
             this.ptbx_Sale.Click += new System.EventHandler(this.ptbx_Sale_Click);
+            this.ptbx_Sale.MouseEnter += new System.EventHandler(this.ptbx_Sale_MouseEnter);
+            this.ptbx_Sale.MouseLeave += new System.EventHandler(this.ptbx_Sale_MouseLeave);
             // 
             // lbl_Bill
             // 
@@ -160,17 +170,21 @@
             this.lbl_Bill.TabIndex = 11;
             this.lbl_Bill.Text = "Bill";
             this.lbl_Bill.Click += new System.EventHandler(this.lbl_Bill_Click);
+            this.lbl_Bill.MouseEnter += new System.EventHandler(this.lbl_Bill_MouseEnter);
+            this.lbl_Bill.MouseLeave += new System.EventHandler(this.lbl_Bill_MouseLeave);
             // 
             // ptbx_Bill
             // 
             this.ptbx_Bill.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ptbx_Bill.Image = global::MyProJect.Properties.Resources.Product;
+            this.ptbx_Bill.Image = global::MyProJect.Properties.Resources.Bill_IMG;
             this.ptbx_Bill.Location = new System.Drawing.Point(220, 259);
             this.ptbx_Bill.Name = "ptbx_Bill";
             this.ptbx_Bill.Size = new System.Drawing.Size(130, 130);
             this.ptbx_Bill.TabIndex = 10;
             this.ptbx_Bill.TabStop = false;
             this.ptbx_Bill.Click += new System.EventHandler(this.ptbx_Bill_Click);
+            this.ptbx_Bill.MouseEnter += new System.EventHandler(this.ptbx_Bill_MouseEnter);
+            this.ptbx_Bill.MouseLeave += new System.EventHandler(this.ptbx_Bill_MouseLeave);
             // 
             // lbl_Account
             // 
@@ -185,17 +199,21 @@
             this.lbl_Account.TabIndex = 9;
             this.lbl_Account.Text = "Account";
             this.lbl_Account.Click += new System.EventHandler(this.lbl_Account_Click);
+            this.lbl_Account.MouseEnter += new System.EventHandler(this.lbl_Account_MouseEnter);
+            this.lbl_Account.MouseLeave += new System.EventHandler(this.lbl_Account_MouseLeave);
             // 
             // ptrbx_Account
             // 
             this.ptrbx_Account.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ptrbx_Account.Image = global::MyProJect.Properties.Resources.user_128;
+            this.ptrbx_Account.Image = global::MyProJect.Properties.Resources.Account_IMG;
             this.ptrbx_Account.Location = new System.Drawing.Point(29, 259);
             this.ptrbx_Account.Name = "ptrbx_Account";
             this.ptrbx_Account.Size = new System.Drawing.Size(130, 130);
             this.ptrbx_Account.TabIndex = 8;
             this.ptrbx_Account.TabStop = false;
             this.ptrbx_Account.Click += new System.EventHandler(this.ptrbx_Account_Click);
+            this.ptrbx_Account.MouseEnter += new System.EventHandler(this.ptrbx_Account_MouseEnter);
+            this.ptrbx_Account.MouseLeave += new System.EventHandler(this.ptrbx_Account_MouseLeave);
             // 
             // lbl_Staff
             // 
@@ -210,6 +228,8 @@
             this.lbl_Staff.TabIndex = 7;
             this.lbl_Staff.Text = "Staff";
             this.lbl_Staff.Click += new System.EventHandler(this.lbl_Staff_Click);
+            this.lbl_Staff.MouseEnter += new System.EventHandler(this.lbl_Staff_MouseEnter);
+            this.lbl_Staff.MouseLeave += new System.EventHandler(this.lbl_Staff_MouseLeave);
             // 
             // lbl_Producer
             // 
@@ -224,17 +244,21 @@
             this.lbl_Producer.TabIndex = 5;
             this.lbl_Producer.Text = "Producer";
             this.lbl_Producer.Click += new System.EventHandler(this.lbl_Producer_Click);
+            this.lbl_Producer.MouseEnter += new System.EventHandler(this.lbl_Producer_MouseEnter);
+            this.lbl_Producer.MouseLeave += new System.EventHandler(this.lbl_Producer_MouseLeave);
             // 
             // ptrbx_Producer
             // 
             this.ptrbx_Producer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ptrbx_Producer.Image = global::MyProJect.Properties.Resources.manufacturing1;
+            this.ptrbx_Producer.Image = global::MyProJect.Properties.Resources.Producer_IMG;
             this.ptrbx_Producer.Location = new System.Drawing.Point(420, 51);
             this.ptrbx_Producer.Name = "ptrbx_Producer";
             this.ptrbx_Producer.Size = new System.Drawing.Size(130, 130);
             this.ptrbx_Producer.TabIndex = 4;
             this.ptrbx_Producer.TabStop = false;
             this.ptrbx_Producer.Click += new System.EventHandler(this.ptrbx_Producer_Click);
+            this.ptrbx_Producer.MouseEnter += new System.EventHandler(this.ptrbx_Producer_MouseEnter);
+            this.ptrbx_Producer.MouseLeave += new System.EventHandler(this.ptrbx_Producer_MouseLeave);
             // 
             // lbl_Product
             // 
@@ -249,17 +273,22 @@
             this.lbl_Product.TabIndex = 3;
             this.lbl_Product.Text = "Product";
             this.lbl_Product.Click += new System.EventHandler(this.lbl_Product_Click);
+            this.lbl_Product.MouseEnter += new System.EventHandler(this.lbl_Product_MouseEnter);
+            this.lbl_Product.MouseLeave += new System.EventHandler(this.lbl_Product_MouseLeave);
             // 
             // ptrbx_product
             // 
             this.ptrbx_product.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ptrbx_product.Image = global::MyProJect.Properties.Resources.packing_machine;
+            this.ptrbx_product.ErrorImage = null;
+            this.ptrbx_product.Image = global::MyProJect.Properties.Resources.clipboard1;
             this.ptrbx_product.Location = new System.Drawing.Point(220, 51);
             this.ptrbx_product.Name = "ptrbx_product";
             this.ptrbx_product.Size = new System.Drawing.Size(130, 130);
             this.ptrbx_product.TabIndex = 2;
             this.ptrbx_product.TabStop = false;
             this.ptrbx_product.Click += new System.EventHandler(this.ptrbx_product_Click);
+            this.ptrbx_product.MouseEnter += new System.EventHandler(this.ptrbx_product_MouseEnter);
+            this.ptrbx_product.MouseLeave += new System.EventHandler(this.ptrbx_product_MouseLeave);
             // 
             // lbl_Type
             // 
@@ -274,17 +303,21 @@
             this.lbl_Type.TabIndex = 1;
             this.lbl_Type.Text = "Type";
             this.lbl_Type.Click += new System.EventHandler(this.lbl_Type_Click);
+            this.lbl_Type.MouseEnter += new System.EventHandler(this.lbl_Type_MouseEnter);
+            this.lbl_Type.MouseLeave += new System.EventHandler(this.lbl_Type_MouseLeave);
             // 
             // ptrbx_Type
             // 
             this.ptrbx_Type.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ptrbx_Type.Image = global::MyProJect.Properties.Resources.timeline;
+            this.ptrbx_Type.Image = global::MyProJect.Properties.Resources.typeofpro;
             this.ptrbx_Type.Location = new System.Drawing.Point(29, 51);
             this.ptrbx_Type.Name = "ptrbx_Type";
             this.ptrbx_Type.Size = new System.Drawing.Size(130, 130);
             this.ptrbx_Type.TabIndex = 0;
             this.ptrbx_Type.TabStop = false;
             this.ptrbx_Type.Click += new System.EventHandler(this.ptrbx_Type_Click);
+            this.ptrbx_Type.MouseEnter += new System.EventHandler(this.ptrbx_Type_MouseEnter);
+            this.ptrbx_Type.MouseLeave += new System.EventHandler(this.ptrbx_Type_MouseLeave);
             // 
             // FormMenu
             // 

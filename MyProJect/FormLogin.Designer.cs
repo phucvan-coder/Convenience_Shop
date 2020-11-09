@@ -34,14 +34,18 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.pictureBoxPassword = new System.Windows.Forms.PictureBox();
-            this.pictureBox_User = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.picturecheck2 = new System.Windows.Forms.PictureBox();
+            this.picturecheck1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPassword = new System.Windows.Forms.PictureBox();
+            this.pictureBox_User = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Plane = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picturecheck2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturecheck1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_User)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Plane)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -94,6 +98,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(199, 20);
             this.txtUser.TabIndex = 23;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             this.txtUser.MouseEnter += new System.EventHandler(this.txt_User_Mouse_Enter);
             this.txtUser.MouseLeave += new System.EventHandler(this.txt_User_Mouse_Leave);
             // 
@@ -118,35 +123,9 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(199, 20);
             this.txtPassword.TabIndex = 8;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             this.txtPassword.MouseEnter += new System.EventHandler(this.txt_Password_Mouse_Enter);
             this.txtPassword.MouseLeave += new System.EventHandler(this.txt_Password_Mouse_Leave);
-            // 
-            // pictureBoxPassword
-            // 
-            this.pictureBoxPassword.Image = global::MyProJect.Properties.Resources.unlock_1;
-            this.pictureBoxPassword.Location = new System.Drawing.Point(24, 159);
-            this.pictureBoxPassword.Name = "pictureBoxPassword";
-            this.pictureBoxPassword.Size = new System.Drawing.Size(24, 24);
-            this.pictureBoxPassword.TabIndex = 7;
-            this.pictureBoxPassword.TabStop = false;
-            // 
-            // pictureBox_User
-            // 
-            this.pictureBox_User.Image = global::MyProJect.Properties.Resources.user_2;
-            this.pictureBox_User.Location = new System.Drawing.Point(24, 98);
-            this.pictureBox_User.Name = "pictureBox_User";
-            this.pictureBox_User.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox_User.TabIndex = 22;
-            this.pictureBox_User.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MyProJect.Properties.Resources.paper_plane;
-            this.pictureBox1.Location = new System.Drawing.Point(148, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -172,6 +151,51 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "Password :";
             // 
+            // picturecheck2
+            // 
+            this.picturecheck2.Image = global::MyProJect.Properties.Resources._checked;
+            this.picturecheck2.Location = new System.Drawing.Point(319, 159);
+            this.picturecheck2.Name = "picturecheck2";
+            this.picturecheck2.Size = new System.Drawing.Size(24, 24);
+            this.picturecheck2.TabIndex = 28;
+            this.picturecheck2.TabStop = false;
+            // 
+            // picturecheck1
+            // 
+            this.picturecheck1.Image = global::MyProJect.Properties.Resources._checked;
+            this.picturecheck1.Location = new System.Drawing.Point(319, 98);
+            this.picturecheck1.Name = "picturecheck1";
+            this.picturecheck1.Size = new System.Drawing.Size(24, 24);
+            this.picturecheck1.TabIndex = 27;
+            this.picturecheck1.TabStop = false;
+            // 
+            // pictureBoxPassword
+            // 
+            this.pictureBoxPassword.Image = global::MyProJect.Properties.Resources.unlock_1;
+            this.pictureBoxPassword.Location = new System.Drawing.Point(24, 159);
+            this.pictureBoxPassword.Name = "pictureBoxPassword";
+            this.pictureBoxPassword.Size = new System.Drawing.Size(24, 24);
+            this.pictureBoxPassword.TabIndex = 7;
+            this.pictureBoxPassword.TabStop = false;
+            // 
+            // pictureBox_User
+            // 
+            this.pictureBox_User.Image = global::MyProJect.Properties.Resources.user_2;
+            this.pictureBox_User.Location = new System.Drawing.Point(24, 98);
+            this.pictureBox_User.Name = "pictureBox_User";
+            this.pictureBox_User.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox_User.TabIndex = 22;
+            this.pictureBox_User.TabStop = false;
+            // 
+            // pictureBox_Plane
+            // 
+            this.pictureBox_Plane.Image = global::MyProJect.Properties.Resources.paper_plane;
+            this.pictureBox_Plane.Location = new System.Drawing.Point(148, 12);
+            this.pictureBox_Plane.Name = "pictureBox_Plane";
+            this.pictureBox_Plane.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox_Plane.TabIndex = 0;
+            this.pictureBox_Plane.TabStop = false;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +203,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(367, 307);
+            this.Controls.Add(this.picturecheck2);
+            this.Controls.Add(this.picturecheck1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
@@ -189,7 +215,7 @@
             this.Controls.Add(this.pictureBox_User);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox_Plane);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLogin";
@@ -197,9 +223,11 @@
             this.Text = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picturecheck2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturecheck1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_User)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Plane)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,7 +235,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox_Plane;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Panel panel1;
@@ -218,5 +246,7 @@
         private System.Windows.Forms.PictureBox pictureBoxPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox picturecheck1;
+        private System.Windows.Forms.PictureBox picturecheck2;
     }
 }

@@ -118,85 +118,142 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="user-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="email-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\email-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="telephone-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\telephone-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="packing-machine" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\packing-machine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Employ-card" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Employ-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shopping" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shopping.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="log-in-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\log-in-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="paper-plane1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paper-plane1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unlock-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unlock-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="telephone-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\telephone-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Product1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Product1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="id-card" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\id-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="old-paper (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\old-paper (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="log-in-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\log-in-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unlock-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unlock-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="timeline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\timeline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="manufacturing1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\manufacturing1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="XeDay" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\XeDay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Bill_HOV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bill_HOV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="manufacturing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\manufacturing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="clipboard_HOV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clipboard_HOV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="email-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\email-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Typeproduct_HOV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Typeproduct_HOV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="telephone-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\telephone-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clipboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clipboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Account_HOV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Account_HOV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Staff_HOV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Staff_HOV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cart_IMG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cart_IMG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Account_IMG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Account_IMG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Product" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="paper-plane" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paper-plane.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Producer_HOV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Producer_HOV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="packing-machine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\packing-machine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="id-card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\id-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Employ-card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Employ-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Staff_IMG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Staff_IMG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unlock-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unlock-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="log-out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\log-out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manufacturing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\manufacturing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XeDay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XeDay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="log-in-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\log-in-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bill_IMG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bill_IMG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="old-paper (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\old-paper (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="typeofpro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\typeofpro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="old-paper (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\old-paper (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sell" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="manufacturing1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\manufacturing1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shopping" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shopping.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="timeline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\timeline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paper-plane" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paper-plane.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clipboard1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clipboard1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Producer-IMG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Producer-IMG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="email-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\email-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="log-in-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\log-in-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clipboard_HOV1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clipboard_HOV1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logout_HOV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logout_HOV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Product1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Product1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="telephone-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\telephone-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unlock-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unlock-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="log-out" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\log-out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cart_HOV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cart_HOV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="email-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\email-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checked_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checked_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
