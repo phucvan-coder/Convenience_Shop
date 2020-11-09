@@ -17,7 +17,7 @@ namespace MyProJect
         {
             InitializeComponent();
         }
-        public delegate void PassData(string fromDate, string toDate, int billID);
+        public delegate void PassData(string fromDate, string toDate);
         public PassData passData;
 
         private void btnFilter_Click(object sender, EventArgs e)
@@ -26,10 +26,14 @@ namespace MyProJect
             {
                 string from = dtpFrom.Value.ToString("dd/MM/yyyy");
                 string to = dtpTo.Value.ToString("dd/MM/yyyy");
-                int billID = Convert.ToInt32(txtBillID.Text);
-                passData(from, to, billID);
+                passData(from, to);
             }
             this.Hide();
+        }
+
+        private void FormBillFilter_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.btnUpdateProducer = new System.Windows.Forms.Button();
             this.btnDeleteProducer = new System.Windows.Forms.Button();
             this.btnAddProducer = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.btnSearchProducer = new System.Windows.Forms.Button();
             this.txtSearchProducer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducerList)).BeginInit();
@@ -72,6 +72,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Producer Details";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(640, 134);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 23;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // btnUpdateProducer
             // 
             this.btnUpdateProducer.Location = new System.Drawing.Point(640, 79);
@@ -97,7 +107,7 @@
             this.btnAddProducer.Location = new System.Drawing.Point(480, 80);
             this.btnAddProducer.Name = "btnAddProducer";
             this.btnAddProducer.Size = new System.Drawing.Size(74, 23);
-            this.btnAddProducer.TabIndex = 14;
+            this.btnAddProducer.TabIndex = 4;
             this.btnAddProducer.Text = "Add";
             this.btnAddProducer.UseVisualStyleBackColor = true;
             this.btnAddProducer.Click += new System.EventHandler(this.btnAddProducer_Click);
@@ -137,7 +147,7 @@
             this.txtProducerPhone.Location = new System.Drawing.Point(556, 28);
             this.txtProducerPhone.Name = "txtProducerPhone";
             this.txtProducerPhone.Size = new System.Drawing.Size(158, 20);
-            this.txtProducerPhone.TabIndex = 10;
+            this.txtProducerPhone.TabIndex = 3;
             this.txtProducerPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProducerPhone_KeyPress);
             // 
             // txtProducerAddress
@@ -145,14 +155,14 @@
             this.txtProducerAddress.Location = new System.Drawing.Point(148, 134);
             this.txtProducerAddress.Name = "txtProducerAddress";
             this.txtProducerAddress.Size = new System.Drawing.Size(158, 20);
-            this.txtProducerAddress.TabIndex = 9;
+            this.txtProducerAddress.TabIndex = 2;
             // 
             // txtProducerName
             // 
             this.txtProducerName.Location = new System.Drawing.Point(148, 81);
             this.txtProducerName.Name = "txtProducerName";
             this.txtProducerName.Size = new System.Drawing.Size(158, 20);
-            this.txtProducerName.TabIndex = 8;
+            this.txtProducerName.TabIndex = 1;
             // 
             // txtProducerID
             // 
@@ -223,16 +233,6 @@
             this.label1.Size = new System.Drawing.Size(239, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "Producer Management";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(640, 134);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 23;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // FormProducerManagement
             // 

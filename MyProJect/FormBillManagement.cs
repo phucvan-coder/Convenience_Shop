@@ -54,7 +54,7 @@ namespace MyProJect
             txtMoneyStatistics.Text = moneyStatistics.ToString("c", culture);
         }
 
-        public void Filter(string f, string t, int id)
+        public void Filter(string f, string t)
         {
             DateTime from = Convert.ToDateTime(f);
             DateTime to = Convert.ToDateTime(t);
@@ -63,7 +63,7 @@ namespace MyProJect
             List<BillInfo_Class> lst = new List<BillInfo_Class>();
             foreach (DataGridViewRow a in dgvBillList.Rows)
             {
-                if (from <= Convert.ToDateTime(a.Cells[2].Value.ToString()) && Convert.ToDateTime(a.Cells[2].Value.ToString()) <= to || id == Convert.ToInt32(a.Cells[1].Value))
+                if (from <= Convert.ToDateTime(a.Cells[2].Value.ToString()) && Convert.ToDateTime(a.Cells[2].Value.ToString()) <= to )
                 {
                     BillInfo_Class n = new BillInfo_Class();
                     n.Id = Convert.ToInt32(a.Cells[0].Value.ToString());
@@ -101,7 +101,7 @@ namespace MyProJect
             List<BillInfo_Class> lst = new List<BillInfo_Class>();
             foreach (DataGridViewRow a in dgvBillList.Rows)
             {
-                if (a.Cells[1].Value.ToString().ToLower().Contains(query) ||
+                if (a.Cells[1].Value.ToString().ToLower() == query ||
                     a.Cells[3].Value.ToString().ToLower().Contains(query) ||
                     a.Cells[4].Value.ToString().ToLower().Contains(query))
                 {
@@ -143,11 +143,16 @@ namespace MyProJect
         {
             FormBillManagement_Load(sender, e);
         }
+
+
+
+
         #endregion
 
-
-
-
-
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            FormReport frm = new FormReport();
+            frm.Show();
+        }
     }
 }

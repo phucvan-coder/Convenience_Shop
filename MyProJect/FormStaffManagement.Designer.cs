@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.btnUpdateStaff = new System.Windows.Forms.Button();
             this.btnDeleteStaff = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.btnSearchStaff = new System.Windows.Forms.Button();
             this.txtSearchStaff = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffList)).BeginInit();
@@ -84,6 +84,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Staff Details";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(396, 142);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 22;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // dtpDateOfBirth
             // 
             this.dtpDateOfBirth.CustomFormat = "dd/MM/yyyy";
@@ -91,7 +101,7 @@
             this.dtpDateOfBirth.Location = new System.Drawing.Point(129, 103);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
             this.dtpDateOfBirth.Size = new System.Drawing.Size(164, 20);
-            this.dtpDateOfBirth.TabIndex = 21;
+            this.dtpDateOfBirth.TabIndex = 2;
             // 
             // btnUpdateStaff
             // 
@@ -129,21 +139,21 @@
             this.cmbGender.Location = new System.Drawing.Point(129, 140);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(164, 21);
-            this.cmbGender.TabIndex = 17;
+            this.cmbGender.TabIndex = 3;
             // 
             // txtStaffAddress
             // 
             this.txtStaffAddress.Location = new System.Drawing.Point(579, 107);
             this.txtStaffAddress.Name = "txtStaffAddress";
             this.txtStaffAddress.Size = new System.Drawing.Size(164, 20);
-            this.txtStaffAddress.TabIndex = 15;
+            this.txtStaffAddress.TabIndex = 6;
             // 
             // txtStaffPhone
             // 
             this.txtStaffPhone.Location = new System.Drawing.Point(579, 63);
             this.txtStaffPhone.Name = "txtStaffPhone";
             this.txtStaffPhone.Size = new System.Drawing.Size(164, 20);
-            this.txtStaffPhone.TabIndex = 13;
+            this.txtStaffPhone.TabIndex = 5;
             this.txtStaffPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStaffPhone_KeyPress);
             // 
             // txtStaffEmail
@@ -151,14 +161,14 @@
             this.txtStaffEmail.Location = new System.Drawing.Point(579, 19);
             this.txtStaffEmail.Name = "txtStaffEmail";
             this.txtStaffEmail.Size = new System.Drawing.Size(164, 20);
-            this.txtStaffEmail.TabIndex = 12;
+            this.txtStaffEmail.TabIndex = 4;
             // 
             // txtStaffName
             // 
             this.txtStaffName.Location = new System.Drawing.Point(129, 63);
             this.txtStaffName.Name = "txtStaffName";
             this.txtStaffName.Size = new System.Drawing.Size(164, 20);
-            this.txtStaffName.TabIndex = 11;
+            this.txtStaffName.TabIndex = 1;
             // 
             // txtStaffID
             // 
@@ -288,16 +298,6 @@
             this.label1.Size = new System.Drawing.Size(203, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Staff Management";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(396, 142);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 22;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // FormStaffManagement
             // 

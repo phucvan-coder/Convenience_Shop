@@ -60,13 +60,14 @@ CREATE TABLE Account(
 )
 GO
 /*
-insert into Account values ('acc1','pass1','Quản Lý'),('acc2','pass2','Quản Lý')
+insert into Account values ('acc1','pass1', N'Quản Lý'),('acc2','pass2', N'Quản Lý')
+delete from Account where AccountName = 'acc1' or AccountName = 'acc2' 
 */
 
 CREATE TABLE Bill(
 	Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	DateOfSale DATETIME NULL
-)
+)	
 GO
 CREATE TABLE BillInfo(
 	Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,

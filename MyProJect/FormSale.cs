@@ -162,6 +162,7 @@ namespace MyProJect
                                 {
                                     row.Cells[3].Value = Convert.ToInt32(row.Cells[3].Value) + Convert.ToInt32(nmrAmount.Value);
                                     row.Cells[6].Value = Convert.ToInt32(row.Cells[3].Value)*Convert.ToInt32(row.Cells[4].Value);
+                                    row.Cells[6].Value = Convert.ToInt32(row.Cells[6].Value) - Convert.ToInt32(row.Cells[6].Value) * (Convert.ToDouble(row.Cells[5].Value) / 100.0);
                                     FormSale_Load(sender, e);
                                     return;
                                 }
@@ -189,6 +190,7 @@ namespace MyProJect
             else
             {
                 dgvOrderList.Rows.RemoveAt(dgvOrderList.Rows[0].Index);
+                    
             }
             FormSale_Load(sender, e);
         }
@@ -197,6 +199,22 @@ namespace MyProJect
         {
             using (ConvenienceShopEntities entity = new ConvenienceShopEntities())
             {
+                List<Product> tmp = new List<Product>();
+                int idx = Convert.ToInt32(cmbType.SelectedValue);
+                tmp = entity.Products.Where(x => x.ProductName == cmbProduct.Text && x.TypeID == idx).ToList();
+                int amountAll = 0;
+                foreach (Product ii in tmp)
+                {
+                    amountAll += Convert.ToInt32(ii.Amount);
+                }
+
+                if (amountAll < Convert.ToInt32(nmrAmount.Value))
+                {
+                    MessageBox.Show("Not Enough Amount! Available is " + amountAll, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    nmrAmount.Value = Convert.ToInt32(amountAll);
+                    return;
+                }
+
                 var price = Convert.ToDouble(entity.Products.Where(x => x.ProductName == cmbProduct.Text).First().Price);
                 double totalPrice = (Convert.ToInt32(nmrAmount.Value) * price) - (Convert.ToInt32(nmrAmount.Value) * price * Convert.ToInt32(nmrDiscount.Value) / 100);
                 dgvOrderList.Rows[index].Cells[0].Value = cmbType.Text;
@@ -302,7 +320,6 @@ namespace MyProJect
             cmbType.SelectedIndex = -1;
             nmrAmount.Value = 0;
             nmrDiscount.Value = 0;
-            dtpSaleDate.Value = DateTime.Now;
             DisplayTotalCost();
         }
         //Event Load cmbProduct after choosing type

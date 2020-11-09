@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.nmrAmount = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.dgvProductList = new System.Windows.Forms.DataGridView();
             this.btnSearchProduct = new System.Windows.Forms.Button();
             this.txtProductSearch = new System.Windows.Forms.TextBox();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrAmount)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -99,6 +99,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Product Details";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(402, 169);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 23;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // dtpDate
             // 
             this.dtpDate.CustomFormat = "dd/MM/yyyy";
@@ -106,7 +116,7 @@
             this.dtpDate.Location = new System.Drawing.Point(565, 108);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(157, 20);
-            this.dtpDate.TabIndex = 22;
+            this.dtpDate.TabIndex = 6;
             // 
             // nmrAmount
             // 
@@ -118,7 +128,7 @@
             0});
             this.nmrAmount.Name = "nmrAmount";
             this.nmrAmount.Size = new System.Drawing.Size(157, 20);
-            this.nmrAmount.TabIndex = 16;
+            this.nmrAmount.TabIndex = 5;
             this.nmrAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nmrAmount_KeyPress);
             // 
             // label9
@@ -166,7 +176,7 @@
             this.btnAddProduct.Location = new System.Drawing.Point(483, 169);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(75, 23);
-            this.btnAddProduct.TabIndex = 11;
+            this.btnAddProduct.TabIndex = 8;
             this.btnAddProduct.Text = "Add";
             this.btnAddProduct.UseVisualStyleBackColor = true;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
@@ -237,7 +247,7 @@
             this.cmbType.Location = new System.Drawing.Point(166, 74);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(157, 21);
-            this.cmbType.TabIndex = 5;
+            this.cmbType.TabIndex = 1;
             // 
             // cmbProducer
             // 
@@ -253,14 +263,14 @@
             this.cmbStatus.Location = new System.Drawing.Point(565, 142);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(157, 21);
-            this.cmbStatus.TabIndex = 3;
+            this.cmbStatus.TabIndex = 7;
             // 
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(166, 166);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(157, 20);
-            this.txtPrice.TabIndex = 2;
+            this.txtPrice.TabIndex = 3;
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // txtProductName
@@ -268,7 +278,7 @@
             this.txtProductName.Location = new System.Drawing.Point(166, 124);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(157, 20);
-            this.txtProductName.TabIndex = 1;
+            this.txtProductName.TabIndex = 2;
             // 
             // txtProductID
             // 
@@ -318,16 +328,6 @@
             this.txtProductSearch.Name = "txtProductSearch";
             this.txtProductSearch.Size = new System.Drawing.Size(157, 20);
             this.txtProductSearch.TabIndex = 3;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(402, 169);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 23;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // FormProductManagement
             // 

@@ -200,7 +200,13 @@ namespace MyProJect
 
             dgvTypeList.DataSource = data;
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            FormTypeManagement_Load(sender, e);
+        }
         #endregion
+
 
     }
 }

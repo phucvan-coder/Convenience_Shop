@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.cmbRank = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnUpdateAccount = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.btnSearchAccount = new System.Windows.Forms.Button();
             this.txtSearchAccount = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccountList)).BeginInit();
@@ -72,6 +72,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Account Details";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(346, 135);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 23;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // cmbRank
             // 
             this.cmbRank.FormattingEnabled = true;
@@ -81,7 +91,7 @@
             this.cmbRank.Location = new System.Drawing.Point(131, 150);
             this.cmbRank.Name = "cmbRank";
             this.cmbRank.Size = new System.Drawing.Size(149, 21);
-            this.cmbRank.TabIndex = 13;
+            this.cmbRank.TabIndex = 4;
             // 
             // label5
             // 
@@ -128,21 +138,21 @@
             this.txtPassword.Location = new System.Drawing.Point(131, 109);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(149, 20);
-            this.txtPassword.TabIndex = 8;
+            this.txtPassword.TabIndex = 3;
             // 
             // txtAccountName
             // 
             this.txtAccountName.Location = new System.Drawing.Point(131, 70);
             this.txtAccountName.Name = "txtAccountName";
             this.txtAccountName.Size = new System.Drawing.Size(149, 20);
-            this.txtAccountName.TabIndex = 7;
+            this.txtAccountName.TabIndex = 2;
             // 
             // txtAccountID
             // 
             this.txtAccountID.Location = new System.Drawing.Point(131, 31);
             this.txtAccountID.Name = "txtAccountID";
             this.txtAccountID.Size = new System.Drawing.Size(149, 20);
-            this.txtAccountID.TabIndex = 6;
+            this.txtAccountID.TabIndex = 1;
             // 
             // label4
             // 
@@ -213,7 +223,7 @@
             this.txtSearchAccount.Location = new System.Drawing.Point(236, 18);
             this.txtSearchAccount.Name = "txtSearchAccount";
             this.txtSearchAccount.Size = new System.Drawing.Size(149, 20);
-            this.txtSearchAccount.TabIndex = 9;
+            this.txtSearchAccount.TabIndex = 5;
             // 
             // label1
             // 
@@ -224,16 +234,6 @@
             this.label1.Size = new System.Drawing.Size(231, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "Account Management";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(346, 135);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 23;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // FormAccountManagement
             // 

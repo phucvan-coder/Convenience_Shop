@@ -68,8 +68,8 @@ namespace MyProJect
 
         public void ComboboxStatus()
         {
-            cmbStatus.Items.Add("Còn Hàng");
-            cmbStatus.Items.Add("Hết Hàng");
+            cmbStatus.Items.Add("Còn Hạn");
+            cmbStatus.Items.Add("Hết Hạn");
         }
 
         //Function add product onto database

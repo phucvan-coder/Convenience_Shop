@@ -34,8 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtpTo = new System.Windows.Forms.DateTimePicker();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtBillID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +57,7 @@
             // 
             // btnFilter
             // 
-            this.btnFilter.Location = new System.Drawing.Point(41, 190);
+            this.btnFilter.Location = new System.Drawing.Point(44, 121);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(75, 46);
             this.btnFilter.TabIndex = 2;
@@ -88,37 +86,18 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(130, 190);
+            this.btnCancel.Location = new System.Drawing.Point(130, 121);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 46);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(37, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 19);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Bill ID";
-            // 
-            // txtBillID
-            // 
-            this.txtBillID.Location = new System.Drawing.Point(96, 126);
-            this.txtBillID.Name = "txtBillID";
-            this.txtBillID.Size = new System.Drawing.Size(109, 20);
-            this.txtBillID.TabIndex = 7;
-            // 
             // FormBillFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(243, 273);
-            this.Controls.Add(this.txtBillID);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(243, 180);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.dtpTo);
             this.Controls.Add(this.label2);
@@ -128,6 +107,7 @@
             this.Name = "FormBillFilter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Bill Filter";
+            this.Load += new System.EventHandler(this.FormBillFilter_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,7 +121,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpTo;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtBillID;
     }
 }

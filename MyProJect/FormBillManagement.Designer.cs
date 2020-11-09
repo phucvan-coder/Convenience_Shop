@@ -37,6 +37,7 @@
             this.btnFilter = new System.Windows.Forms.Button();
             this.btnRefreshBill = new System.Windows.Forms.Button();
             this.txtSearchBill = new System.Windows.Forms.TextBox();
+            this.btnReport = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBillList)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +54,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnReport);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtMoneyStatistics);
             this.groupBox1.Controls.Add(this.dgvBillList);
@@ -132,6 +134,16 @@
             this.txtSearchBill.Size = new System.Drawing.Size(155, 20);
             this.txtSearchBill.TabIndex = 0;
             // 
+            // btnReport
+            // 
+            this.btnReport.Location = new System.Drawing.Point(601, 270);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(75, 23);
+            this.btnReport.TabIndex = 7;
+            this.btnReport.Text = "Report";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
             // FormBillManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,5 +174,6 @@
         private System.Windows.Forms.TextBox txtSearchBill;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMoneyStatistics;
+        private System.Windows.Forms.Button btnReport;
     }
 }

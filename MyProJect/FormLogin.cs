@@ -80,7 +80,6 @@ namespace MyProJect
         //Action enter
         private void txt_User_Mouse_Enter(object sender, EventArgs e)
         {
-            txtUser.Focus();
             // thay ảnh cho txt user
             pictureBox_User.Image = Properties.Resources.user_1;
             // text USer
@@ -92,7 +91,6 @@ namespace MyProJect
         }
         private void txt_Password_Mouse_Enter(object sender, EventArgs e)
         {
-            txtPassword.Focus();
             // thay ảnh cho txt password
             pictureBoxPassword.Image = Properties.Resources.unlock_2;
             // text password
@@ -155,5 +153,29 @@ namespace MyProJect
             }
         }
         #endregion
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                bool result = Login();
+
+                if (result)
+                {
+                    MessageBox.Show("Login success", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    FormMenu menu = new FormMenu(txtUser.Text, txtPassword.Text);
+                    //pass data
+                    menu.ShowDialog();
+
+                    this.Show();
+                }
+                // nếu sai thông tin đăng nhập thì báo cmn lỗi luôn
+                else
+                {
+                    MessageBox.Show("Information not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }

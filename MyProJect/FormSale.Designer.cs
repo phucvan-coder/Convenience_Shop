@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.nmrAmount = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.btnUpdateProduct = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrDiscount)).BeginInit();
@@ -88,12 +88,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Order Details";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(395, 111);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 23;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // nmrAmount
             // 
             this.nmrAmount.Location = new System.Drawing.Point(612, 21);
+            this.nmrAmount.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nmrAmount.Name = "nmrAmount";
             this.nmrAmount.Size = new System.Drawing.Size(81, 20);
-            this.nmrAmount.TabIndex = 16;
+            this.nmrAmount.TabIndex = 4;
             this.nmrAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nmrAmount_KeyPress);
             // 
             // label7
@@ -141,7 +156,7 @@
             this.btnAddProduct.Location = new System.Drawing.Point(487, 111);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(75, 23);
-            this.btnAddProduct.TabIndex = 11;
+            this.btnAddProduct.TabIndex = 6;
             this.btnAddProduct.Text = "Add";
             this.btnAddProduct.UseVisualStyleBackColor = true;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
@@ -151,7 +166,7 @@
             this.nmrDiscount.Location = new System.Drawing.Point(612, 70);
             this.nmrDiscount.Name = "nmrDiscount";
             this.nmrDiscount.Size = new System.Drawing.Size(81, 20);
-            this.nmrDiscount.TabIndex = 10;
+            this.nmrDiscount.TabIndex = 5;
             this.nmrDiscount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nmrDiscount_KeyPress);
             // 
             // dtpSaleDate
@@ -161,7 +176,7 @@
             this.dtpSaleDate.Location = new System.Drawing.Point(130, 115);
             this.dtpSaleDate.Name = "dtpSaleDate";
             this.dtpSaleDate.Size = new System.Drawing.Size(160, 20);
-            this.dtpSaleDate.TabIndex = 9;
+            this.dtpSaleDate.TabIndex = 3;
             // 
             // cmbProduct
             // 
@@ -169,7 +184,7 @@
             this.cmbProduct.Location = new System.Drawing.Point(130, 70);
             this.cmbProduct.Name = "cmbProduct";
             this.cmbProduct.Size = new System.Drawing.Size(160, 21);
-            this.cmbProduct.TabIndex = 8;
+            this.cmbProduct.TabIndex = 2;
             // 
             // cmbType
             // 
@@ -177,7 +192,7 @@
             this.cmbType.Location = new System.Drawing.Point(130, 19);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(160, 21);
-            this.cmbType.TabIndex = 7;
+            this.cmbType.TabIndex = 1;
             this.cmbType.SelectedIndexChanged += new System.EventHandler(this.cmbType_SelectedIndexChanged);
             // 
             // label5
@@ -325,16 +340,6 @@
             this.label1.Size = new System.Drawing.Size(53, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "Sale";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(395, 111);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 23;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // FormSale
             // 

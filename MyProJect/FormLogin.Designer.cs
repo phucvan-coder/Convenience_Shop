@@ -124,6 +124,7 @@
             this.txtPassword.Size = new System.Drawing.Size(199, 20);
             this.txtPassword.TabIndex = 8;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             this.txtPassword.MouseEnter += new System.EventHandler(this.txt_Password_Mouse_Enter);
             this.txtPassword.MouseLeave += new System.EventHandler(this.txt_Password_Mouse_Leave);
             // 
